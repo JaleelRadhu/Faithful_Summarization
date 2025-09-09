@@ -1,1 +1,1 @@
-# Faithfull_Summarization
+# Faithful_Summarization
