@@ -1,0 +1,171 @@
+You will be given one perspective-aware summary that is focused on a specific perspective regarding a healthcare issue.
+
+Your task is to evaluate the summary based on four specific metrics. After reviewing each metric, provide a numeric score and reasoning in the Evaluation Form.
+
+
+Please make sure you read and understand these instructions carefully. Please keep this document open while reviewing, and refer to it as needed.
+
+
+Evaluation Criteria:
+
+
+1. Extraneous Information (1-5): 
+
+Rate the presence of content in the summary that is not supported by or referenced in the provided answers. It specifically measures the degree to which the summary includes information, also known as "hallucinations," that cannot be traced back to the source material.
+
+5 - No extraneous information, perfectly aligned with the answers.
+4 - Minimal extraneous information, mostly aligned with the answers.
+3 - Moderate extraneous information, somewhat aligned with the answers.
+2 - Significant extraneous information, poorly aligned with the answers.
+1 - Full of extraneous information, not aligned with the answers at all.
+
+
+2. Contradiction (1-5):
+
+Rate the presence of any statements that directly contradict information from the answers.
+
+5 - No contradictions, entirely consistent with the answers.
+4 - Minor contradictions, largely consistent with the answers.
+3 - Some noticeable contradictions, partially consistent with the answers.
+2 - Major contradictions, overall inconsistency with the answers.
+1 - Riddled with contradictions, completely inconsistent with the answers.
+
+
+3. Perspective Misalignment (1-5):
+
+Evaluate whether the summary expresses a different perspective from what is the intended perspective. Intended perspective for this particular example is {{Perspective}}. Which means {{Perspective_Def}}
+
+5 - Fully aligned with the given perspective.
+4 - Mostly aligned but slightly deviates from the given perspective.
+3 - Equally balanced between aligned and different perspectives.
+2 - Primarily presents a different perspective.
+1 - Completely offers a different perspective not found in the answers.
+
+
+4. Redundancy (1-5):
+
+Assess the extent of unnecessary repetition of information.
+
+5 - No redundancy, concise and clear.
+4 - Slight redundancy, but does not detract from clarity.
+3 - Moderate redundancy, some repeated information.
+2 - High redundancy, frequent unnecessary repetition.
+1 - Extremely redundant, overwhelming repetition.
+
+
+Evaluation Steps:
+
+1.Review the Specific Perspective Summary: Focus on understanding the main details of the summary and their relevance to that particular perspective and the healthcare issue.
+2.Compare the Summary to the Answers and Perspective: Examine how well the summary adheres to the answers provided, perspective and input spans. Identify content in the summary that is extraneous, contradictory, offers a different perspective, or redundant.
+3.Identify and Reason Out Errors: Detail why certain parts of the summary are considered errors based on the four metrics.
+4.Score the Summary: Based on your reasoning, give a numeric score for each error type contained in the summary.
+
+Few-Shot Examples:
+
+Example of a Completed Evaluation Form
+
+Source Text:
+Perspective: "INFORMATION"
+Question: "What herbs are in Paiduyangyan?"
+Input Spans for the Particular Perspective Captured from the Answers:
+"Rhubarb, White atractylodes, American ginseng, Qing-yang ginseng, Red ginseng, Peppermint."
+Summary to Evaluate:
+"For information purposes, the herbs found in Paiduyangyan include Rhubarb, White Atractylodes, American Ginseng, Qing-yang Ginseng, Red Ginseng, and Peppermint."
+Answers:
+"Rhubarb, White atractylodes, American ginseng, Qing-yang ginseng, Red ginseng, Peppermint."
+
+Evaluation Form (scores ONLY):
+
+
+Reasoning for Extraneous Information:
+
+The summary directly reflects the content provided in the answers without adding unrelated information. All listed herbs match exactly with those mentioned in the answers.
+
+Score for Extraneous Information:
+
+5 (No extraneous information, perfectly aligned with the answers.)
+
+
+Reasoning for Contradiction:
+
+There are no contradictions in the summary. It accurately lists the herbs as mentioned in the answers without contradicting any of the details.
+
+Score for Contradiction:
+
+5 (No contradictions, entirely consistent with the answers.)
+
+
+Reasoning for Perspective Misalignment:
+
+The summary maintains the specified 'INFORMATION' perspective by factually listing the herbs found in Paiduyangyan, which aligns perfectly with the perspective and information provided in the answers.
+
+Score for Perspective Misalignment:
+
+5 (Fully aligned with the given perspective.)
+
+
+Reasoning for Redundancy:
+
+The summary lists all the herbs without unnecessary repetition. It is concise and provides the information directly.
+
+Score for Redundancy:
+
+5 (No redundancy, concise and clear.)
+
+
+
+Start Evaluating....
+
+Source Text:
+
+Perspective:
+
+{{Perspective}}
+
+Perspective Definition:
+
+{{Perspective_Def}}
+
+Input Spans for the particular perspective captured from the Answers:
+
+{{Input spans}}
+
+Summary to Evaluate: 
+
+{{Given Summary}}
+
+Question: 
+
+{{Question}}
+
+Answers: 
+
+{{Answers}}
+
+
+
+Evaluation Form (scores ONLY):
+
+Provide your reasoning and a numeric score and modifications based on the evaluation criteria and source text; Make the evaluation adheres to the below template strictly:
+
+- Reasoning for Extraneous Information: (Add your answer here)
+
+- Score for Extraneous Information:  (Add your score here)
+
+- Reasoning for Contradiction: (Add your answer here)
+
+- Score for Contradiction: (Add your score here)
+
+- Reasoning for Different Perspective: (Add your answer here)
+
+- Score for Different Perspective: (Add your score here)
+
+- Reasoning for Redundancy: (Add your answer here)
+
+- Score for Redundancy: (Add your score here)
+
+
+
+
+
+

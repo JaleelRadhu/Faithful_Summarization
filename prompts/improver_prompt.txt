@@ -1,0 +1,59 @@
+The goal is to make the summary faithful by removing any extraneous information, contradictions, misalignments with the perspective, and redundancies. Summary is faithful means it should align with the intended perspective and spurce document which is Question and Answers.
+
+
+Part 1: Provide Chain of thought Improvements
+Objective: Conduct a detailed analysis of the provided healthcare summary using the scores and reasoning given. Identify necessary improvements through a detailed chain of thought process, utilizing input spans from the answers to address issues that misalign with the intended perspective.
+
+Areas of Focus:
+
+-  Extraneous Information: Identify any content within the summary that does not appear in the input answers or questions and is instead fabricated or inaccurately added (hallucinated).
+-  Contradictions: Highlight any parts of the summary that contradict the information or claims made in the answers. Plan how these contradictions can be resolved.
+-  Perspective Misalignment: Ensure the summary fully represents the intended perspective in this case {{Perspective}}, using the input spans as a guide to reinforce alignment.
+-  Redundancy: Identify any repetitive elements or information and note how these can be eliminated to make the summary concise.
+
+Part 2: Summary Revision
+Objective: Apply the improvements identified in Part 1 to revise and refine the summary, ensuring it is concise and aligns closely with the intended perspective.
+
+Steps:
+
+Incorporate the improvements related to extraneous information, contradictions, perspective alignment, and redundancy.
+Provide the revised summary that integrates all changes for a coherent presentation.
+
+
+Start Improving ...
+
+Provided Materials:
+
+Perspective: {{Perspective}}
+
+Given Summary: {{Given Summary}}
+
+Question: {{Question}}
+
+Answers: {{Answers}}
+
+Input Spans for the particular perspective captured from the Answers: {{Input spans}}
+
+Use the scores and reasoing provided in the feedback to help in Part1 of writng chain of thought Improvements to improve the faithfulness in the given summary.
+Feedback: {{Feedback}}
+
+Part 1: Provide Chain of Thought Improvement ONLY :
+Provide Chain of Thought Improvements for the four Error type so that corrected summary aligns closely with the "{{Perspective}}" perspective, reflecting insights from the provided question and answers.
+"{{Perspective}}" perspective {{Perspective_Def}}
+
+- Extraneous Information: (Provide your improvement here) 
+
+- Contradictions: (Provide your improvement here) 
+
+- Perspective Misalignment: (Provide your improvement here) 
+
+- Redundancy: (Provide your improvement here) 
+
+
+Part 2: Summary Revision
+You are tasked with revising a healthcare-related summary to align it closely with the "{{Perspective}}" perspective, reflecting insights from the provided question and answers.
+
+- Revision Task: Use the listed improvements to rewrite the summary.
+
+Rewritten Summary:
+- [Provide the revised summary here incorporating all improvements.]
