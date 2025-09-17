@@ -1,0 +1,19 @@
+model:
+  name: mistralai/Mistral-7B-Instruct-v0.2
+  backend: hf
+  device: 0
+  max_new_tokens: 512
+  temperature: 0.7
+
+data:
+  input_path: data/raw/flant5_remaining.csv
+  checkpoint_dir: data/checkpoints
+  output_path: results/final.csv
+
+iteration:
+  max_iterations: 5
+  rouge_metric: rouge-l
+  stopping_criterion: rouge-l
+  tolerance: 0.01
+
+
