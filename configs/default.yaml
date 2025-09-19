@@ -1,19 +1,37 @@
-model:
+data:
+  input_path: data/raw/flant5_remaining.csv
+  checkpoint_dir: data/checkpoints
+  output_path: results/final.csv
+
+prompts:
+  evaluator_path:  /home/abdullahm/jaleel/Faithfullness_Improver/prompts/evaluator_prompt.txt
+  cot_improver_path:  /home/abdullahm/jaleel/Faithfullness_Improver/prompts/improver_prompt.txt
+
+iteration:
+  max_iterations: 5
+  stopping_criterion: rouge-l-f
+  tolerance: 0.01
+
+Evaluations : ["rouge-l-f", "bertscore-f1", "bleu"]
+
+Evaluator:
   name: mistralai/Mistral-7B-Instruct-v0.2
   backend: hf
   device: 0
   max_new_tokens: 512
   temperature: 0.7
 
-data:
-  input_path: data/raw/flant5_remaining.csv
-  checkpoint_dir: data/checkpoints
-  output_path: results/final.csv
+Improver:
+  name: mistralai/Mistral-7B-Instruct-v0.2
+  backend: hf
+  device: 0
+  max_new_tokens: 512
+  temperature: 0.7
 
-iteration:
-  max_iterations: 5
-  rouge_metric: rouge-l
-  stopping_criterion: rouge-l
-  tolerance: 0.01
-
+Starting_summary_generator: #add plasma 
+  name : plasma-7b-instruct
+  backend: hf
+  device: 0
+  max_new_tokens: 512
+  temperature: 0.7
 

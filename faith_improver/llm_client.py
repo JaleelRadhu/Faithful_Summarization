@@ -7,11 +7,11 @@ from typing import Dict, Any
 class LLMClient:
     def __init__(self, cfg: Dict[str, Any]):
         self.cfg = cfg
-        self.model_name = cfg['model']['name']
-        self.backend = cfg['model'].get('backend', 'hf')
-        self.device = cfg['model'].get('device', '0')
-        self.max_new_tokens = cfg['model'].get('max_new_tokens', 512)
-        self.temperature = cfg['model'].get('temperature', 0.7)
+        self.model_name = cfg['name']
+        self.backend = cfg.get('backend', 'hf')
+        self.device = cfg.get('device', '0')
+        self.max_new_tokens = cfg.get('max_new_tokens', 512)
+        self.temperature = cfg.get('temperature', 0.7)
         
         if self.backend == 'hf':
             from transformers import AutoModelForCausalLM, AutoTokenizer, pipeline
@@ -22,7 +22,7 @@ class LLMClient:
             self.model = AutoModelForCausalLM.from_pretrained(
                 self.model_name,
                 token = hf_token,
-                device_map="auto" if self.device not in ["cup", -1] else None,
+                device_map="auto" if self.device not in ["cpu", -1] else None,
             )
             
             self.pipe = pipeline(
@@ -37,26 +37,37 @@ class LLMClient:
         else:
             raise ValueError(f"Unsupported backend: {self.backend}")
         
-        def generate(self, prompt: str, **kwargs) -> str:
-            params = {
-                "max_new_tokens": self.max_new_tokens,
-                "temperature": self.temperature,
-            }
-            params.update(kwargs)   
-            if self.backend == 'hf':
-                outputs = self.pipe(
-                    prompt,
-                    **params
-                )
-                return outputs[0]['generated_text']
-            elif self.backend == 'openai':
-                response = self.client.Completion.create(
-                    model=self.model_name,
-                    message=[{"role": "user", "content": prompt}],
-                    max_tokens=self.max_new_tokens,
-                    temperature=self.temperature
-                )
-                return response.choices[0].text.strip()
-            else:
-                raise ValueError(f"Unsupported backend: {self.backend}")    
+    def generate(self, prompt: str, **kwargs) -> str:
+        params = {
+            "max_new_tokens": self.max_new_tokens,
+            "temperature": self.temperature,
+        }
+        params.update(kwargs)   
+        if self.backend == 'hf':
+            outputs = self.pipe(
+                prompt,
+                **params
+            )
+            return outputs[0]['generated_text']
+        elif self.backend == 'openai':
+            response = self.client.Completion.create(
+                model=self.model_name,
+                message=[{"role": "user", "content": prompt}],
+                max_tokens=self.max_new_tokens,
+                temperature=self.temperature
+            )
+            return response.choices[0].text.strip()
+        else:
+            raise ValueError(f"Unsupported backend: {self.backend}")    
     
+    
+if __name__ == "__main__":
+    import yaml
+    with open("configs/default.yaml", 'r') as f:
+        cfg = yaml.safe_load(f)
+    
+    eval_cfg = cfg.get('Evaluator', {})
+    llm_client = LLMClient(eval_cfg)
+    prompt = "Explain the theory of relativity in simple terms."
+    response = llm_client.generate(prompt)
+    print(response)
