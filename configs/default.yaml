@@ -6,9 +6,11 @@ model:
   temperature: 0.7
 
 data:
-  input_path: data/raw/flant5_remaining.csv
-  checkpoint_dir: data/checkpoints
-  output_path: results/final.csv
+  base_summary_dir: data/base_summaries/
+  checkpoint_dir: data/checkpoints/
+  improved_summary_dir: data/improved_summaries/
+  results_dir: results/
+
 
 iteration:
   max_iterations: 5
