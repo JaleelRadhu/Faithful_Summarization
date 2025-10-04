@@ -1,21 +1,42 @@
 model:
   name: mistralai/Mistral-7B-Instruct-v0.2
+  quantization: None
   backend: hf
   device: 0
   max_new_tokens: 512
   temperature: 0.7
 
 data:
-  base_summary_dir: data/base_summaries/
-  checkpoint_dir: data/checkpoints/
-  improved_summary_dir: data/improved_summaries/
-  results_dir: results/
+  base_summary_dir: /home/abdullahm/jaleel/Faithfullness_Improver/data
+  results_dir: /home/abdullahm/jaleel/Faithfullness_Improver/results/
+  output_dir: /home/abdullahm/jaleel/Faithfullness_Improver/outputs/
+
+perspective_definitions_path: /home/abdullahm/jaleel/Faithfullness_Improver/prompts/perspective_defn.json
+
+evaluator_prompt_path: /home/abdullahm/jaleel/Faithfullness_Improver/prompts/evaluator_prompt.txt
+improver_prompt_path: /home/abdullahm/jaleel/Faithfullness_Improver/prompts/improver_prompt.txt
 
 
 iteration:
   max_iterations: 5
-  rouge_metric: rouge-l
   stopping_criterion: rouge-l
   tolerance: 0.01
 
 
+is_improver_evaluator_model_same: True
+
+improver_model:
+  name: mistralai/Mistral-7B-Instruct-v0.2
+  quantization: None
+  backend: hf
+  device: 0
+  max_new_tokens: 512
+  temperature: 0.7
+
+evaluator_model:
+  name: mistralai/Mistral-7B-Instruct-v0.2
+  quantization: None
+  backend: hf
+  device: 0
+  max_new_tokens: 512
+  temperature: 0.7

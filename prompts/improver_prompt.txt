@@ -1,59 +1,74 @@
-The goal is to make the summary faithful by removing any extraneous information, contradictions, misalignments with the perspective, and redundancies. Summary is faithful means it should align with the intended perspective and spurce document which is Question and Answers.
+# Faithful Summary Improvement Task
 
+**Goal**: Ensure the summary is *faithful*.  
+A faithful summary must:  
+- Align strictly with the **intended perspective** ({Perspective}).  
+- Stay true to the **source Q&A**  
+- Remove **extraneous information, contradictions, perspective misalignments, and redundancies**.  
 
-Part 1: Provide Chain of thought Improvements
-Objective: Conduct a detailed analysis of the provided healthcare summary using the scores and reasoning given. Identify necessary improvements through a detailed chain of thought process, utilizing input spans from the answers to address issues that misalign with the intended perspective.
+---
 
-Areas of Focus:
+## Part 1: Chain of Thought Improvements  
 
--  Extraneous Information: Identify any content within the summary that does not appear in the input answers or questions and is instead fabricated or inaccurately added (hallucinated).
--  Contradictions: Highlight any parts of the summary that contradict the information or claims made in the answers. Plan how these contradictions can be resolved.
--  Perspective Misalignment: Ensure the summary fully represents the intended perspective in this case {{Perspective}}, using the input spans as a guide to reinforce alignment.
--  Redundancy: Identify any repetitive elements or information and note how these can be eliminated to make the summary concise.
+**Objective**: Analyze the given summary using the **feedback (scores and reasoning)** and the **input spans from the answers**. Identify issues and propose improvements in each category below:  
 
-Part 2: Summary Revision
-Objective: Apply the improvements identified in Part 1 to revise and refine the summary, ensuring it is concise and aligns closely with the intended perspective.
+- **Extraneous Information**  
+  - Spot fabricated or unsupported details not in the Q&A.  
+  - Suggest how to remove or correct them.  
 
-Steps:
+- **Contradictions**  
+  - Highlight contradictions with the Q&A.  
+  - Suggest corrections.  
 
-Incorporate the improvements related to extraneous information, contradictions, perspective alignment, and redundancy.
-Provide the revised summary that integrates all changes for a coherent presentation.
+- **Perspective Misalignment**  
+  - Check if the summary aligns with the {{Perspective}} perspective.  
+  - Suggest how to reinforce alignment.  
 
+- **Redundancy**  
+  - Identify repetition or verbosity.  
+  - Suggest how to condense.  
 
-Start Improving ...
+---
 
-Provided Materials:
+## Part 2: Summary Revision  
 
-Perspective: {{Perspective}}
+**Objective**: Rewrite the summary by applying the improvements from Part 1.  
 
-Given Summary: {{Given Summary}}
+**Instructions**:  
+- Remove extraneous info.  
+- Resolve contradictions.  
+- Align strictly with the {Perspective} perspective.  
+- Eliminate redundancy.  
+- Produce a clear, concise, faithful summary.  
 
-Question: {{Question}}
+---
 
-Answers: {{Answers}}
+## Provided Materials  
 
-Input Spans for the particular perspective captured from the Answers: {{Input spans}}
+- **Perspective**: {Perspective} 
+- **Perspective Definition**: {Perspective_Def}
+- **Summary to be Improved**: {Given Summary}
+- **Question**: {Question} 
+- **Answers**: {Answers} 
+- **Input Spans (for Pespective: {Perspective})**: {Input spans}
+- **Feedback (scores & reasoning)**: {Feedback}  
 
-Use the scores and reasoing provided in the feedback to help in Part1 of writng chain of thought Improvements to improve the faithfulness in the given summary.
-Feedback: {{Feedback}}
+---
 
-Part 1: Provide Chain of Thought Improvement ONLY :
-Provide Chain of Thought Improvements for the four Error type so that corrected summary aligns closely with the "{{Perspective}}" perspective, reflecting insights from the provided question and answers.
-"{{Perspective}}" perspective {{Perspective_Def}}
+# 🔹 Output Format (Must Follow)
 
-- Extraneous Information: (Provide your improvement here) 
+### Part 1: Chain of Thought Improvements ONLY  
+Provide chain-of-thought improvements for each of the four error types so the corrected summary aligns closely with the "{{Perspective}}" perspective ({{Perspective_Def}}), reflecting insights from the provided question and answers.  
 
-- Contradictions: (Provide your improvement here) 
+- **Extraneous Information**: [Provide your improvement here]  
+- **Contradictions**: [Provide your improvement here]
+- **Perspective Misalignment**: [Provide your improvement here]  
+- **Redundancy**: [Provide your improvement here]
 
-- Perspective Misalignment: (Provide your improvement here) 
+---
 
-- Redundancy: (Provide your improvement here) 
+### Part 2: Summary Revision  
+Revise the summary to make it fully faithful. Use the improvements listed above to rewrite.  
 
-
-Part 2: Summary Revision
-You are tasked with revising a healthcare-related summary to align it closely with the "{{Perspective}}" perspective, reflecting insights from the provided question and answers.
-
-- Revision Task: Use the listed improvements to rewrite the summary.
-
-Rewritten Summary:
-- [Provide the revised summary here incorporating all improvements.]
+**Rewritten Summary:**  
+- [Provide the revised summary here incorporating all improvements.]  

@@ -1,21 +1,44 @@
 from evaluation.rouge_eval import calculate_rouge_scores
 from pipeline.feedback_generator import generate_feedback
 from pipeline.summary_improver import revise_summary
+from utils.evaluator import get_evaluator
 
-def run_trial(summary_data, score_prompt, corrector_prompt, pipe, max_iterations=5, tolerance=0.01):
+import yaml
+
+
+def run_trial(summary_data, evaluator_prompt, improver_prompt, pipe, max_iterations=5, tolerance=0.01):
     previous_summary = summary_data["predicted"]
-    previous_rouge_score = None
+    previous_score = None
 
-    for iteration in range(max_iterations):
-        feedback = generate_feedback(summary_data, score_prompt, pipe)
-        cot, revised_summary = revise_summary(summary_data, feedback, corrector_prompt, pipe)
-
-        scores = calculate_rouge_scores(summary_data["Actual"], revised_summary)
-        current_rouge = scores['rouge-l']['f']
-
-        if previous_rouge_score is not None and current_rouge <= previous_rouge_score:
-            break
-        previous_rouge_score = current_rouge
-        summary_data["predicted"] = revised_summary
+    # load yaml 
+    config = yaml.safe_load(open("config/default.yaml"))
+    max_iterations = config["iteration"]["max_iterations"]
+    # get stopping criteria from config file
+    stopping_criteria = config["iteration"]["stopping_criterion"]
+    evaluator = get_evaluator(stopping_criteria)
     
-    return feedback, revised_summary, cot, scores
+    
+    for iteration in range(max_iterations):
+        
+        summary_data["Given Summary"] = previous_summary
+        feedback = generate_feedback(summary_data, evaluator_prompt, pipe)
+        # cot, revised_summary = revise_summary(summary_data, feedback, improver_prompt, pipe)
+        improved_summary_data = revise_summary(summary_data, feedback, improver_prompt, pipe)
+        cot = improved_summary_data["part1_improvements"]
+        revised_summary = improved_summary_data["revised_summary"]
+        full_output = improved_summary_data["full_output"]
+        
+        
+        reference = summary_data["Actual"] #THIS IS PROBLEMATIC, YOU ARE USING THE | GOLD SUMMARY | TO EVALUATE THE PREDICTION
+
+        # scores = calculate_rouge_scores(summary_data["Actual"], revised_summary)
+        current_score = evaluator(reference, revised_summary)
+        
+
+        if previous_score is not None and current_score<= previous_score:
+            break
+        previous_score = current_score
+        previous_summary = revised_summary
+        # summary_data["predicted"] = revised_summary
+    
+    return feedback, revised_summary, cot

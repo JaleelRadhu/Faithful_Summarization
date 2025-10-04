@@ -1,6 +1,13 @@
-from utils.prompt_builder import fill_prompt
 
-def generate_feedback(summary_data, score_prompt, pipe):
-    cur_prompt = fill_prompt(score_prompt, summary_data)
-    response = pipe(cur_prompt, max_new_tokens=512, temperature=0.7)
-    return response[0]["generated_text"]
+def fill_prompt(template: str, data: dict):
+    template = template.format(**data)
+    return template
+
+
+
+
+if __name__ == "__main__":
+    template = open("prompts/test.txt").read()
+    data = {"name": "Alice", "day": "Monday"}
+    result = fill_prompt(template, data)
+    print(result)  # Output: Hello, Alice! Today is Monday.
