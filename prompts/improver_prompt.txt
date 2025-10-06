@@ -6,6 +6,8 @@ A faithful summary must:
 - Stay true to the **source Q&A**  
 - Remove **extraneous information, contradictions, perspective misalignments, and redundancies**.  
 
+**CRITICAL:** Follow the output format EXACTLY. Do NOT add extra sections".
+
 ---
 
 ## Part 1: Chain of Thought Improvements  
@@ -50,12 +52,17 @@ A faithful summary must:
 - **Summary to be Improved**: {Given Summary}
 - **Question**: {Question} 
 - **Answers**: {Answers} 
-- **Input Spans (for Pespective: {Perspective})**: {Input spans}
+- **Input Spans (for Pespective: {Perspective})**: {Input_spans}
 - **Feedback (scores & reasoning)**: {Feedback}  
 
 ---
 
-# 🔹 Output Format (Must Follow)
+## STRICT OUTPUT FORMAT (Follow Exactly)
+
+Your response must contain ONLY two parts. Do NOT add any other sections.
+
+
+# 🔹 Output Format (Must Follow):
 
 ### Part 1: Chain of Thought Improvements ONLY  
 Provide chain-of-thought improvements for each of the four error types so the corrected summary aligns closely with the "{{Perspective}}" perspective ({{Perspective_Def}}), reflecting insights from the provided question and answers.  
@@ -72,3 +79,8 @@ Revise the summary to make it fully faithful. Use the improvements listed above 
 
 **Rewritten Summary:**  
 - [Provide the revised summary here incorporating all improvements.]  
+
+---
+
+## STOP HERE - Do not generate anything after Part 2!
+

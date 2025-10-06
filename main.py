@@ -2,12 +2,16 @@ import yaml
 import pandas as pd
 from models.model_loader import load_model
 from pipeline.refinement_loop import refinement_loop
-from utils.io_utils import save_results
+# from utils.io_utils import save_results
 import argparse
 import os
 import json
 import pandas as pd
 import torch
+
+from dotenv import load_dotenv
+#load hf token from environment variable
+load_dotenv()
 def save_results(results, output_path): # helper
     
     """Helper function to save results to a CSV file."""
@@ -30,10 +34,10 @@ def main():
     args = parser.parse_args()
 
     # Load config
-    config = yaml.safe_load(open("config/default.yaml"))
+    config = yaml.safe_load(open("/home/abdullahm/jaleel/Faithfullness_Improver/configs/default.yaml"))
 
     # Load model pipeline
-    pipe = load_model(config["model"]["name"], quantization=config["model"]["quantization"])
+    pipe = load_model(config["model"]["name"], quantization=config["model"]["quantization"], hf_token=os.getenv("HF_TOKEN"))
 
     # Load data
     df = pd.read_csv(args.input_data)    
@@ -68,17 +72,19 @@ def main():
         
         try: 
             feedback, revised, cot = refinement_loop(summary_data, evaluator_prompt, improver_prompt, pipe)
+            results.append([row["Perspective"], feedback, revised, cot, row["Actual"]])
         except torch.cuda.OutOfMemoryError:
             print("CUDA Out of Memory. Skipping this row.")
             with open(f"{input_filename}_oom_errors.txt", "a") as f:
                 f.write(f"Row with Actual: {summary_data['Actual']}\n")
             continue
-        except Exception as e:
-            print(f"Other Error processing")
-            with open(f"{input_filename}_other_errors.txt", "a") as f:
-                f.write(f"Row with Actual: {summary_data['Actual']}, Error: {e}\n")
+        # except Exception as e:
+        #     print(f"Other Error processing: {e}")
+        #     with open(f"{input_filename}_other_errors.txt", "a") as f:
+        #         f.write(f"Row with Actual: {summary_data['Actual']}, Error: {e}\n")
+        #     continue
                 
-        results.append([row["Perspective"], feedback, revised, cot, row["Actual"]])
+        
 
     save_results(results, output_path)
 

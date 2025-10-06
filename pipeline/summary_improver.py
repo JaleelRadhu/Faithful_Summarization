@@ -7,7 +7,7 @@ def revise_summary(summary_data, feedback, improver_prompt, pipe):
     final_improver_prompt = improver_prompt.format(**{**summary_data, "Feedback": feedback})
     
     # Get model response
-    response = pipe(final_improver_prompt, max_new_tokens=512, temperature=0.7)
+    response = pipe(final_improver_prompt, max_new_tokens=512, temperature=0.7, return_full_text=False)
     revised_text = response[0]["generated_text"]
 
     # --- Extract Part 1 (Improvements) ---

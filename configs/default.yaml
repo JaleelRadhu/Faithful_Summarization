@@ -1,5 +1,5 @@
 model:
-  name: mistralai/Mistral-7B-Instruct-v0.2
+  name: mistralai/Mixtral-8x7B-Instruct-v0.1
   quantization: None
   backend: hf
   device: 0
@@ -19,7 +19,7 @@ improver_prompt_path: /home/abdullahm/jaleel/Faithfullness_Improver/prompts/impr
 
 iteration:
   max_iterations: 5
-  stopping_criterion: rouge-l
+  stopping_criterion: rouge-l-f
   tolerance: 0.01
 
 
