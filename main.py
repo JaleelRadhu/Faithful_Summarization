@@ -1,7 +1,7 @@
 import yaml
 import pandas as pd
 from models.model_loader import load_model
-from pipeline.refinement_loop import run_trial
+from pipeline.refinement_loop import refinement_loop
 from utils.io_utils import save_results
 import argparse
 import os
@@ -67,7 +67,7 @@ def main():
         }
         
         try: 
-            feedback, revised, cot = run_trial(summary_data, evaluator_prompt, improver_prompt, pipe)
+            feedback, revised, cot = refinement_loop(summary_data, evaluator_prompt, improver_prompt, pipe)
         except torch.cuda.OutOfMemoryError:
             print("CUDA Out of Memory. Skipping this row.")
             with open(f"{input_filename}_oom_errors.txt", "a") as f:

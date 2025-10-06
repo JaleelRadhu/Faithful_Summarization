@@ -6,7 +6,7 @@ from utils.evaluator import get_evaluator
 import yaml
 
 
-def run_trial(summary_data, evaluator_prompt, improver_prompt, pipe, max_iterations=5, tolerance=0.01):
+def refinement_loop(summary_data, evaluator_prompt, improver_prompt, pipe, max_iterations=5, tolerance=0.01):
     previous_summary = summary_data["predicted"]
     previous_score = None
 
@@ -21,21 +21,31 @@ def run_trial(summary_data, evaluator_prompt, improver_prompt, pipe, max_iterati
     for iteration in range(max_iterations):
         
         summary_data["Given Summary"] = previous_summary
+        
+        #generate feedback using evaluator prompt
         feedback = generate_feedback(summary_data, evaluator_prompt, pipe)
         # cot, revised_summary = revise_summary(summary_data, feedback, improver_prompt, pipe)
+        
+        print(f"Iteration {iteration+1} Feedback\n: {feedback}")
+        
+        #generate revised summary using improver prompt
         improved_summary_data = revise_summary(summary_data, feedback, improver_prompt, pipe)
+        
         cot = improved_summary_data["part1_improvements"]
         revised_summary = improved_summary_data["revised_summary"]
         full_output = improved_summary_data["full_output"]
         
+        print(f"Iteration {iteration+1} Full Output\n: {full_output}")
+        print(f"Iteration {iteration+1} Revised Summary\n: {revised_summary}")
         
-        reference = summary_data["Actual"] #THIS IS PROBLEMATIC, YOU ARE USING THE | GOLD SUMMARY | TO EVALUATE THE PREDICTION
+        reference = summary_data["Actual"] #THIS IS PROBLEMATIC, YOU ARE USING THE | GOLD SUMMARY | TO EVALUATE THE PREDICTION !!!
 
         # scores = calculate_rouge_scores(summary_data["Actual"], revised_summary)
         current_score = evaluator(reference, revised_summary)
         
 
-        if previous_score is not None and current_score<= previous_score:
+        if previous_score is not None and current_score <= previous_score:
+            print(f"Iteration {iteration+1}: No improvement in {stopping_criteria}. Stopping.")
             break
         previous_score = current_score
         previous_summary = revised_summary
