@@ -1,5 +1,5 @@
 model:
-  name: Qwen/Qwen2.5-7B-Instruct # mistralai/Mistral-7B-Instruct-v0.2
+  name:  Qwen/Qwen2.5-7B-Instruct # mistralai/Mistral-7B-Instruct-v0.3
   quantization: None
   backend: hf
   device: 0

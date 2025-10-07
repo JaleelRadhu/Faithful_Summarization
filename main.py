@@ -2,6 +2,8 @@ import yaml
 import pandas as pd
 from models.model_loader import load_model
 from pipeline.refinement_loop import refinement_loop
+from utils.generation import ChatGenerator
+from utils.evaluator import get_rouge_l_score
 # from utils.io_utils import save_results
 import argparse
 import os
@@ -12,6 +14,22 @@ import torch
 from dotenv import load_dotenv
 #load hf token from environment variable
 load_dotenv()
+
+
+def load_prompts(evaluator_path, improver_path):
+    """Load evaluator and improver prompts from files"""
+    with open(evaluator_path, 'r') as f:
+        evaluator_prompt = f.read()
+    with open(improver_path, 'r') as f:
+        improver_prompt = f.read()
+    return evaluator_prompt, improver_prompt
+
+def load_perspective_definitions(path):
+    """Load perspective definitions from JSON file"""
+    with open(path, 'r') as f:
+        return json.load(f)
+    
+    
 def save_results(results, output_path): # helper
     
     """Helper function to save results to a CSV file."""
@@ -29,64 +47,96 @@ def save_results(results, output_path): # helper
 
 def main():
     
-    parser = argparse.ArgumentParser(description="Run summary improvement pipeline")
-    parser.add_argument("--input_data", type=str, required=True, help="Path to input CSV file")
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--input_data', required=True, help='Path to input CSV file')
+    parser.add_argument('--config', default='configs/default.yaml', help='Path to config file')
     args = parser.parse_args()
-
+    
     # Load config
-    config = yaml.safe_load(open("/home/abdullahm/jaleel/Faithfullness_Improver/configs/default.yaml"))
+    with open(args.config, 'r') as f:
+        config = yaml.safe_load(f)
+    
+    # Load model and tokenizer
+    model, tokenizer = load_model(
+        config['model']['name'],
+        quantization=config['model'].get('quantization', 'None')
+    )
+    
+    system_prompt = "You are an expert summary faithfulness evaluator and  improver. Follow the instructions exactly and provide structured outputs."
+    pipe = ChatGenerator(model, tokenizer, system_prompt=system_prompt)
 
-    # Load model pipeline
-    pipe = load_model(config["model"]["name"], quantization=config["model"]["quantization"], hf_token=os.getenv("HF_TOKEN"))
-
-    # Load data
-    df = pd.read_csv(args.input_data)    
+    print(f"Device set to use {model.device}")
     
-    evaluator_prompt = open(config["evaluator_prompt_path"]).read()
-    improver_prompt = open(config["improver_prompt_path"]).read()
+    # Load prompts and perspective definitions
+    evaluator_prompt, improver_prompt = load_prompts(
+        config['evaluator_prompt_path'],
+        config['improver_prompt_path']
+    )
+    perspective_defs = load_perspective_definitions(config['perspective_definitions_path'])
     
     
-    # load json file of perspective definitions as p_def_dic
-    p_def_path = config["perspective_definitions_path"]
-    with open(p_def_path, 'r') as f:
-        p_def_dic = json.load(f)
+    # Load input data
+    df = pd.read_csv(args.input_data)
+    
+    results = []
     
     # Determine output path
     input_filename = os.path.splitext(os.path.basename(args.input_data))[0]
     output_dir = config["data"]["output_dir"]
     os.makedirs(output_dir, exist_ok=True)
-    output_path = os.path.join(output_dir, f"{input_filename}_improved.csv")
+    output_path = os.path.join(output_dir, f"{input_filename}_improved.json")
     
-    results = []
-    for _, row in df.iterrows():
-        perspective_def = p_def_dic[row["Perspective"]]
+    for idx, row in df.iterrows():
+        print(f"\n{'='*80}")
+        print(f"Processing sample {idx + 1}/{len(df)}")
+        print(f"{'='*80}\n")
+        
+        # Prepare summary data
         summary_data = {
-            "Question": row["question"],
-            "Answers": row["Answers"],
-            "Perspective": row["Perspective"],
-            "Predicted": row["Predicted"],
-            "Input_spans": row["Input_spans"],
-            "Actual": row["Actual"],
-            "Perspective_Def": perspective_def
+            "Perspective": row['Perspective'],
+            "Perspective_Def": perspective_defs.get(row['Perspective'], ""),
+            "Question": row['question'],
+            "Answers": row['Answers'],
+            "Input_spans": row['Input_spans'],
+            "Predicted": row['Predicted'],
+            "Actual": row['Actual'],
+            "Given Summary": row['Predicted']  # Initial summary
         }
+        # starting rouge l f score
+        starting_score = get_rouge_l_score(row['Actual'], row['Predicted'])
+        print(f"Initial ROUGE Scores: {starting_score}")
+        # Run refinement loop
+        feedback, revised_summary, cot = refinement_loop(
+            summary_data,
+            evaluator_prompt,
+            improver_prompt,
+            pipe,
+            max_iterations=config['iteration']['max_iterations']
+        )
         
-        try: 
-            feedback, revised, cot = refinement_loop(summary_data, evaluator_prompt, improver_prompt, pipe)
-            results.append([row["Perspective"], feedback, revised, cot, row["Actual"]])
-        except torch.cuda.OutOfMemoryError:
-            print("CUDA Out of Memory. Skipping this row.")
-            with open(f"{input_filename}_oom_errors.txt", "a") as f:
-                f.write(f"Row with Actual: {summary_data['Actual']}\n")
-            continue
-        # except Exception as e:
-        #     print(f"Other Error processing: {e}")
-        #     with open(f"{input_filename}_other_errors.txt", "a") as f:
-        #         f.write(f"Row with Actual: {summary_data['Actual']}, Error: {e}\n")
-        #     continue
-                
+        # Store results
+        results.append({
+            "original_summary": row['Predicted'],
+            "revised_summary": revised_summary,
+            "Gold Summary": row['Actual'],
+            "feedback": feedback,
+            "cot": cot,
+            "perspective": row['Perspective'],
+            "question": row['question'],
+            "starting score": starting_score,
+            "final score": get_rouge_l_score(row['Actual'], revised_summary) 
+            })
         
-
-    save_results(results, output_path)
+        print(f"\n✅ Completed sample {idx + 1}")
+        
+    # Save results
+    # output_path = config['data']['output_dir'] + 'refined_summaries.json'
+    with open(output_path, 'w') as f:
+        json.dump(results, f, indent=2)
+    
+    print(f"\n{'='*80}")
+    print(f"✅ All samples processed. Results saved to: {output_path}")
+    print(f"{'='*80}")
 
 if __name__ == "__main__":
     main()

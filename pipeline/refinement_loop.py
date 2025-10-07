@@ -26,7 +26,7 @@ def refinement_loop(summary_data, evaluator_prompt, improver_prompt, pipe, max_i
         feedback = generate_feedback(summary_data, evaluator_prompt, pipe)
         # cot, revised_summary = revise_summary(summary_data, feedback, improver_prompt, pipe)
         print("--feedback_start--"*5)
-        print(f"Iteration {iteration+1} Feedback\n: {feedback}")
+        print(f"Iteration {iteration+1} Feedback:\n {feedback}")
         print("--feedback_end--"*5)
         
         #generate revised summary using improver prompt
@@ -35,12 +35,18 @@ def refinement_loop(summary_data, evaluator_prompt, improver_prompt, pipe, max_i
         cot = improved_summary_data["part1_improvements"]
         revised_summary = improved_summary_data["revised_summary"]
         full_output = improved_summary_data["full_output"]
-        print("--output_start--"*5)
-        print(f"Iteration {iteration+1} Full Improvement Output\n: {full_output}")
-        print("--output_end--"*5)
-        print("--output_start--"*5)
+        print("--full output_start--"*5)
+        print(f"Iteration {iteration+1} Full Improvement Output:\n {full_output}")
+        print("--full output_end--"*5)
+        print("--revised_summary_start--"*5)
         print(f"Iteration {iteration+1} Revised Summary:\n {revised_summary}")
-        print("--output_end--"*5)
+        print("--revised_summary_end--"*5)
+        
+        if not revised_summary or revised_summary.strip() == "":
+            print(f"⚠️ Warning: Iteration {iteration+1} produced empty summary. Using previous summary.")
+            revised_summary = previous_summary
+            break
+        
         
         reference = summary_data["Actual"] #THIS IS PROBLEMATIC, YOU ARE USING THE | GOLD SUMMARY | TO EVALUATE THE PREDICTION !!!
 
