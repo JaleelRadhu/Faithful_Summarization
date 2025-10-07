@@ -36,7 +36,7 @@ def refinement_loop(summary_data, evaluator_prompt, improver_prompt, pipe, max_i
         revised_summary = improved_summary_data["revised_summary"]
         full_output = improved_summary_data["full_output"]
         print("--output_start--"*5)
-        print(f"Iteration {iteration+1} Full Output\n: {full_output}")
+        print(f"Iteration {iteration+1} Full Improvement Output\n: {full_output}")
         print("--output_end--"*5)
         print("--output_start--"*5)
         print(f"Iteration {iteration+1} Revised Summary:\n {revised_summary}")

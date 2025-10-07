@@ -2,8 +2,6 @@ import re
 
 def revise_summary(summary_data, feedback, improver_prompt, pipe):
     # Fill the improver prompt with summary, perspective, etc.
-    
-    # final_improver_prompt = fill_prompt(improver_prompt, {**summary_data, "Feedback": feedback})
     final_improver_prompt = improver_prompt.format(**{**summary_data, "Feedback": feedback})
     
     # Get model response
@@ -12,15 +10,22 @@ def revise_summary(summary_data, feedback, improver_prompt, pipe):
 
     # --- Extract Part 1 (Improvements) ---
     part1 = None
-    match_part1 = re.search(r"Part 1:.*?(?=Part 2:)", revised_text, re.DOTALL)
+    # Updated regex to match "### Part 1:" format
+    match_part1 = re.search(r"###\s*Part 1:.*?(?=###\s*Part 2:)", revised_text, re.DOTALL | re.IGNORECASE)
     if match_part1:
         part1 = match_part1.group(0).strip()
 
     # --- Extract Part 2 (only final revised summary) ---
     part2_summary = None
-    match_part2 = re.search(r"Rewritten Summary:\s*[-–]?\s*(.*)", revised_text, re.DOTALL)
+    # Updated regex to match "- **Rewritten Summary**:" format with bullet point
+    match_part2 = re.search(r"-\s*\*\*Rewritten Summary\*\*:\s*(.*?)(?=---|$)", revised_text, re.DOTALL | re.IGNORECASE)
     if match_part2:
         part2_summary = match_part2.group(1).strip()
+    else:
+        # Fallback: try without the bullet point
+        match_part2 = re.search(r"\*\*Rewritten Summary\*\*:\s*(.*?)(?=---|$)", revised_text, re.DOTALL | re.IGNORECASE)
+        if match_part2:
+            part2_summary = match_part2.group(1).strip()
 
     return {
         "full_output": revised_text.strip(),
