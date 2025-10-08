@@ -10,6 +10,7 @@ import os
 import json
 import pandas as pd
 import torch
+from tqdm import tqdm
 
 from dotenv import load_dotenv
 #load hf token from environment variable
@@ -86,14 +87,15 @@ def main():
     os.makedirs(output_dir, exist_ok=True)
     output_path = os.path.join(output_dir, f"{input_filename}_improved.json")
     
-    for idx, row in df.iterrows():
+    # use tqdm for progress bar
+    for idx, row in tqdm(df.iterrows(), total=len(df), desc="Processing samples"):
         print(f"\n{'='*80}")
         print(f"Processing sample {idx + 1}/{len(df)}")
         print(f"{'='*80}\n")
         
         # Prepare summary data
         summary_data = {
-            "Perspective": row['Perspective'],
+            "Perspective": row['Perspective'],          
             "Perspective_Def": perspective_defs.get(row['Perspective'], ""),
             "Question": row['question'],
             "Answers": row['Answers'],
@@ -114,7 +116,6 @@ def main():
             max_iterations=config['iteration']['max_iterations']
         )
         
-        # Store results
         results.append({
             "original_summary": row['Predicted'],
             "revised_summary": revised_summary,
@@ -128,6 +129,50 @@ def main():
             })
         
         print(f"\n✅ Completed sample {idx + 1}")
+    
+    # for idx, row in df.iterrows():
+    #     print(f"\n{'='*80}")
+    #     print(f"Processing sample {idx + 1}/{len(df)}")
+    #     print(f"{'='*80}\n")
+        
+    #     # Prepare summary data
+    #     summary_data = {
+    #         "Perspective": row['Perspective'],
+    #         "Perspective_Def": perspective_defs.get(row['Perspective'], ""),
+    #         "Question": row['question'],
+    #         "Answers": row['Answers'],
+    #         "Input_spans": row['Input_spans'],
+    #         "Predicted": row['Predicted'],
+    #         "Actual": row['Actual'],
+    #         "Given Summary": row['Predicted']  # Initial summary
+    #     }
+    #     # starting rouge l f score
+    #     starting_score = get_rouge_l_score(row['Actual'], row['Predicted'])
+    #     print(f"Initial ROUGE Scores: {starting_score}")
+    #     # Run refinement loop
+    #     feedback, revised_summary, cot = refinement_loop(
+    #         summary_data,
+    #         evaluator_prompt,
+    #         improver_prompt,
+    #         pipe,
+    #         max_iterations=config['iteration']['max_iterations']
+    #     )
+        
+        # Store results
+        # results.append({
+        #     "original_summary": row['Predicted'],
+        #     "revised_summary": revised_summary,
+        #     "Gold Summary": row['Actual'],
+        #     "feedback": feedback,
+        #     "cot": cot,
+        #     "perspective": row['Perspective'],
+        #     "question": row['question'],
+        #     "starting score": starting_score,
+        #     "final score": get_rouge_l_score(row['Actual'], revised_summary) 
+        #     })
+        
+        # print(f"\n✅ Completed sample {idx + 1}")
+        
         
     # Save results
     # output_path = config['data']['output_dir'] + 'refined_summaries.json'
