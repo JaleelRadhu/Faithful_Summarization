@@ -60,5 +60,9 @@ def refinement_loop(summary_data, evaluator_prompt, improver_prompt, pipe, max_i
         previous_score = current_score
         previous_summary = revised_summary
         # summary_data["predicted"] = revised_summary
+        
+        # print all important info  
+        
+
     
     return feedback, revised_summary, cot
