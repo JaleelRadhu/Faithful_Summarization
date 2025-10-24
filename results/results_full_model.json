@@ -1,0 +1,122 @@
+{
+    "complete_base_dummy_improved_stop-rouge-l-f": {
+        "rouge_l": {
+            "starting_score": 0.188291512334864,
+            "final_score": 0.3037471056913455
+        },
+        "rouge_1": {
+            "starting_score": 0.188291512334864,
+            "final_score": 0.3188986208428607
+        },
+        "rouge_2": {
+            "starting_score": 0.05228758004293226,
+            "final_score": 0.08465845135622896
+        },
+        "meteor": {
+            "starting_score": 0.1480259267144513,
+            "final_score": 0.22853967561248142
+        },
+        "bertscore": {
+            "starting_score": 0.858330249786377,
+            "final_score": 0.8814340631167094
+        },
+        "llm_metrics": {
+            "perspective_misalignment": {
+                "starting_score": 4.333333333333333,
+                "final_score": 5.0
+            },
+            "extraneous_information": {
+                "starting_score": 4.0,
+                "final_score": 4.666666666666667
+            },
+            "contradiction": {
+                "starting_score": 3.6666666666666665,
+                "final_score": 5.0
+            },
+            "redundancy": {
+                "starting_score": 5.0,
+                "final_score": 4.666666666666667
+            }
+        }
+    },
+    "complete_base_dummy_2_improved_stop-rouge-l-f": {
+        "rouge_l": {
+            "starting_score": 0.527718901789554,
+            "final_score": 0.5005170176454049
+        },
+        "rouge_1": {
+            "starting_score": 0.5597449437267694,
+            "final_score": 0.5267771802470309
+        },
+        "rouge_2": {
+            "starting_score": 0.3744467877008628,
+            "final_score": 0.34958185796730473
+        },
+        "meteor": {
+            "starting_score": 0.4505968199550073,
+            "final_score": 0.398456098180487
+        },
+        "bertscore": {
+            "starting_score": 0.9200076758861542,
+            "final_score": 0.9164224565029144
+        },
+        "llm_metrics": {
+            "perspective_misalignment": {
+                "starting_score": 4.75,
+                "final_score": 5.0
+            },
+            "extraneous_information": {
+                "starting_score": 4.5,
+                "final_score": 5.0
+            },
+            "contradiction": {
+                "starting_score": 4.5,
+                "final_score": 5.0
+            },
+            "redundancy": {
+                "starting_score": 4.5,
+                "final_score": 5.0
+            }
+        }
+    },
+    "complete_base_dummy_improved_stop-rouge-l-f_imp_eval_model-Qwen_Qwen2.5_7B_Instruct": {
+        "rouge_l": {
+            "starting_score": 0.188291512334864,
+            "final_score": 0.35765802353879783
+        },
+        "rouge_1": {
+            "starting_score": 0.188291512334864,
+            "final_score": 0.3679144337952081
+        },
+        "rouge_2": {
+            "starting_score": 0.05228758004293226,
+            "final_score": 0.12485037268839615
+        },
+        "meteor": {
+            "starting_score": 0.1480259267144513,
+            "final_score": 0.2674888643932528
+        },
+        "bertscore": {
+            "starting_score": 0.858330249786377,
+            "final_score": 0.8819514711697897
+        },
+        "llm_metrics": {
+            "perspective_misalignment": {
+                "starting_score": 4.0,
+                "final_score": 5.0
+            },
+            "extraneous_information": {
+                "starting_score": 4.0,
+                "final_score": 4.333333333333333
+            },
+            "contradiction": {
+                "starting_score": 3.6666666666666665,
+                "final_score": 5.0
+            },
+            "redundancy": {
+                "starting_score": 4.666666666666667,
+                "final_score": 4.666666666666667
+            }
+        }
+    }
+}

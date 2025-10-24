@@ -17,17 +17,21 @@ def refinement_loop(summary_data, evaluator_prompt, improver_prompt, pipe, max_i
     stopping_criteria = config["iteration"]["stopping_criterion"]
     evaluator = get_evaluator(stopping_criteria)
     
-    
+    total_iterations = 0
     for iteration in range(max_iterations):
         
         summary_data["Given Summary"] = previous_summary
         
         #generate feedback using evaluator prompt
         feedback = generate_feedback(summary_data, evaluator_prompt, pipe)
+        if iteration == 0:
+            first_feedback = feedback
+        # write the above in a single line
+        
         # cot, revised_summary = revise_summary(summary_data, feedback, improver_prompt, pipe)
-        print("--feedback_start--"*5)
-        print(f"Iteration {iteration+1} Feedback:\n {feedback}")
-        print("--feedback_end--"*5)
+        # print("--feedback_start--"*5)
+        # print(f"Iteration {iteration+1} Feedback:\n {feedback}")
+        # print("--feedback_end--"*5)
         
         #generate revised summary using improver prompt
         improved_summary_data = revise_summary(summary_data, feedback, improver_prompt, pipe)
@@ -35,12 +39,12 @@ def refinement_loop(summary_data, evaluator_prompt, improver_prompt, pipe, max_i
         cot = improved_summary_data["part1_improvements"]
         revised_summary = improved_summary_data["revised_summary"]
         full_output = improved_summary_data["full_output"]
-        print("--full output_start--"*5)
-        print(f"Iteration {iteration+1} Full Improvement Output:\n {full_output}")
-        print("--full output_end--"*5)
-        print("--revised_summary_start--"*5)
-        print(f"Iteration {iteration+1} Revised Summary:\n {revised_summary}")
-        print("--revised_summary_end--"*5)
+        # print("--full output_start--"*5)
+        # print(f"Iteration {iteration+1} Full Improvement Output:\n {full_output}")
+        # print("--full output_end--"*5)
+        # print("--revised_summary_start--"*5)
+        # print(f"Iteration {iteration+1} Revised Summary:\n {revised_summary}")
+        # print("--revised_summary_end--"*5)
         
         if not revised_summary or revised_summary.strip() == "":
             print(f"⚠️ Warning: Iteration {iteration+1} produced empty summary. Using previous summary.")
@@ -60,9 +64,10 @@ def refinement_loop(summary_data, evaluator_prompt, improver_prompt, pipe, max_i
         previous_score = current_score
         previous_summary = revised_summary
         # summary_data["predicted"] = revised_summary
+        total_iterations += 1
         
         # print all important info  
         
 
     
-    return feedback, revised_summary, cot
+    return first_feedback, feedback, revised_summary, cot, total_iterations
