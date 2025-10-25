@@ -20,14 +20,25 @@ def revise_summary(summary_data, feedback, improver_prompt, pipe):
     
     # Try multiple patterns to match different output formats
     patterns = [
-        # Pattern 1: **Rewritten Summary:** followed by bullet point
-        r"\*\*Rewritten Summary:\*\*\s*\n\s*-\s*(.*?)(?=\n\s*---|$)",
-        # Pattern 2: - **Rewritten Summary**:
-        r"-\s*\*\*Rewritten Summary\*\*:\s*(.*?)(?=\n\s*---|$)",
-        # Pattern 3: **Rewritten Summary:** without bullet
-        r"\*\*Rewritten Summary:\*\*\s*(.*?)(?=\n\s*---|$)",
-        # Pattern 4: Generic fallback - capture everything after "Rewritten Summary"
-        r"Rewritten Summary[:\*\s]*\n?\s*-?\s*(.*?)(?=\n\s*---|$)",
+        
+        # Pattern 1: **(Rewritten|Revised) Summary:** followed by bullet point
+        r"\*\*(?:Rewritten|Revised) Summary:\*\*\s*\n\s*-\s*(.*?)(?=\n\s*---|$)",
+        # Pattern 2: - **(Rewritten|Revised) Summary**:
+        r"-\s*\*\*(?:Rewritten|Revised) Summary\*\*:\s*(.*?)(?=\n\s*---|$)",
+        # Pattern 3: **(Rewritten|Revised) Summary:** without bullet
+        r"\*\*(?:Rewritten|Revised) Summary:\*\*\s*(.*?)(?=\n\s*---|$)",
+        # Pattern 4: Generic fallback - capture everything after "(Rewritten|Revised) Summary"
+        r"(?:Rewritten|Revised) Summary[:\*\s]*\n?\s*-?\s*(.*?)(?=\n\s*---|$)",
+        # Pattern for "### Part 2: Summary Revision" format
+        r"###\s*Part 2:\s*Summary Revision\s*[:\n]\s*\"?(.*?)\"?(?=\n\s*---|$)"
+                # Pattern 1: **Rewritten Summary:** followed by bullet point
+        # r"\*\*Rewritten Summary:\*\*\s*\n\s*-\s*(.*?)(?=\n\s*---|$)",
+        # # Pattern 2: - **Rewritten Summary**:
+        # r"-\s*\*\*Rewritten Summary\*\*:\s*(.*?)(?=\n\s*---|$)",
+        # # Pattern 3: **Rewritten Summary:** without bullet
+        # r"\*\*Rewritten Summary:\*\*\s*(.*?)(?=\n\s*---|$)",
+        # # Pattern 4: Generic fallback - capture everything after "Rewritten Summary"
+        # r"Rewritten Summary[:\*\s]*\n?\s*-?\s*(.*?)(?=\n\s*---|$)",
     ]
     
     for pattern in patterns:

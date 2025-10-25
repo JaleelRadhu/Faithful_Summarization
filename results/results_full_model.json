@@ -13,36 +13,14 @@
             "final_score": 0.08465845135622896
         },
         "meteor": {
-            "starting_score": 0.1480259267144513,
-            "final_score": 0.22853967561248142
-        },
-        "bertscore": {
-            "starting_score": 0.858330249786377,
-            "final_score": 0.8814340631167094
-        },
-        "llm_metrics": {
-            "perspective_misalignment": {
-                "starting_score": 4.333333333333333,
-                "final_score": 5.0
-            },
-            "extraneous_information": {
-                "starting_score": 4.0,
-                "final_score": 4.666666666666667
-            },
-            "contradiction": {
-                "starting_score": 3.6666666666666665,
-                "final_score": 5.0
-            },
-            "redundancy": {
-                "starting_score": 5.0,
-                "final_score": 4.666666666666667
-            }
+            "starting_score": 0.12048659538199287,
+            "final_score": 0.24289670164315103
         }
     },
     "complete_base_dummy_2_improved_stop-rouge-l-f": {
         "rouge_l": {
-            "starting_score": 0.527718901789554,
-            "final_score": 0.5005170176454049
+            "starting_score": 0.5338917412957269,
+            "final_score": 0.5106758082958114
         },
         "rouge_1": {
             "starting_score": 0.5597449437267694,
@@ -53,70 +31,44 @@
             "final_score": 0.34958185796730473
         },
         "meteor": {
-            "starting_score": 0.4505968199550073,
-            "final_score": 0.398456098180487
-        },
-        "bertscore": {
-            "starting_score": 0.9200076758861542,
-            "final_score": 0.9164224565029144
-        },
-        "llm_metrics": {
-            "perspective_misalignment": {
-                "starting_score": 4.75,
-                "final_score": 5.0
-            },
-            "extraneous_information": {
-                "starting_score": 4.5,
-                "final_score": 5.0
-            },
-            "contradiction": {
-                "starting_score": 4.5,
-                "final_score": 5.0
-            },
-            "redundancy": {
-                "starting_score": 4.5,
-                "final_score": 5.0
-            }
+            "starting_score": 0.582694460320638,
+            "final_score": 0.5277041176409634
         }
     },
     "complete_base_dummy_improved_stop-rouge-l-f_imp_eval_model-Qwen_Qwen2.5_7B_Instruct": {
         "rouge_l": {
-            "starting_score": 0.188291512334864,
-            "final_score": 0.35765802353879783
+            "starting_score": 0.30263148905911635,
+            "final_score": 0.31891565819136797
         },
         "rouge_1": {
-            "starting_score": 0.188291512334864,
-            "final_score": 0.3679144337952081
+            "starting_score": 0.3396105240855493,
+            "final_score": 0.36119038110678797
         },
         "rouge_2": {
-            "starting_score": 0.05228758004293226,
-            "final_score": 0.12485037268839615
+            "starting_score": 0.14143316217663063,
+            "final_score": 0.15263616806492195
         },
         "meteor": {
-            "starting_score": 0.1480259267144513,
-            "final_score": 0.2674888643932528
+            "starting_score": 0.3226715375169315,
+            "final_score": 0.3140238174977905
+        }
+    },
+    "complete_base_dummy_improved_stop-rouge-l-f_imp_eval_model-microsoft_Phi_3_mini_4k_instruct": {
+        "rouge_l": {
+            "starting_score": 0.30263148905911635,
+            "final_score": 0.21321196912257387
         },
-        "bertscore": {
-            "starting_score": 0.858330249786377,
-            "final_score": 0.8819514711697897
+        "rouge_1": {
+            "starting_score": 0.3396105240855493,
+            "final_score": 0.2460347051635658
         },
-        "llm_metrics": {
-            "perspective_misalignment": {
-                "starting_score": 4.0,
-                "final_score": 5.0
-            },
-            "extraneous_information": {
-                "starting_score": 4.0,
-                "final_score": 4.333333333333333
-            },
-            "contradiction": {
-                "starting_score": 3.6666666666666665,
-                "final_score": 5.0
-            },
-            "redundancy": {
-                "starting_score": 4.666666666666667,
-                "final_score": 4.666666666666667
-            }
+        "rouge_2": {
+            "starting_score": 0.14143316217663063,
+            "final_score": 0.0627735602906534
+        },
+        "meteor": {
+            "starting_score": 0.3226715375169315,
+            "final_score": 0.21754912902301796
         }
     }
 }

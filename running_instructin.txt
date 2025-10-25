@@ -1,0 +1,4 @@
+the input data should be in the format similar to files in data/
+
+
+python -m vllm.entrypoints.openai.api_server     --model "Qwen/Qwen2.5-7B-Instruct"     --tensor-parallel-size 2     --port 8000 --gpu-memory-utilization 0.60

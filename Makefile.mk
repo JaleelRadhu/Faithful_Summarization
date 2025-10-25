@@ -12,7 +12,7 @@ run:
 	@# Loop over each file defined in the INPUT_FILES variable
 	@for file in $(INPUT_FILES); do \
 		echo "\n[INFO] Processing file: $$file"; \
-		$(PYTHON_ENV) $(PROJECT_ROOT)/main.py --input_data $(DATA_DIR)/$$file || echo "[WARN] Failed to process $$file. Continuing..."; \
+		$(PYTHON_ENV) $(PROJECT_ROOT)/main_new.py --input_data $(DATA_DIR)/$$file || echo "[WARN] Failed to process $$file. Continuing..."; \
 	done
 	
 	@echo "\n[INFO] Running final evaluation script..."

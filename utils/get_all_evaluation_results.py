@@ -51,9 +51,9 @@ def get_file_metrics(file_path):
         ("rouge_1", get_rouge_1_score),
         ("rouge_2", get_rouge_2_score),
         ("meteor", get_meteor_score),
-        ("bertscore", get_BERTScore),
+        # ("bertscore", get_BERTScore),
         # ("bartscore", get_BARTScore),
-        ("llm_metrics", get_llm_metrics) # This one might return multiple sub-scores
+        # ("llm_metrics", get_llm_metrics) # This one might return multiple sub-scores
     ]
 
     # This list will store all individual scores for each item, before averaging them out.
@@ -103,8 +103,8 @@ def get_file_metrics(file_path):
             else:
                 # For general metrics (ROUGE, METEOR, BERTScore, BARTScore)
                 # Assuming evaluator_func takes (candidate_summary, reference_summary)
-                starting_score = evaluator_func(original_summary, reference)
-                final_score = evaluator_func(improved_summary, reference)
+                starting_score = evaluator_func( reference, original_summary,)
+                final_score = evaluator_func( reference, improved_summary)
                 item_metric_scores[metric_name] = {
                     "starting_score": starting_score,
                     "final_score": final_score

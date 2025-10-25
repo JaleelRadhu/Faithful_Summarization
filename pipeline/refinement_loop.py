@@ -49,6 +49,9 @@ def refinement_loop(summary_data, evaluator_prompt, improver_prompt, pipe, max_i
         if not revised_summary or revised_summary.strip() == "":
             print(f"⚠️ Warning: Iteration {iteration+1} produced empty summary. Using previous summary.")
             revised_summary = previous_summary
+            print("--full output_start--"*5)
+            print(f"Iteration {iteration+1} Full Improvement Output:\n {full_output}")
+            print("--full output_end--"*5)
             break
         
         

@@ -1,0 +1,1104 @@
+[
+  {
+    "question": "Do men produce more gas than women?",
+    "perspective": "INFORMATION",
+    "answers": [
+      "LOL cute question, No men do not produce more gas than women. It's just that guys think gas is funny or they just let them rip, now honestly when was the last time you saw/heard a woman just let it rip? You answered your own question we just hide it or at least try.",
+      "every person is differnt and i think it is totally social....."
+    ],
+    "input_spans": [
+      "No men do not produce more gas than women"
+    ],
+    "Actual": "Men do not produce more gas than women.",
+    "Predicted": "Based on the provided answers, here is a faithful, perspective-aware summary from the \"INFORMATION\" perspective:\n\nMen do not produce more gas than women."
+  },
+  {
+    "question": "Did anybody come across this disease call Pins And Needles?",
+    "perspective": "INFORMATION",
+    "answers": [
+      "Pins and needles\n \n  \n\n'Pins and needles' (paraesthesia) is a sensation of uncomfortable tingling or prickling, usually felt in the hands or feet. The affected area is sometimes said to have 'fallen asleep'. A common cause is leaning or lying awkwardly on a limb, which either presses against the nerves or reduces the blood supply to the local area. Changing position quickly restores normal feeling. Any numbness is soon replaced by the tingling and prickling sensation, as the nerves start sending messages again to the brain and spinal cord. In some cases, pins and needles are caused by nerve damage or certain disorders of the central nervous system. Always see your doctor if you experience frequent or persistent bouts of pins and needles.\n\nSymptoms\nThe symptoms of pins and needles include:\n\n    * Hands and feet are usually affected\n    * Initial numbness and heaviness\n    * Prickling and tingling sensation on the skin\n    * Return of normal feeling a few minutes after changing position.\n\nA range of causes\nPins and needles can be caused by a wide range of events and conditions, including:\n\n    * Pressure on nerves\n    * Reduced blood supply\n    * Nerve injury\n    * Hyperventilation or breathing excessively\n    * The effect of toxic substances on the nerves, such as alcohol or lead\n    * Certain medications\n    * Diabetes\n    * Multiple sclerosis\n    * Hypothyroidism (underactive thyroid gland)\n    * Transient Ischaemic Attack (TIA)\n    * Stroke.",
+      "This is not a disease as far as I know.  What it is is when an extremitiy of the body \"falls asleep\" because blood doesn't flow properly to it.  The way to remedy it is to get the blood flowing by rubbing the part or flapping or hitting it around."
+    ],
+    "input_spans": [
+      "'Pins and needles' (paraesthesia) is a sensation of uncomfortable tingling or prickling, usually felt in the hands or feet.",
+      "The affected area is sometimes said to have 'fallen asleep'",
+      "Changing position quickly restores normal feeling. Any numbness is soon replaced by the tingling and prickling sensation, as the nerves start sending messages again to the brain and spinal cord"
+    ],
+    "Actual": "For information purpose Pins and needles (paraesthesia) is an uncomfortable tingling or prickling sensation, often in the hands or feet also called \"fallen asleep.\" This sensation occurs when nerves begin to send messages again after a change in position, replacing numbness with tingling as normal feeling returns.",
+    "Predicted": "Pins and needles, also known as paraesthesia, is a sensation of uncomfortable tingling or prickling, typically felt in the hands or feet. It occurs when the affected area 'falls asleep' due to reduced blood flow or pressure on nerves. This sensation is usually temporary and can be relieved by changing position or restoring blood flow through rubbing, flapping, or hitting the affected area."
+  },
+  {
+    "question": "Did anybody come across this disease call Pins And Needles?",
+    "perspective": "CAUSE",
+    "answers": [
+      "Pins and needles\n \n  \n\n'Pins and needles' (paraesthesia) is a sensation of uncomfortable tingling or prickling, usually felt in the hands or feet. The affected area is sometimes said to have 'fallen asleep'. A common cause is leaning or lying awkwardly on a limb, which either presses against the nerves or reduces the blood supply to the local area. Changing position quickly restores normal feeling. Any numbness is soon replaced by the tingling and prickling sensation, as the nerves start sending messages again to the brain and spinal cord. In some cases, pins and needles are caused by nerve damage or certain disorders of the central nervous system. Always see your doctor if you experience frequent or persistent bouts of pins and needles.\n\nSymptoms\nThe symptoms of pins and needles include:\n\n    * Hands and feet are usually affected\n    * Initial numbness and heaviness\n    * Prickling and tingling sensation on the skin\n    * Return of normal feeling a few minutes after changing position.\n\nA range of causes\nPins and needles can be caused by a wide range of events and conditions, including:\n\n    * Pressure on nerves\n    * Reduced blood supply\n    * Nerve injury\n    * Hyperventilation or breathing excessively\n    * The effect of toxic substances on the nerves, such as alcohol or lead\n    * Certain medications\n    * Diabetes\n    * Multiple sclerosis\n    * Hypothyroidism (underactive thyroid gland)\n    * Transient Ischaemic Attack (TIA)\n    * Stroke.",
+      "This is not a disease as far as I know.  What it is is when an extremitiy of the body \"falls asleep\" because blood doesn't flow properly to it.  The way to remedy it is to get the blood flowing by rubbing the part or flapping or hitting it around."
+    ],
+    "input_spans": [
+      "common cause is leaning or lying awkwardly on a limb, which either presses against the nerves or reduces the blood supply to the local area",
+      "aused by nerve damage or certain disorders of the central nervous system.",
+      "caused by a wide range of events and conditions, including:    * Pressure on nerves    * Reduced blood supply    * Nerve injury    * Hyperventilation or breathing excessively    * The effect of toxic substances on the nerves, such as alcohol or lead    * Certain medications    * Diabetes    * Multiple sclerosis    * Hypothyroidism (underactive thyroid gland)    * Transient Ischaemic Attack (TIA)    * Stroke"
+    ],
+    "Actual": "Some causes of numbness and tingling in limbs include awkward positioning, nerve damage, central nervous system disorders, pressure on nerves, reduced blood supply, nerve injuries, hyperventilation, toxic substances (like alcohol or lead), certain medications, diabetes, multiple sclerosis, hypothyroidism, transient ischemic attack (TIA), and stroke.",
+    "Predicted": "Based on the provided answers, from the perspective of CAUSE, pins and needles can be caused by a variety of factors, including:\n\n* Leaning or lying awkwardly on a limb, which presses against nerves or reduces blood supply\n* Nerve damage or disorders of the central nervous system\n* Pressure on nerves\n* Reduced blood supply\n* Nerve injury\n* Hyperventilation or excessive breathing\n* Toxic substances affecting nerves, such as alcohol or lead\n* Certain medications\n* Diabetes\n* Multiple sclerosis\n* Hypothyroidism (underactive thyroid gland)\n* Transient Ischaemic Attack (TIA)\n* Stroke"
+  },
+  {
+    "question": "Did anybody come across this disease call Pins And Needles?",
+    "perspective": "SUGGESTION",
+    "answers": [
+      "Pins and needles\n \n  \n\n'Pins and needles' (paraesthesia) is a sensation of uncomfortable tingling or prickling, usually felt in the hands or feet. The affected area is sometimes said to have 'fallen asleep'. A common cause is leaning or lying awkwardly on a limb, which either presses against the nerves or reduces the blood supply to the local area. Changing position quickly restores normal feeling. Any numbness is soon replaced by the tingling and prickling sensation, as the nerves start sending messages again to the brain and spinal cord. In some cases, pins and needles are caused by nerve damage or certain disorders of the central nervous system. Always see your doctor if you experience frequent or persistent bouts of pins and needles.\n\nSymptoms\nThe symptoms of pins and needles include:\n\n    * Hands and feet are usually affected\n    * Initial numbness and heaviness\n    * Prickling and tingling sensation on the skin\n    * Return of normal feeling a few minutes after changing position.\n\nA range of causes\nPins and needles can be caused by a wide range of events and conditions, including:\n\n    * Pressure on nerves\n    * Reduced blood supply\n    * Nerve injury\n    * Hyperventilation or breathing excessively\n    * The effect of toxic substances on the nerves, such as alcohol or lead\n    * Certain medications\n    * Diabetes\n    * Multiple sclerosis\n    * Hypothyroidism (underactive thyroid gland)\n    * Transient Ischaemic Attack (TIA)\n    * Stroke.",
+      "This is not a disease as far as I know.  What it is is when an extremitiy of the body \"falls asleep\" because blood doesn't flow properly to it.  The way to remedy it is to get the blood flowing by rubbing the part or flapping or hitting it around."
+    ],
+    "input_spans": [
+      "see your doctor if you experience frequent or persistent bouts of pins and needles",
+      "remedy it is to get the blood flowing by rubbing the part or flapping or hitting it around"
+    ],
+    "Actual": "It is suggested to consult a doctor and a solution is to stimulate blood flow by rubbing or gently moving the affected area.",
+    "Predicted": "If you experience frequent or persistent bouts of pins and needles, it's suggested to see your doctor. In the meantime, you can remedy the temporary condition by getting the blood flowing to the affected area, which can be done by rubbing, flapping, or hitting the area."
+  },
+  {
+    "question": "what causes itchy hands?",
+    "perspective": "CAUSE",
+    "answers": [
+      "Itchy hands are most often associated with a skin condition or rash. The commonest of these is eczema. This itching could be due to an allergy to something you have come into contact. Common allergy causing agents are household detergents or factors linked to your occupation. \n\n\nIt is very unlikely that the itching is related to your circulation. There are other conditions that give rise to itching but the itch tends to be more generalised all over the body. You will need to visit your GP so he or she can assess your hands and advise you on the likely cause and treatment. If you are worried about anything in particular, it is very important that you tell you're doctor.",
+      "You could be allergic to something. It's common that your hands are too dry or irritated by overuse of water and soap. This is only one possible reason, however."
+    ],
+    "input_spans": [
+      "Itchy hands are most often associated with a skin condition or rash. The commonest of these is eczema",
+      "This itching could be due to an allergy to something you have come into contact."
+    ],
+    "Actual": "Itchy hands may occur for various reasons such as a dry hand, allergy or due to conditions like eczema",
+    "Predicted": "Itchy hands are often associated with skin conditions or rashes, with eczema being the most common cause. They can also be caused by an allergy to something you have come into contact with."
+  },
+  {
+    "question": "what causes itchy hands?",
+    "perspective": "INFORMATION",
+    "answers": [
+      "Itchy hands are most often associated with a skin condition or rash. The commonest of these is eczema. This itching could be due to an allergy to something you have come into contact. Common allergy causing agents are household detergents or factors linked to your occupation. \n\n\nIt is very unlikely that the itching is related to your circulation. There are other conditions that give rise to itching but the itch tends to be more generalised all over the body. You will need to visit your GP so he or she can assess your hands and advise you on the likely cause and treatment. If you are worried about anything in particular, it is very important that you tell you're doctor.",
+      "You could be allergic to something. It's common that your hands are too dry or irritated by overuse of water and soap. This is only one possible reason, however."
+    ],
+    "input_spans": [
+      "Itchy hands are most often associated with a skin condition or rash.",
+      "Common allergy causing agents are household detergents or factors linked to your occupation. It is very unlikely that the itching is related to your circulation. There are other conditions that give rise to itching but the itch tends to be more generalised all over the body.",
+      "You could be allergic to something. It's common that your hands are too dry or irritated by overuse of water and soap."
+    ],
+    "Actual": "Itchy hands may occur for various reasons such as a dry hand, allergy or due to conditions like eczema. Some common allergy causing agents are household detergents or there might be occupational reasons. It is unlikely to be an issue with the circulation system/ nervous system of the body. There exist other conditons that might cause itchy hands but they are not localized only to the hands.",
+    "Predicted": "Itchy hands are often associated with skin conditions or rashes, such as eczema, which can be caused by allergies to household detergents or occupational factors. Alternatively, dry or irritated hands due to excessive water and soap use may also be a possible reason."
+  },
+  {
+    "question": "what causes itchy hands?",
+    "perspective": "SUGGESTION",
+    "answers": [
+      "Itchy hands are most often associated with a skin condition or rash. The commonest of these is eczema. This itching could be due to an allergy to something you have come into contact. Common allergy causing agents are household detergents or factors linked to your occupation. \n\n\nIt is very unlikely that the itching is related to your circulation. There are other conditions that give rise to itching but the itch tends to be more generalised all over the body. You will need to visit your GP so he or she can assess your hands and advise you on the likely cause and treatment. If you are worried about anything in particular, it is very important that you tell you're doctor.",
+      "You could be allergic to something. It's common that your hands are too dry or irritated by overuse of water and soap. This is only one possible reason, however."
+    ],
+    "input_spans": [
+      "You will need to visit your GP so he or she can assess your hands and advise you on the likely cause and treatment. If you are worried about anything in particular, it is very important that you tell you're doctor"
+    ],
+    "Actual": "A visit to the GP or a docotr is advised so that the cause could be asessed and a treatment plan could be devised.",
+    "Predicted": "Based on the provided answers and adopting the SUGGESTION perspective, a faithful summary is:\n\nIt is suggested that you visit your GP to assess your hands and determine the likely cause of itchy hands."
+  },
+  {
+    "question": "Could break outs (resembling acne) around the mouth be caused by an STD contracted orally, and if so, what?",
+    "perspective": "CAUSE",
+    "answers": [
+      "SOUNDS LIKE HERPES...BEST SEE A DOCTOR",
+      "it could be a form of herpes. i have aslo heard that thursh a disease of the mouth is a sign of a decresed immune system which may be caused by an internal infection",
+      "Brake outs around the mouth are called herpes simplex 1.  It is not an STD, but could be contagious by kissing or drinking.  My brother used to get them alot when we were kids and we had to be sure not to drink after him.  Try carmex.  You can by it at wal-mart and its not expensive at all.  It usually works good."
+    ],
+    "input_spans": [
+      "HERPES."
+    ],
+    "Actual": "Break outs around the mouth can be due to Herpes.",
+    "Predicted": "Breakouts around the mouth can be caused by herpes, specifically herpes simplex 1, which is contagious through kissing or sharing drinks."
+  },
+  {
+    "question": "Could break outs (resembling acne) around the mouth be caused by an STD contracted orally, and if so, what?",
+    "perspective": "SUGGESTION",
+    "answers": [
+      "SOUNDS LIKE HERPES...BEST SEE A DOCTOR",
+      "it could be a form of herpes. i have aslo heard that thursh a disease of the mouth is a sign of a decresed immune system which may be caused by an internal infection",
+      "Brake outs around the mouth are called herpes simplex 1.  It is not an STD, but could be contagious by kissing or drinking.  My brother used to get them alot when we were kids and we had to be sure not to drink after him.  Try carmex.  You can by it at wal-mart and its not expensive at all.  It usually works good."
+    ],
+    "input_spans": [
+      "SEE A DOCTOR",
+      "Try carmex."
+    ],
+    "Actual": "It is suggested to see a doctor or try carmex.",
+    "Predicted": "Based on the provided answers, it seems that breakouts around the mouth could be caused by herpes, specifically herpes simplex 1, which is contagious through kissing or drinking. It's not necessarily an STD, but it's recommended to see a doctor for a proper diagnosis. A suggested remedy is to try Carmex, which can be found at Walmart and is relatively inexpensive."
+  },
+  {
+    "question": "Could break outs (resembling acne) around the mouth be caused by an STD contracted orally, and if so, what?",
+    "perspective": "INFORMATION",
+    "answers": [
+      "SOUNDS LIKE HERPES...BEST SEE A DOCTOR",
+      "it could be a form of herpes. i have aslo heard that thursh a disease of the mouth is a sign of a decresed immune system which may be caused by an internal infection",
+      "Brake outs around the mouth are called herpes simplex 1.  It is not an STD, but could be contagious by kissing or drinking.  My brother used to get them alot when we were kids and we had to be sure not to drink after him.  Try carmex.  You can by it at wal-mart and its not expensive at all.  It usually works good."
+    ],
+    "input_spans": [
+      "thursh a disease of the mouth is a sign of a decresed immune system which may be caused by an internal infection",
+      "It is not an STD, but could be contagious by kissing or drinking.",
+      "You can by it at wal-mart and its not expensive at all."
+    ],
+    "Actual": "Thrush, a mouth disease, serves as an indicator of a compromised immune system, often linked to internal infections. While not categorized as a sexually transmitted disease (STD), it can be transmitted through activities such as kissing or sharing drinks. For treatment, Carmex, readily available at Walmart and affordable, is a recommended remedy for managing this condition.",
+    "Predicted": "Breakouts around the mouth can be caused by a weakened immune system, which may be due to an internal infection. Herpes simplex 1, a contagious condition, can also cause such breakouts and is spread through kissing or drinking."
+  },
+  {
+    "question": "Could break outs (resembling acne) around the mouth be caused by an STD contracted orally, and if so, what?",
+    "perspective": "EXPERIENCE",
+    "answers": [
+      "SOUNDS LIKE HERPES...BEST SEE A DOCTOR",
+      "it could be a form of herpes. i have aslo heard that thursh a disease of the mouth is a sign of a decresed immune system which may be caused by an internal infection",
+      "Brake outs around the mouth are called herpes simplex 1.  It is not an STD, but could be contagious by kissing or drinking.  My brother used to get them alot when we were kids and we had to be sure not to drink after him.  Try carmex.  You can by it at wal-mart and its not expensive at all.  It usually works good."
+    ],
+    "input_spans": [
+      "My brother used to get them alot when we were kids and we had to be sure not to drink after him."
+    ],
+    "Actual": "In users expereince, one individual's brother used to get herpes complex and when they were kids they made sure to not drink after him.",
+    "Predicted": "Based on the provided answers, it seems that breakouts around the mouth can be caused by herpes simplex 1, which is contagious through kissing or drinking. It's not necessarily an STD, but rather a common condition that can be managed with products like Carmex."
+  },
+  {
+    "question": "Are there any parents out there with a child who has AUTISM ??",
+    "perspective": "EXPERIENCE",
+    "answers": [
+      "Yes. My son is autistic. He is very violent also and I as a single parent of 2 children surrendered him to the state.",
+      "My son has Tourettes, OCD and ADHD.  We thought for a while that it might be Asbergers (sp) or some other form of Autism, so I can relate.\n\nYou are doing fine.  Love you son for who he is, not what he has.  Find a support group in your area.  They are helpful.\n\nIt is difficult, and the road ahead will be rough.  I have a great supportive family and church.  This is the best help. \n\nLove and accept him, and others will too.",
+      "Go to http://groups.yahoo.com/ enter \"autism\" in the search and you will find support groups for autism. There seem to be quite a few; join a couple that specify parents and you should find many to talk to.",
+      "Yes , I have a 16 yr old brother with mild Asberger's Autism also. Just like your son he is as normal as the next kid. He does have days where you can tell he is different. Sometimes he repeats the same phrase over and over again, or sometimes he just spins propellers from the helicopter he has for hours on end. I looked up this website called http://Autismtoday.com   it has alot of information. Any other thoughts or questions please ask . I need help too....."
+    ],
+    "input_spans": [
+      "Yes. My son is autistic. He is very violent also and I as a single parent of 2 children surrendered him to the state.",
+      "My son has Tourettes, OCD and ADHD.  We thought for a while that it might be Asbergers (sp) or some other form of Autism, so I can relate",
+      "It is difficult, and the road ahead will be rough.  I have a great supportive family and church.  This is the best help.",
+      "Yes , I have a 16 yr old brother with mild Asberger's Autism also. Just like your son he is as normal as the next kid. He does have days where you can tell he is different. Sometimes he repeats the same phrase over and over again, or sometimes he just spins propellers from the helicopter he has for hours on end. I looked up this website called http://Autismtoday.com   it has alot of information"
+    ],
+    "Actual": "In users expereince, one parent shares the challenging experience of raising a son with autism who also exhibits violent behavior, leading to the difficult decision of surrendering him to the state. The son has Tourette's, OCD, and ADHD, initially thought to be Asperger's or another form of autism. Despite the tough road ahead, the parent finds support from their family and church. Another contributor relates, sharing a 16-year-old brother with mild Asperger's autism who, like the original poster's son, appears normal but exhibits distinct behaviors, such as repetitive phrases and prolonged spinning of propellers. They recommend http://Autismtoday.com for valuable information and resources. The shared experiences highlight the complexities of raising children with autism and the importance of seeking support and information.",
+    "Predicted": "As a parent of a child with autism, it can be challenging and overwhelming. Some parents have shared their experiences, offering words of encouragement and support. One parent surrendered their autistic child to the state due to violent behavior, while another parent has a child with Tourette's, OCD, and ADHD, who was initially suspected to have autism. \n\nA supportive family and church can be a great help in navigating the difficulties that come with raising a child with autism. It's essential to love and accept your child for who they are, not what they have. Joining a support group can also be beneficial in connecting with others who understand what you're going through."
+  },
+  {
+    "question": "Are there any parents out there with a child who has AUTISM ??",
+    "perspective": "SUGGESTION",
+    "answers": [
+      "Yes. My son is autistic. He is very violent also and I as a single parent of 2 children surrendered him to the state.",
+      "My son has Tourettes, OCD and ADHD.  We thought for a while that it might be Asbergers (sp) or some other form of Autism, so I can relate.\n\nYou are doing fine.  Love you son for who he is, not what he has.  Find a support group in your area.  They are helpful.\n\nIt is difficult, and the road ahead will be rough.  I have a great supportive family and church.  This is the best help. \n\nLove and accept him, and others will too.",
+      "Go to http://groups.yahoo.com/ enter \"autism\" in the search and you will find support groups for autism. There seem to be quite a few; join a couple that specify parents and you should find many to talk to.",
+      "Yes , I have a 16 yr old brother with mild Asberger's Autism also. Just like your son he is as normal as the next kid. He does have days where you can tell he is different. Sometimes he repeats the same phrase over and over again, or sometimes he just spins propellers from the helicopter he has for hours on end. I looked up this website called http://Autismtoday.com   it has alot of information. Any other thoughts or questions please ask . I need help too....."
+    ],
+    "input_spans": [
+      "Love you son for who he is, not what he has.  Find a support group in your area.  They are helpful",
+      "Love and accept him, and others will too.",
+      "Go to http://groups.yahoo.com/ enter \"autism\" in the search and you will find support groups for autism. There seem to be quite a few; join a couple that specify parents and you should find many to talk to"
+    ],
+    "Actual": "It was suggested to love and embrace your son for who he is, not focusing on what he has. Seek support by finding local support groups, as they can be beneficial. Love and acceptance are key, and others will follow suit. Explore online resources, such as http://groups.yahoo.com/, and search for \"autism\" to discover various autism support groups. Join a couple that are tailored for parents, providing a platform to connect with and gain insights from others facing similar experiences.",
+    "Predicted": "If you're a parent of a child with autism, it's essential to love and accept them for who they are, not their condition. Finding a support group in your area can be incredibly helpful. You can search for autism support groups on websites like http://groups.yahoo.com/ or http://Autismtoday.com. Joining a group specifically for parents can connect you with others who understand your situation, providing a sense of community and support during the challenging times ahead."
+  },
+  {
+    "question": "Of the hepatitis virus, which is the most contagious and why?",
+    "perspective": "INFORMATION",
+    "answers": [
+      "Dr. D is right on the money. Even with blood contact, Hepatitis B (HBV) is more likely to be transmitted than HIV or Hepatitis C (HCV).  This has to do with how much of the virus can be found in the blood.  People with HBV typically have very high levels of HBV DNA in the blood stream making it easier to transmit and infect someone else.  HCV and HIV are lower and therefore have lower transmission efficiency.\n\nThere are vaccines for Hepatitis A and B so unless you have already been infected and developed protective antibodies, you should get vaccinated.",
+      "hepatitis B!  It is readily transmitted sexually and also transmitted by illicit drug usage.  HCV is only transmitted by parenteral means (IV drugs, snorting drugs, tatoos, i.e. blood to blood).  HCV sexual transmission is very rare, if at all.  Currently the CDC does not recommend protection for sex with a monogamous HCV partner but definitely for HBV partner!"
+    ],
+    "input_spans": [
+      "Even with blood contact, Hepatitis B (HBV) is more likely to be transmitted than HIV or Hepatitis C (HCV)",
+      "This has to do with how much of the virus can be found in the blood.  People with HBV typically have very high levels of HBV DNA in the blood stream making it easier to transmit and infect someone else",
+      "HCV and HIV are lower and therefore have lower transmission efficiency.",
+      "hepatitis B!  It is readily transmitted sexually and also transmitted by illicit drug usage.",
+      "HCV is only transmitted by parenteral means (IV drugs, snorting drugs, tatoos, i.e. blood to blood)",
+      "HCV sexual transmission is very rare, if at all."
+    ],
+    "Actual": "Hepatitis B (HBV) is more easily transmitted than HIV or Hepatitis C (HCV) due to higher levels of the virus in the blood. HBV is highly contagious through blood contact, sexual activity, and illicit drug use. In contrast, HCV is primarily transmitted through blood-to-blood contact, with rare instances of sexual transmission. HIV transmission efficiency is lower than HBV due to lower virus levels in the bloodstream.",
+    "Predicted": "Based on the provided information, the most contagious hepatitis virus is Hepatitis B (HBV) due to its high levels of virus in the bloodstream, making it easier to transmit. It can be transmitted through blood contact, sexual activity, and illicit drug usage. In contrast, Hepatitis C (HCV) is primarily transmitted through parenteral means, such as IV drug use, and has lower transmission efficiency compared to HBV."
+  },
+  {
+    "question": "Of the hepatitis virus, which is the most contagious and why?",
+    "perspective": "CAUSE",
+    "answers": [
+      "Dr. D is right on the money. Even with blood contact, Hepatitis B (HBV) is more likely to be transmitted than HIV or Hepatitis C (HCV).  This has to do with how much of the virus can be found in the blood.  People with HBV typically have very high levels of HBV DNA in the blood stream making it easier to transmit and infect someone else.  HCV and HIV are lower and therefore have lower transmission efficiency.\n\nThere are vaccines for Hepatitis A and B so unless you have already been infected and developed protective antibodies, you should get vaccinated.",
+      "hepatitis B!  It is readily transmitted sexually and also transmitted by illicit drug usage.  HCV is only transmitted by parenteral means (IV drugs, snorting drugs, tatoos, i.e. blood to blood).  HCV sexual transmission is very rare, if at all.  Currently the CDC does not recommend protection for sex with a monogamous HCV partner but definitely for HBV partner!"
+    ],
+    "input_spans": [
+      "People with HBV typically have very high levels of HBV DNA in the blood stream making it easier to transmit and infect someone else"
+    ],
+    "Actual": "People with HBV have high levels of HBV DNA in their blood, making it easier to transmit the virus to others.",
+    "Predicted": "People with Hepatitis B (HBV) are more contagious due to having high levels of HBV DNA in their bloodstream, making it easier to transmit the virus to others."
+  },
+  {
+    "question": "Of the hepatitis virus, which is the most contagious and why?",
+    "perspective": "SUGGESTION",
+    "answers": [
+      "Dr. D is right on the money. Even with blood contact, Hepatitis B (HBV) is more likely to be transmitted than HIV or Hepatitis C (HCV).  This has to do with how much of the virus can be found in the blood.  People with HBV typically have very high levels of HBV DNA in the blood stream making it easier to transmit and infect someone else.  HCV and HIV are lower and therefore have lower transmission efficiency.\n\nThere are vaccines for Hepatitis A and B so unless you have already been infected and developed protective antibodies, you should get vaccinated.",
+      "hepatitis B!  It is readily transmitted sexually and also transmitted by illicit drug usage.  HCV is only transmitted by parenteral means (IV drugs, snorting drugs, tatoos, i.e. blood to blood).  HCV sexual transmission is very rare, if at all.  Currently the CDC does not recommend protection for sex with a monogamous HCV partner but definitely for HBV partner!"
+    ],
+    "input_spans": [
+      "vaccines for Hepatitis A and B so unless you have already been infected and developed protective antibodies, you should get vaccinated",
+      "CDC does not recommend protection for sex with a monogamous HCV partner but definitely for HBV partner"
+    ],
+    "Actual": "It is suggested to get vaccinated for Hepatitis A and B if not been infected to build protective antibodies. The CDC advises vaccination, especially for Hepatitis B, even in monogamous partnerships.",
+    "Predicted": "Based on the provided answers, the most contagious hepatitis virus is Hepatitis B (HBV) due to its high transmission efficiency, particularly through blood contact and sexual transmission. It is recommended to get vaccinated for HBV unless already infected and developed protective antibodies."
+  },
+  {
+    "question": "Do researchers have the cure for cancer?",
+    "perspective": "INFORMATION",
+    "answers": [
+      "Generally speaking, no.  It also seems unlikely to me that there will ever be a single cure for \"cancer\".  My sense is that cancer is not a single disease but a family of diseases with different causes, different mechanisms, and different potential interventions.\n\nThat said, there are pretty effective treatments for different types of cancer. And people are cured of cancer every day by some of these treatments (including surgical removal, etc.) Still, early diagnosis is often key. \n\nWhile diet and exercise is important (nutrition can play an important role), the last poster would have you believe there is a miricale cure being supressed by the government and big pharma.  Right....",
+      "They have a cure, but they cannot put it on the market because pharmaceautical companies would lose money.  They always give chemo therapy which destroys cancer, but also destroys your body cells.  If they found out that a certain tree bark can be used to cure cancer 90% of the time, they wouldnt say a word.  They would just keep their mouths shut and continue administering drugs that prolong your life for another year and keep collecting on you till you die.  There are medicines out there that can cure cancer even when doctors have given up.  And its not a hit or miss thing.  Up to 90% of cancer patients who have late stage cancer can still survive, even after doctors have given up on them.  Chemo therapy, will not let you live another 5 or 6 years even though the cancer is gone.  what do you live with if your body is deteriorated with their chemo?  And the thing is, your body will deteriorate.  If some people kill half of their cancer with chemo, what about the other half of your body cells?  They die also.  The other remedies that are on the market are not even allowed to post labels on their medicines.  They can only be sold as health products and vitamins, and not a cure for cancer, even though they do cure cancer.  Why is that then?  Because if they were labled cancer medicine, people would flock over there to buy them.  But, the government cant regulate these medicines.  What if it was a mushroom that everybody can grow?  See, the medical community wants to profit from you till the day you die.  Do look up cesium chloride, green algae, oxygen drops, paw paw, and everything else that you can dig up.  Health vitamin websites and the like is where you should start.  There are even some doctors scattered across the USA who can almost garauntee that you live, if its only 2nd stage cancer.  They can even cure 3rd stage cancer at a 85%-90% survival rate, so what makes you think they cant cure cancer?  There are some chinese herbs, but, I suggest you look up cesium chloride and oxygen drops first."
+    ],
+    "input_spans": [
+      "They have a cure, but they cannot put it on the market because pharmaceautical companies would lose money.  They always give chemo therapy which destroys cancer, but also destroys your body cells.  If they found out that a certain tree bark can be used to cure cancer 90% of the time, they wouldnt say a word.  They would just keep their mouths shut and continue administering drugs that prolong your life for another year and keep collecting on you till you die.  There are medicines out there that can cure cancer even when doctors have given up.  And its not a hit or miss thing.  Up to 90% of cancer patients who have late stage cancer can still survive, even after doctors have given up on them.  Chemo therapy, will not let you live another 5 or 6 years even though the cancer is gone.  what do you live with if your body is deteriorated with their chemo?  And the thing is, your body will deteriorate.  If some people kill half of their cancer with chemo, what about the other half of your body cells?  They die also.  The other remedies that are on the market are not even allowed to post labels on their medicines.  They can only be sold as health products and vitamins, and not a cure for cancer, even though they do cure cancer.  Why is that then?  Because if they were labled cancer medicine, people would flock over there to buy them.  But, the government cant regulate these medicines.  What if it was a mushroom that everybody can grow?  See, the medical community wants to profit from you till the day you die.  Do look up cesium chloride, green algae, oxygen drops, paw paw, and everything else that you can dig up.  Health vitamin websites and the like is where you should start.  There are even some doctors scattered across the USA who can almost garauntee that you live, if its only 2nd stage cancer.  They can even cure 3rd stage cancer at a 85%-90% survival rate, so what makes you think they cant cure cancer?  There are some chinese herbs, but, I suggest you look up cesium chloride and oxygen drops first",
+      "cancer is not a single disease but a family of diseases with different causes, different mechanisms, and different potential interventions.That said, there are pretty effective treatments for different types of cancer. And people are cured of cancer every day by some of these treatments (including surgical removal, etc.) Still, early diagnosis is often key. While diet and exercise is important (nutrition can play an important role), the last poster would have you believe there is a miricale cure being supressed by the government and big pharma"
+    ],
+    "Actual": "For information purposes, the argument posits that a cure for cancer exists but is withheld from the market due to pharmaceutical companies' profit motives. The critique extends to chemotherapy, emphasizing its destructive impact on both cancer and healthy cells, with alternative remedies purported to have up to a 90% success rate in late-stage cancer cases. The claim suggests a deliberate suppression of information about these remedies, preventing them from being labeled as cancer medicine to avoid regulatory scrutiny. The narrative contends that the medical community prioritizes profit over patient well-being, and urges individuals to explore alternative treatments such as cesium chloride, green algae, oxygen drops, paw paw, and other options available on health vitamin websites. While acknowledging the complexity of cancer as a diverse family of diseases, the tone implies skepticism toward mainstream medical practices and encourages investigation into alternative therapies. However, it's essential to approach such claims critically and consult with healthcare professionals for informed decisions about cancer treatments.",
+    "Predicted": "Researchers have not found a single cure for cancer, as it is a family of diseases with different causes, mechanisms, and potential interventions. However, there are effective treatments for different types of cancer, and people are cured every day through treatments like surgical removal. Early diagnosis is key, and diet and exercise play an important role in cancer prevention. Some alternative remedies, such as cesium chloride and oxygen drops, claim to have a high success rate in curing cancer, but their effectiveness and regulation are not widely acknowledged by the medical community."
+  },
+  {
+    "question": "what is the number of americans who die each day?",
+    "perspective": "INFORMATION",
+    "answers": [
+      "On average, there are about 6,700 people who die nationwide daily (the data used was from 2003). This number may have increased, or decreased since then as current (2005) data is not available.\n\nThe CDC web site provides a lot of information that should help you with your class.",
+      "I agree with the above answer."
+    ],
+    "input_spans": [
+      "On average, there are about 6,700 people who die nationwide daily (the data used was from 2003). This number may have increased, or decreased since then as current (2005) data is not available.The CDC web site provides a lot of information that should help you with your class"
+    ],
+    "Actual": "For information purposes, on average, approximately 6,700 people die nationwide daily, based on data from 2003. It's important to note that this figure may have changed, either increased or decreased, as more recent data from 2005 is not available. The CDC website is recommended as a valuable resource for additional information that may assist with your class.",
+    "Predicted": "On average, approximately 6,700 people die nationwide daily, based on data from 2003."
+  },
+  {
+    "question": "Can cigarette smoke cause hives?",
+    "perspective": "INFORMATION",
+    "answers": [
+      "Yes of course.Usually respiratory allergy.",
+      "Chronic hives may be aggravated by tobacco; avoiding it may reduce the frequency of reactions.",
+      "yes, you are probably allergic.\n\ni don't get hives from it but my sinus' get severly stuffed and can't be around cigarette smoke\n\ni get really bad headaches from it too"
+    ],
+    "input_spans": [
+      "Yes of course.Usually respiratory allergy",
+      "Chronic hives may be aggravated by tobacco; avoiding it may reduce the frequency of reactions."
+    ],
+    "Actual": "For information purposes, smoking cigarettes tobacco may cause respiratory allergies and chronic hives to be aggravated. Avoiding or reucing smiking frequency can help with the hives.",
+    "Predicted": "Cigarette smoke can cause hives, often due to a respiratory allergy. Avoiding it may reduce the frequency of reactions."
+  },
+  {
+    "question": "Can cigarette smoke cause hives?",
+    "perspective": "SUGGESTION",
+    "answers": [
+      "Yes of course.Usually respiratory allergy.",
+      "Chronic hives may be aggravated by tobacco; avoiding it may reduce the frequency of reactions.",
+      "yes, you are probably allergic.\n\ni don't get hives from it but my sinus' get severly stuffed and can't be around cigarette smoke\n\ni get really bad headaches from it too"
+    ],
+    "input_spans": [
+      "avoiding it may reduce the frequency of reactions."
+    ],
+    "Actual": "It is suggested that by avoiding smoking tobacco can help reduce the hives and the frequency of allergic reactions.",
+    "Predicted": "Based on the provided answers, from a suggestion perspective, it is suggested that avoiding cigarette smoke may help reduce the frequency of hives, as it can aggravate chronic hives."
+  },
+  {
+    "question": "Can cigarette smoke cause hives?",
+    "perspective": "EXPERIENCE",
+    "answers": [
+      "Yes of course.Usually respiratory allergy.",
+      "Chronic hives may be aggravated by tobacco; avoiding it may reduce the frequency of reactions.",
+      "yes, you are probably allergic.\n\ni don't get hives from it but my sinus' get severly stuffed and can't be around cigarette smoke\n\ni get really bad headaches from it too"
+    ],
+    "input_spans": [
+      "yes, you are probably allergic.i don't get hives from it but my sinus' get severly stuffed and can't be around cigarette smokei get really bad headaches from it too"
+    ],
+    "Actual": "A person experienced stuffy sinuses and sever headaches from smoking instead of hives.",
+    "Predicted": "Based on the provided answers, from the perspective of someone who has experienced the effects of cigarette smoke, it appears that some people may be allergic to cigarette smoke, which can cause hives. However, it's also possible that the smoke can trigger other reactions, such as severe sinus congestion and headaches, even if it doesn't cause hives."
+  },
+  {
+    "question": "two insurance plans: tricare & metlife dental. which one is used for wisdom teeth extractions.?",
+    "perspective": "INFORMATION",
+    "answers": [
+      "They both have wisdom teeth extraction coverage but it depends on what plan you are on. Both insurance companies have hundreds of dental plans...all differing from the other. In my experience Metlife seems to have the better coverage but I would check with your specific plan to see what they offer.",
+      "It appears that the question period has expired.  If you have received an answer that meets your needs, please choose one of those as a 'best answer.'  If you haven't received a good answer for your question, you may want to consider the following,\n\n1) Re-post your question.  Newer questions get more activity on Yahoo! Answers than old ones.\n2) If you do re-post your question, consider why it wasn't answered the first time.  Could it be more specific?  Could it be worded better? Were there grammatical or spelling errors? Was it in the best category?\n\nIf it doesn't seem likely that re-posting your question will help you, then here's a listing of my favorite 'answer sites'.  Maybe one of them will help you.\n\nAnswers.com http://www.answers.com/\nBartleby http://www.bartleby.com/\nYahoo Reference http://education.yahoo.com/reference/\nHowStuffWorks http://www.howstuffworks.com/\nWikipedia http://en.wikipedia.org/wiki/Main_Page\n\nSince I really haven't answered your question, it is not necessary to give me any points.  Regards."
+    ],
+    "input_spans": [
+      "They both have wisdom teeth extraction coverage but it depends on what plan you are on. Both insurance companies have hundreds of dental plans...all differing from the other"
+    ],
+    "Actual": "For information purposes, Tricare and  metLife Insurance both offer coverage for wisdom teeth extraction, but the extent of coverage varies depending on the specific plan a person is enrolled in. Each insurance provider offers a multitude of dental plans, and the coverage details differ across these plans. It is essential for individuals to carefully review and understand the specifics of their chosen plan to determine the extent of wisdom teeth extraction coverage provided by Tricare or metife Insurance.",
+    "Predicted": "Both Tricare and Metlife dental plans have coverage for wisdom teeth extractions, but the specific coverage depends on the individual plan chosen."
+  },
+  {
+    "question": "two insurance plans: tricare & metlife dental. which one is used for wisdom teeth extractions.?",
+    "perspective": "EXPERIENCE",
+    "answers": [
+      "They both have wisdom teeth extraction coverage but it depends on what plan you are on. Both insurance companies have hundreds of dental plans...all differing from the other. In my experience Metlife seems to have the better coverage but I would check with your specific plan to see what they offer.",
+      "It appears that the question period has expired.  If you have received an answer that meets your needs, please choose one of those as a 'best answer.'  If you haven't received a good answer for your question, you may want to consider the following,\n\n1) Re-post your question.  Newer questions get more activity on Yahoo! Answers than old ones.\n2) If you do re-post your question, consider why it wasn't answered the first time.  Could it be more specific?  Could it be worded better? Were there grammatical or spelling errors? Was it in the best category?\n\nIf it doesn't seem likely that re-posting your question will help you, then here's a listing of my favorite 'answer sites'.  Maybe one of them will help you.\n\nAnswers.com http://www.answers.com/\nBartleby http://www.bartleby.com/\nYahoo Reference http://education.yahoo.com/reference/\nHowStuffWorks http://www.howstuffworks.com/\nWikipedia http://en.wikipedia.org/wiki/Main_Page\n\nSince I really haven't answered your question, it is not necessary to give me any points.  Regards."
+    ],
+    "input_spans": [
+      "In my experience Metlife seems to have the better coverage"
+    ],
+    "Actual": "In users expereince, one individual said that MetLife had better coverage.",
+    "Predicted": "Based on the provided answers, from the perspective of experience, Metlife seems to have better coverage for wisdom teeth extractions."
+  },
+  {
+    "question": "two insurance plans: tricare & metlife dental. which one is used for wisdom teeth extractions.?",
+    "perspective": "SUGGESTION",
+    "answers": [
+      "They both have wisdom teeth extraction coverage but it depends on what plan you are on. Both insurance companies have hundreds of dental plans...all differing from the other. In my experience Metlife seems to have the better coverage but I would check with your specific plan to see what they offer.",
+      "It appears that the question period has expired.  If you have received an answer that meets your needs, please choose one of those as a 'best answer.'  If you haven't received a good answer for your question, you may want to consider the following,\n\n1) Re-post your question.  Newer questions get more activity on Yahoo! Answers than old ones.\n2) If you do re-post your question, consider why it wasn't answered the first time.  Could it be more specific?  Could it be worded better? Were there grammatical or spelling errors? Was it in the best category?\n\nIf it doesn't seem likely that re-posting your question will help you, then here's a listing of my favorite 'answer sites'.  Maybe one of them will help you.\n\nAnswers.com http://www.answers.com/\nBartleby http://www.bartleby.com/\nYahoo Reference http://education.yahoo.com/reference/\nHowStuffWorks http://www.howstuffworks.com/\nWikipedia http://en.wikipedia.org/wiki/Main_Page\n\nSince I really haven't answered your question, it is not necessary to give me any points.  Regards."
+    ],
+    "input_spans": [
+      "but I would check with your specific plan to see what they offer."
+    ],
+    "Actual": "It is suggested to check with your specific plan to see what they offer.",
+    "Predicted": "To determine which insurance plan covers wisdom teeth extractions, it's best to check your specific plan details."
+  },
+  {
+    "question": "what is the quickess way to lose weight?",
+    "perspective": "SUGGESTION",
+    "answers": [
+      "Take a poop.",
+      "WHAT to eat for losing weight\n\n\u2022 Eat plenty of fruits and vegetables, especially NC (negative calorie) food.\n\n* Print these lists. They will be your ... \"Bible\", from now on !\n* Dill and parsely - include them in all your salads. Also ognion + garlic.\n* Try eat mostly fresh vegs & fruits (whenever possible, of course)\n* If you really want a book, then check this out: The Negative Calorie Diet Workbook & Cookbook - eBook (Win95/98 only). Read more about this e-book here.\n\n\n\u2022 Eat fish, chicken, beef, pork. (preferences are in this order)\n\n* If you are a vegetarian, then ignore this!\n* Avoid fat meat\n\n\n\u2022 Eat 2-3 slices of bread/day. Don't EVER exclude bread from your diet!\n\n\u2022 Snacks between meals (if needed): apples, oranges, grepfruits and other NC fruits\n\n* Don't cheat ... NO cookies, chips, candies, brownies etc! \n* EVEN if they have \"low fat\" indication... They might have low fat, yet they can have lots of CALORIES !!!\n\n\n\u2022 About rice, potatoes, beans, [xxx]nuts, pastry, pasta... you know!\n\n* Don't eat too much of those, at least during the first weeks of the diet. I'm not a low carb addict, but I've noticed weight gains if consuming those in large quantities, especially when associated with other foods.\n* If you like them a lot, try and eat them like one meal. A nice delicious plate of spaghetti could be your lunch (never dinner!), followed by a nice big apple. These rich starch foods are not good for dinner!\n* At dinner time, chose mainly large mixed veggies salads... with fish, lean meat or cheese (if you are not a vegetarian). \n\n if u want to lose weight the best food to it are baked potatoes with nothing on it. no salt no nothing just plain. u can eat a 10000000000 baked potatoes till ur stuff and not gain a pound.  i heard that from a weight loss tape. the best drink is water or gatorade. thats a start then when you work out do some taeboo. if u want a macine. run with dumbells on a treadmill. u could do the rocky workout. but thats a new story. u could use a butterfly macine i think it works the abs",
+      "not the healthiest but starve yourself or i have heard of using laxatives. however do not recommend. quick weight loss is never healthy",
+      "i don't think quickest is always the healthiest.  i would suggest eating 5-6 smaller meals, drink a lot of water, and excersize in order to rev up your matabolism.  good luck.",
+      "bulemia",
+      "The quickest  way to loose weight is  fight with your loved one and be in tension upto the date when you think your wiehgt is reduced.",
+      "eat two eggs and a cup of rice or tofu [with soy sauce if you like] for every meal. this plus a one mile walk everyday. i have been on this diet for a month and have lost 10 lbs so far. be vigilant though. no mc donalds ^_^ good luck!",
+      "When you find out tell me i have bad knees so a lot of exercising is out I am looking for a tread mill and i will walk slowly watching t.v. at night. Also i did lose 20 simply cutting out sodas. i lost that in a month and changed nothing else. Good luck and good speed.\nP.s. the egg and tofu diet is silly in another month the leg cramps from lack of calcium will stop the walking and the colesterol in the eggs will eventually stop the heart get the heart. And no other vitamins isn't good either. If you still wish to go that route and risk malnutrition take 3 one-a-day vitamins a day.",
+      "Don't eat so much\nexercise\nand drink lots of water over the course of each day.",
+      "www.dietpower.com"
+    ],
+    "input_spans": [
+      "WHAT to eat for losing weight\u2022 Eat plenty of fruits and vegetables, especially NC (negative calorie) food",
+      "If you really want a book, then check this out: The Negative Calorie Diet Workbook & Cookbook - eBook (Win95/98 only). Read more about this e-book here",
+      "Eat fish, chicken, beef, pork. (preferences are in this order)",
+      "Avoid fat meat\u2022 Eat 2-3 slices of bread/day. Don't EVER exclude bread from your diet!\u2022 Snacks between meals (if needed): apples, oranges, grepfruits and other NC fruits* Don't cheat ... NO cookies, chips, candies, brownies",
+      "EVEN if they have \"low fat\" indication... They might have low fat, yet they can have lots of CALORIES !!!\u2022 About rice, potatoes, beans, [xxx]nuts, pastry, pasta... you know!* Don't eat too much of those, at least during the first weeks of the diet",
+      "i heard that from a weight loss tape. the best drink is water or gatorade",
+      "thats a start then when you work out do some taeboo. if u want a macine. run with dumbells on a treadmill. u could do the rocky workout. but thats a new story. u could use a butterfly macine i think it works the ab",
+      "i would suggest eating 5-6 smaller meals, drink a lot of water, and excersize in order to rev up your matabolism",
+      "eat two eggs and a cup of rice or tofu [with soy sauce if you like] for every meal. this plus a one mile walk everyday. i have been on this diet for a month and have lost 10 lbs so far. be vigilant though. no mc donalds",
+      "Don't eat so muchexerciseand drink lots of water over the course of each day."
+    ],
+    "Actual": "To lose weight, focus on a diet rich in fruits, vegetables (especially negative calorie foods), lean proteins like fish and chicken, and limit high-fat meats. Include some bread but avoid snacks like cookies and chips. Be cautious with rice, potatoes, nuts, and pastries. Choose water or Gatorade as drinks and engage in regular workouts, such as Tae Bo or running on a treadmill with dumbbells. Consider eating 5-6 smaller meals, drink plenty of water, and prioritize exercise to boost metabolism. A sample meal consists of two eggs, a cup of rice or tofu with soy sauce, and a daily one-mile walk. Avoid fast food like McDonald's and maintain consistency in your efforts.",
+    "Predicted": "Based on the provided answers, here's a faithful summary of the quickest way to lose weight from a suggestion perspective:\n\nTo lose weight quickly, consider the following suggestions:\n\n1. **Eat a balanced diet**: Focus on negative calorie foods like fruits and vegetables, and include lean protein sources like fish, chicken, and beef. Avoid fat meat and limit your intake of starchy foods like rice, potatoes, and pasta.\n2. **Incorporate healthy snacks**: Eat 2-3 slices of bread a day and snack on fruits like apples, oranges, and grapes between meals.\n3. **Stay hydrated**: Drink plenty of water or low-calorie drinks like Gatorade.\n4. **Exercise regularly**: Engage in physical activity, such as"
+  },
+  {
+    "question": "what is the quickess way to lose weight?",
+    "perspective": "INFORMATION",
+    "answers": [
+      "Take a poop.",
+      "WHAT to eat for losing weight\n\n\u2022 Eat plenty of fruits and vegetables, especially NC (negative calorie) food.\n\n* Print these lists. They will be your ... \"Bible\", from now on !\n* Dill and parsely - include them in all your salads. Also ognion + garlic.\n* Try eat mostly fresh vegs & fruits (whenever possible, of course)\n* If you really want a book, then check this out: The Negative Calorie Diet Workbook & Cookbook - eBook (Win95/98 only). Read more about this e-book here.\n\n\n\u2022 Eat fish, chicken, beef, pork. (preferences are in this order)\n\n* If you are a vegetarian, then ignore this!\n* Avoid fat meat\n\n\n\u2022 Eat 2-3 slices of bread/day. Don't EVER exclude bread from your diet!\n\n\u2022 Snacks between meals (if needed): apples, oranges, grepfruits and other NC fruits\n\n* Don't cheat ... NO cookies, chips, candies, brownies etc! \n* EVEN if they have \"low fat\" indication... They might have low fat, yet they can have lots of CALORIES !!!\n\n\n\u2022 About rice, potatoes, beans, [xxx]nuts, pastry, pasta... you know!\n\n* Don't eat too much of those, at least during the first weeks of the diet. I'm not a low carb addict, but I've noticed weight gains if consuming those in large quantities, especially when associated with other foods.\n* If you like them a lot, try and eat them like one meal. A nice delicious plate of spaghetti could be your lunch (never dinner!), followed by a nice big apple. These rich starch foods are not good for dinner!\n* At dinner time, chose mainly large mixed veggies salads... with fish, lean meat or cheese (if you are not a vegetarian). \n\n if u want to lose weight the best food to it are baked potatoes with nothing on it. no salt no nothing just plain. u can eat a 10000000000 baked potatoes till ur stuff and not gain a pound.  i heard that from a weight loss tape. the best drink is water or gatorade. thats a start then when you work out do some taeboo. if u want a macine. run with dumbells on a treadmill. u could do the rocky workout. but thats a new story. u could use a butterfly macine i think it works the abs",
+      "not the healthiest but starve yourself or i have heard of using laxatives. however do not recommend. quick weight loss is never healthy",
+      "i don't think quickest is always the healthiest.  i would suggest eating 5-6 smaller meals, drink a lot of water, and excersize in order to rev up your matabolism.  good luck.",
+      "bulemia",
+      "The quickest  way to loose weight is  fight with your loved one and be in tension upto the date when you think your wiehgt is reduced.",
+      "eat two eggs and a cup of rice or tofu [with soy sauce if you like] for every meal. this plus a one mile walk everyday. i have been on this diet for a month and have lost 10 lbs so far. be vigilant though. no mc donalds ^_^ good luck!",
+      "When you find out tell me i have bad knees so a lot of exercising is out I am looking for a tread mill and i will walk slowly watching t.v. at night. Also i did lose 20 simply cutting out sodas. i lost that in a month and changed nothing else. Good luck and good speed.\nP.s. the egg and tofu diet is silly in another month the leg cramps from lack of calcium will stop the walking and the colesterol in the eggs will eventually stop the heart get the heart. And no other vitamins isn't good either. If you still wish to go that route and risk malnutrition take 3 one-a-day vitamins a day.",
+      "Don't eat so much\nexercise\nand drink lots of water over the course of each day.",
+      "www.dietpower.com"
+    ],
+    "input_spans": [
+      "Dill and parsely - include them in all your salads. Also ognion + garlic.",
+      "These rich starch foods are not good for dinner!* At dinner time, chose mainly large mixed veggies salads... with fish, lean meat or cheese (if you are not a vegetarian).  if u want to lose weight the best food to it are baked potatoes with nothing on it. no salt no nothing just plain. u can eat a 10000000000 baked potatoes till ur stuff and not gain a pound.",
+      "not the healthiest but starve yourself or i have heard of using laxatives. however do not recommend. quick weight loss is never healthy",
+      ". the egg and tofu diet is silly in another month the leg cramps from lack of calcium will stop the walking and the colesterol in the eggs will eventually stop the heart get the heart. And no other vitamins isn't good either. If you still wish to go that route and risk malnutrition take 3 one-a-day vitamins a day"
+    ],
+    "Actual": "It is suggested incorporating dill and parsley into salads, avoiding rich starch foods for dinner, and opting for large mixed vegetable salads with fish, lean meat, or cheese for dinner to aid in weight loss. It suggests plain baked potatoes as a low-calorie option for weight loss but cautions against extreme methods like starving or using laxatives. Additionally, it warns against diets like the egg and tofu diet due to potential health risks and recommends taking three one-a-day vitamins if pursuing such diets to prevent malnutrition.",
+    "Predicted": "Based on the provided answers, a faithful summary of the quickest way to lose weight from an informational perspective is:\n\nThe quickest way to lose weight is not a straightforward answer, as it often involves a combination of diet and exercise. Some suggested methods include:\n\n* Eating a diet rich in fruits, vegetables, and lean protein sources, such as fish, chicken, and beef, while limiting starches and sugars.\n* Incorporating negative calorie foods, such as dill, parsley, onion, and garlic, into meals.\n* Eating smaller, frequent meals throughout the day, such as 5-6 meals, and drinking plenty of water.\n* Avoiding or limiting foods high in calories, such as cookies, chips, and brownies, and sug"
+  },
+  {
+    "question": "what is the quickess way to lose weight?",
+    "perspective": "EXPERIENCE",
+    "answers": [
+      "Take a poop.",
+      "WHAT to eat for losing weight\n\n\u2022 Eat plenty of fruits and vegetables, especially NC (negative calorie) food.\n\n* Print these lists. They will be your ... \"Bible\", from now on !\n* Dill and parsely - include them in all your salads. Also ognion + garlic.\n* Try eat mostly fresh vegs & fruits (whenever possible, of course)\n* If you really want a book, then check this out: The Negative Calorie Diet Workbook & Cookbook - eBook (Win95/98 only). Read more about this e-book here.\n\n\n\u2022 Eat fish, chicken, beef, pork. (preferences are in this order)\n\n* If you are a vegetarian, then ignore this!\n* Avoid fat meat\n\n\n\u2022 Eat 2-3 slices of bread/day. Don't EVER exclude bread from your diet!\n\n\u2022 Snacks between meals (if needed): apples, oranges, grepfruits and other NC fruits\n\n* Don't cheat ... NO cookies, chips, candies, brownies etc! \n* EVEN if they have \"low fat\" indication... They might have low fat, yet they can have lots of CALORIES !!!\n\n\n\u2022 About rice, potatoes, beans, [xxx]nuts, pastry, pasta... you know!\n\n* Don't eat too much of those, at least during the first weeks of the diet. I'm not a low carb addict, but I've noticed weight gains if consuming those in large quantities, especially when associated with other foods.\n* If you like them a lot, try and eat them like one meal. A nice delicious plate of spaghetti could be your lunch (never dinner!), followed by a nice big apple. These rich starch foods are not good for dinner!\n* At dinner time, chose mainly large mixed veggies salads... with fish, lean meat or cheese (if you are not a vegetarian). \n\n if u want to lose weight the best food to it are baked potatoes with nothing on it. no salt no nothing just plain. u can eat a 10000000000 baked potatoes till ur stuff and not gain a pound.  i heard that from a weight loss tape. the best drink is water or gatorade. thats a start then when you work out do some taeboo. if u want a macine. run with dumbells on a treadmill. u could do the rocky workout. but thats a new story. u could use a butterfly macine i think it works the abs",
+      "not the healthiest but starve yourself or i have heard of using laxatives. however do not recommend. quick weight loss is never healthy",
+      "i don't think quickest is always the healthiest.  i would suggest eating 5-6 smaller meals, drink a lot of water, and excersize in order to rev up your matabolism.  good luck.",
+      "bulemia",
+      "The quickest  way to loose weight is  fight with your loved one and be in tension upto the date when you think your wiehgt is reduced.",
+      "eat two eggs and a cup of rice or tofu [with soy sauce if you like] for every meal. this plus a one mile walk everyday. i have been on this diet for a month and have lost 10 lbs so far. be vigilant though. no mc donalds ^_^ good luck!",
+      "When you find out tell me i have bad knees so a lot of exercising is out I am looking for a tread mill and i will walk slowly watching t.v. at night. Also i did lose 20 simply cutting out sodas. i lost that in a month and changed nothing else. Good luck and good speed.\nP.s. the egg and tofu diet is silly in another month the leg cramps from lack of calcium will stop the walking and the colesterol in the eggs will eventually stop the heart get the heart. And no other vitamins isn't good either. If you still wish to go that route and risk malnutrition take 3 one-a-day vitamins a day.",
+      "Don't eat so much\nexercise\nand drink lots of water over the course of each day.",
+      "www.dietpower.com"
+    ],
+    "input_spans": [
+      "I'm not a low carb addict, but I've noticed weight gains if consuming those in large quantities, especially when associated with other foods.* If you like them a lot, try and eat them like one meal. A nice delicious plate of spaghetti could be your lunch (never dinner!), followed by a nice big apple.",
+      "i have bad knees so a lot of exercising is out I am looking for a tread mill and i will walk slowly watching t.v. at night. Also i did lose 20 simply cutting out sodas. i lost that in a month and changed nothing else."
+    ],
+    "Actual": "In user's experience, one user isn't addicted to low-carb foods but has noticed weight gain when eating them in large quantities, especially when combined with other foods. They suggest eating them as one meal, like having spaghetti for lunch and an apple for dessert. Due to bad knees, they plan to exercise by walking slowly on a treadmill while watching TV at night. They've already lost 20 pounds in a month by cutting out sodas without making any other changes to their diet.",
+    "Predicted": "Based on the provided answers from the perspective of someone with experience, the quickest way to lose weight is not a straightforward or healthy approach. Some answers suggest extreme methods such as starving oneself (Answer 3) or using laxatives (Answer 3), which are not recommended. Others propose unhealthy diets like the egg and tofu diet (Answer 7 and 8) that may lead to malnutrition.\n\nHowever, some experienced individuals suggest more balanced approaches. For example, eating a diet rich in fruits and vegetables (Answer 2) and limiting starches like rice, potatoes, and pasta (Span 1) can be effective. Another approach is to eat smaller, frequent meals (Answer 4) and stay hydrated (Answer 9)."
+  },
+  {
+    "question": "how do i know if i should see a counselor? i think i have self-esteem problems?",
+    "perspective": "EXPERIENCE",
+    "answers": [
+      "I was wondering about this very same question for myself. Getting counseling has helped me. My self esteem problems \"made\" me do things I should not of been doing. My counselor has helped answer questions and made me realize I'm not alone. One thing you should think about is the way you may be \"talking \" to yourself. You may be saying alot of negative things about yourself, but would you say those things to your best friend? No. I'm sure you wouldn't. So why do we say these things to ourselves? You can talk to your primary doctor and ask for their opinion and even a referral to a counselor.",
+      "You choose your own behavior and your own view of yourself.\nADHD and all those terms are for people who have been able to have their own way in life by opting a behavior that is disruptive. You can control how you behave, and you already do.\n\nDiet is the first thing you need to fix. Cut out all processed foods, and all take aways and all fizzy drinks and only eat fresh vegetables and home cooked meats and drink heaps of fresh water, and I will guarantee that all your ADHD, etc will go within 2 weeks and definitely within a month.\n\nIf you choose to think yourself neurotic or low esteem, that is your choice. I personally opt for good health and being a nice person. Your self esteem will start improving the moment you stop behaving in socially improper ways, as people will start accepting you, if this is your goal.\nBlaming behavior on ADHD and taking drugs is not the way to be happy.\nGet on a drug free and healthy diet, cut out every fizzy drink, cigerettes and alcohol and live healthy, do some walking and get outdoors too, and I will guarantee you a total change of life.\nYou will also find your living costs are far cheaper which will give you more money to travel or buy yourself nice things..I opted for travel...\nYour life is in your hands, and whatever a counsellor tells you will not work until you take the responsibility for your own behavior into your hands.\nYou are the boss of you...",
+      "you should definately see a counselor even your run-of-the-mill \"normal\" person can benefit from a good therapist- especially if you think you might actually have some sort of disorder you should talk to a professional"
+    ],
+    "input_spans": [
+      ": I was wondering about this very same question for myself. Getting counseling has helped me. My self esteem problems \"made\" me do things I should not of been doing. My counselor has helped answer questions and made me realize I'm not alone."
+    ],
+    "Actual": "In users expereince, one person shared that they had pondered a similar question about themselves and found that seeking counseling was beneficial. They attribute self-esteem issues to engaging in undesirable behaviors, but counseling has provided support and answers to their questions. The individual expresses gratitude for the realization that they are not alone in their struggles, indicating that the counseling process has been helpful in addressing personal challenges and improving their overall well-being.",
+    "Predicted": "Based on the provided answers, here's a faithful summary from the EXPERIENCE perspective:\n\nI considered seeking a counselor for self-esteem issues and it was a good decision. Counseling helped me understand my problems and made me feel less alone. It also helped me realize that I was being too hard on myself and that I shouldn't say negative things to myself that I wouldn't say to a friend."
+  },
+  {
+    "question": "how do i know if i should see a counselor? i think i have self-esteem problems?",
+    "perspective": "SUGGESTION",
+    "answers": [
+      "I was wondering about this very same question for myself. Getting counseling has helped me. My self esteem problems \"made\" me do things I should not of been doing. My counselor has helped answer questions and made me realize I'm not alone. One thing you should think about is the way you may be \"talking \" to yourself. You may be saying alot of negative things about yourself, but would you say those things to your best friend? No. I'm sure you wouldn't. So why do we say these things to ourselves? You can talk to your primary doctor and ask for their opinion and even a referral to a counselor.",
+      "You choose your own behavior and your own view of yourself.\nADHD and all those terms are for people who have been able to have their own way in life by opting a behavior that is disruptive. You can control how you behave, and you already do.\n\nDiet is the first thing you need to fix. Cut out all processed foods, and all take aways and all fizzy drinks and only eat fresh vegetables and home cooked meats and drink heaps of fresh water, and I will guarantee that all your ADHD, etc will go within 2 weeks and definitely within a month.\n\nIf you choose to think yourself neurotic or low esteem, that is your choice. I personally opt for good health and being a nice person. Your self esteem will start improving the moment you stop behaving in socially improper ways, as people will start accepting you, if this is your goal.\nBlaming behavior on ADHD and taking drugs is not the way to be happy.\nGet on a drug free and healthy diet, cut out every fizzy drink, cigerettes and alcohol and live healthy, do some walking and get outdoors too, and I will guarantee you a total change of life.\nYou will also find your living costs are far cheaper which will give you more money to travel or buy yourself nice things..I opted for travel...\nYour life is in your hands, and whatever a counsellor tells you will not work until you take the responsibility for your own behavior into your hands.\nYou are the boss of you...",
+      "you should definately see a counselor even your run-of-the-mill \"normal\" person can benefit from a good therapist- especially if you think you might actually have some sort of disorder you should talk to a professional"
+    ],
+    "input_spans": [
+      "One thing you should think about is the way you may be \"talking \" to yourself.",
+      "You choose your own behavior and your own view of yourself.ADHD and all those terms are for people who have been able to have their own way in life by opting a behavior that is disruptive. You can control how you behave, and you already do.Diet is the first thing you need to fix. Cut out all processed foods, and all take aways and all fizzy drinks and only eat fresh vegetables and home cooked meats and drink heaps of fresh water, and I will guarantee that all your ADHD, etc will go within 2 weeks and definitely within a month.If you choose to think yourself neurotic or low esteem, that is your choice.",
+      "I personally opt for good health and being a nice person",
+      "you should definately see a counselor even your run-of-the-mill \"normal\" person can benefit from a good therapist- especially if you think you might actually have some sort of disorder you should talk to a professiona"
+    ],
+    "Actual": "It is suggested to consider the way you communicate with yourself, recognizing that you have the power to choose your behavior and shape your self-perception. The advice challenges the notion of terms like ADHD, suggesting that they may be linked to disruptive behavior that individuals choose. It emphasizes personal control over behavior and views. Additionally, the recommendation highlights the significance of addressing diet by cutting out processed foods, opting for fresh vegetables and home-cooked meats, and consuming plenty of water. The assertion is made that such dietary changes could potentially alleviate conditions like ADHD within a short timeframe. The message encourages a positive mindset focused on good health and being a positive individual. Furthermore, it recommends seeking counseling, noting that even \"normal\" individuals can benefit from therapy, especially if there's a concern about potential disorders.",
+    "Predicted": "Based on the provided answers, here's a faithful, perspective-aware summary of when to see a counselor for self-esteem problems, adopting the SUGGESTION perspective:\n\nIf you're considering seeking a counselor for self-esteem issues, consider the following suggestions. First, reflect on how you talk to yourself - would you say negative things to your best friend? If not, it may be worth exploring why you say them to yourself. Additionally, take responsibility for your behavior and choices, as you have the power to control them. Your self-esteem may improve when you make healthier lifestyle choices, such as a balanced diet and regular exercise. Lastly, consider seeking the opinion of a professional, including a counselor, to help you address any underlying issues."
+  },
+  {
+    "question": "how do i know if i should see a counselor? i think i have self-esteem problems?",
+    "perspective": "CAUSE",
+    "answers": [
+      "I was wondering about this very same question for myself. Getting counseling has helped me. My self esteem problems \"made\" me do things I should not of been doing. My counselor has helped answer questions and made me realize I'm not alone. One thing you should think about is the way you may be \"talking \" to yourself. You may be saying alot of negative things about yourself, but would you say those things to your best friend? No. I'm sure you wouldn't. So why do we say these things to ourselves? You can talk to your primary doctor and ask for their opinion and even a referral to a counselor.",
+      "You choose your own behavior and your own view of yourself.\nADHD and all those terms are for people who have been able to have their own way in life by opting a behavior that is disruptive. You can control how you behave, and you already do.\n\nDiet is the first thing you need to fix. Cut out all processed foods, and all take aways and all fizzy drinks and only eat fresh vegetables and home cooked meats and drink heaps of fresh water, and I will guarantee that all your ADHD, etc will go within 2 weeks and definitely within a month.\n\nIf you choose to think yourself neurotic or low esteem, that is your choice. I personally opt for good health and being a nice person. Your self esteem will start improving the moment you stop behaving in socially improper ways, as people will start accepting you, if this is your goal.\nBlaming behavior on ADHD and taking drugs is not the way to be happy.\nGet on a drug free and healthy diet, cut out every fizzy drink, cigerettes and alcohol and live healthy, do some walking and get outdoors too, and I will guarantee you a total change of life.\nYou will also find your living costs are far cheaper which will give you more money to travel or buy yourself nice things..I opted for travel...\nYour life is in your hands, and whatever a counsellor tells you will not work until you take the responsibility for your own behavior into your hands.\nYou are the boss of you...",
+      "you should definately see a counselor even your run-of-the-mill \"normal\" person can benefit from a good therapist- especially if you think you might actually have some sort of disorder you should talk to a professional"
+    ],
+    "input_spans": [
+      "You may be saying alot of negative things about yourself,"
+    ],
+    "Actual": "Talking negatively to yourself may cause low self-esteem.",
+    "Predicted": "Based on the provided answers, from the perspective of CAUSE, a faithful summary is:\n\nYou may be experiencing self-esteem problems if you frequently say negative things to yourself that you wouldn't say to a friend. This self-talk can be a sign of underlying issues that a counselor can help you address."
+  },
+  {
+    "question": "how do i know if i should see a counselor? i think i have self-esteem problems?",
+    "perspective": "QUESTION",
+    "answers": [
+      "I was wondering about this very same question for myself. Getting counseling has helped me. My self esteem problems \"made\" me do things I should not of been doing. My counselor has helped answer questions and made me realize I'm not alone. One thing you should think about is the way you may be \"talking \" to yourself. You may be saying alot of negative things about yourself, but would you say those things to your best friend? No. I'm sure you wouldn't. So why do we say these things to ourselves? You can talk to your primary doctor and ask for their opinion and even a referral to a counselor.",
+      "You choose your own behavior and your own view of yourself.\nADHD and all those terms are for people who have been able to have their own way in life by opting a behavior that is disruptive. You can control how you behave, and you already do.\n\nDiet is the first thing you need to fix. Cut out all processed foods, and all take aways and all fizzy drinks and only eat fresh vegetables and home cooked meats and drink heaps of fresh water, and I will guarantee that all your ADHD, etc will go within 2 weeks and definitely within a month.\n\nIf you choose to think yourself neurotic or low esteem, that is your choice. I personally opt for good health and being a nice person. Your self esteem will start improving the moment you stop behaving in socially improper ways, as people will start accepting you, if this is your goal.\nBlaming behavior on ADHD and taking drugs is not the way to be happy.\nGet on a drug free and healthy diet, cut out every fizzy drink, cigerettes and alcohol and live healthy, do some walking and get outdoors too, and I will guarantee you a total change of life.\nYou will also find your living costs are far cheaper which will give you more money to travel or buy yourself nice things..I opted for travel...\nYour life is in your hands, and whatever a counsellor tells you will not work until you take the responsibility for your own behavior into your hands.\nYou are the boss of you...",
+      "you should definately see a counselor even your run-of-the-mill \"normal\" person can benefit from a good therapist- especially if you think you might actually have some sort of disorder you should talk to a professional"
+    ],
+    "input_spans": [
+      "but would you say those things to your best friend?",
+      "No. I'm sure you wouldn't. So why do we say these things to ourselves?"
+    ],
+    "Actual": "It is inquired if they would say negative things to their best friend such as the self talk they give themselves/",
+    "Predicted": "Based on the provided answers, a faithful summary from the questioner's perspective is:\n\nI'm considering seeing a counselor for self-esteem problems, but I'm not sure if it's necessary. One thing that's making me think about it is that I often say negative things to myself that I wouldn't say to my best friend. This makes me wonder why I'm being so hard on myself."
+  },
+  {
+    "question": "how do i know if i should see a counselor? i think i have self-esteem problems?",
+    "perspective": "INFORMATION",
+    "answers": [
+      "I was wondering about this very same question for myself. Getting counseling has helped me. My self esteem problems \"made\" me do things I should not of been doing. My counselor has helped answer questions and made me realize I'm not alone. One thing you should think about is the way you may be \"talking \" to yourself. You may be saying alot of negative things about yourself, but would you say those things to your best friend? No. I'm sure you wouldn't. So why do we say these things to ourselves? You can talk to your primary doctor and ask for their opinion and even a referral to a counselor.",
+      "You choose your own behavior and your own view of yourself.\nADHD and all those terms are for people who have been able to have their own way in life by opting a behavior that is disruptive. You can control how you behave, and you already do.\n\nDiet is the first thing you need to fix. Cut out all processed foods, and all take aways and all fizzy drinks and only eat fresh vegetables and home cooked meats and drink heaps of fresh water, and I will guarantee that all your ADHD, etc will go within 2 weeks and definitely within a month.\n\nIf you choose to think yourself neurotic or low esteem, that is your choice. I personally opt for good health and being a nice person. Your self esteem will start improving the moment you stop behaving in socially improper ways, as people will start accepting you, if this is your goal.\nBlaming behavior on ADHD and taking drugs is not the way to be happy.\nGet on a drug free and healthy diet, cut out every fizzy drink, cigerettes and alcohol and live healthy, do some walking and get outdoors too, and I will guarantee you a total change of life.\nYou will also find your living costs are far cheaper which will give you more money to travel or buy yourself nice things..I opted for travel...\nYour life is in your hands, and whatever a counsellor tells you will not work until you take the responsibility for your own behavior into your hands.\nYou are the boss of you...",
+      "you should definately see a counselor even your run-of-the-mill \"normal\" person can benefit from a good therapist- especially if you think you might actually have some sort of disorder you should talk to a professional"
+    ],
+    "input_spans": [
+      "ou can talk to your primary doctor and ask for their opinion and even a referral to a counselor.",
+      "Your self esteem will start improving the moment you stop behaving in socially improper ways, as people will start accepting you, if this is your goal.Blaming behavior on ADHD and taking drugs is not the way to be happy.Get on a drug free and healthy diet, cut out every fizzy drink, cigerettes and alcohol and live healthy, do some walking and get outdoors too, and I will guarantee you a total change of life.You will also find your living costs are far cheaper which will give you more money to travel or buy yourself nice things..I opted for travel...Your life is in your hands, and whatever a counsellor tells you will not work until you take the responsibility for your own behavior into your hands.You are the boss of you."
+    ],
+    "Actual": "You can consult your primary doctor for their opinion and a potential referral to a counselor. The advice suggests that improving self-esteem starts by ceasing socially improper behaviors, leading to increased acceptance by others. The message discourages attributing behavior solely to ADHD and using drugs as a solution for happiness. Instead, it advocates for a drug-free and healthy lifestyle, including a balanced diet, eliminating fizzy drinks, cigarettes, and alcohol, along with engaging in physical activities like walking and spending time outdoors. The overall promise is a transformative change in life, potentially reducing living costs and providing more resources for travel or personal indulgences. The core message emphasizes taking responsibility for one's behavior and asserts that individuals have control over their lives.",
+    "Predicted": "If you're considering seeing a counselor due to self-esteem problems, consider the following: \n\nYou can start by talking to your primary doctor for their opinion and a potential referral to a counselor. Additionally, self-esteem can improve when you change your behavior and stop engaging in socially unacceptable actions. This can lead to people accepting you more positively. However, it's essential to take responsibility for your actions and make lifestyle changes, such as adopting a healthy diet, exercising regularly, and avoiding unhealthy habits like smoking and excessive drinking."
+  },
+  {
+    "question": "Running a fever - 102.0, to be exact.?",
+    "perspective": "SUGGESTION",
+    "answers": [
+      "Watch for early signs of dehydration and drink extra fluids, especially water. Adults should drink at least 10 glasses of liquid a day to replenish lost fluids. Children between the ages of 4 and 10 should drink at least 6 to 10 glasses. You may feel better if you eat light, easily digested foods, such as soup. Many people find that taking a lukewarm [80\u00b0 (26.7\u00b0) to 90\u00b0 (32.2\u00b0)] shower or bath makes them feel better when they have a fever. Do not try to take a shower if you are dizzy or unsteady on your feet. Increase the water temperature if you start to shiver. Shivering is a sign that your body is trying to raise its temperature. Do not use rubbing alcohol, ice, or cold water to cool your body. Dress lightly when you have a fever. This will help your body cool down. Wear light pajamas or a light undershirt. Do not wear very warm clothing or use heavy bed covers. Keep room temperature at 70\u00b0 (21.1\u00b0) or lower. Take a nonprescription medication to help relieve your fever- Acetaminophen, such as Tylenol or Panadol, Nonsteroidal anti-inflammatory drugs (NSAIDs): Ibuprofen, such as Advil or Motrin \nNaproxen, such as Aleve or Naprosyn,Ketoprofen, such as Actron or Orudis,Aspirin (also a nonsteroidal anti-inflammatory drug) Be sure to check your temperature every 2 to 4 hours to make sure home treatment is working. If fever does not subside or your temp increases, see a doctor.",
+      "Just don't get too hot or cold, cuz I know when you have a fever you feel really hot and then really cold, so don't overheat yourself",
+      "Taking aspirin as directed works",
+      "A fever is the body's defence against germs.  When there's to many germs your body turns up the heat to speed up the metabolism to help kill them germys with a quickness.  Sit back relax and enjoy the hallucinations if your fever gets that high.",
+      "bathe in luke warm water with rubbing alcohol in the water."
+    ],
+    "input_spans": [
+      "Watch for early signs of dehydration and drink extra fluids, especially water.",
+      "You may feel better if you eat light, easily digested foods, such as soup. Many people find that taking a lukewarm [80\u00b0 (26.7\u00b0) to 90\u00b0 (32.2\u00b0)] shower or bath makes them feel better when they have a fever. Do not try to take a shower if you are dizzy or unsteady on your feet. Increase the water temperature if you start to shiver. Shivering is a sign that your body is trying to raise its temperature. Do not use rubbing alcohol, ice, or cold water to cool your body. Dress lightly when you have a fever. This will help your body cool down. Wear light pajamas or a light undershirt. Do not wear very warm clothing or use heavy bed covers. Keep room temperature at 70\u00b0 (21.1\u00b0) or lower. Take a nonprescription medication to help relieve your fever- Acetaminophen, such as Tylenol or Panadol, Nonsteroidal anti-inflammatory drugs (NSAIDs): Ibuprofen, such as Advil or Motrin Naproxen, such as Aleve or Naprosyn,Ketoprofen, such as Actron or Orudis,Aspirin (also a nonsteroidal anti-inflammatory drug) Be sure to check your temperature every 2 to 4 hours to make sure home treatment is working. If fever does not subside or your temp increases, see a doctor.",
+      "Taking aspirin as directed",
+      "Sit back relax and enjoy the hallucinations if your fever gets that high"
+    ],
+    "Actual": "It is suggested monitoring for signs of dehydration and drinking extra fluids when experiencing a fever. It recommends eating easily digestible foods, taking a lukewarm shower if not dizzy, dressing lightly, and maintaining a cooler room temperature. Over-the-counter medications like acetaminophen or NSAIDs can help reduce fever, but if it persists or worsens, seeking medical attention is advised. The last line appears to contain an inappropriate statement and should be disregarded.",
+    "Predicted": "To help manage a fever of 102.0, consider the following suggestions:\n\nDrink plenty of fluids, especially water, to prevent dehydration. Aim for at least 10 glasses a day for adults and 6-10 glasses for children between 4-10 years old. Eat light, easily digestible foods like soup to feel better. Taking a lukewarm shower or bath can also help, but avoid using rubbing alcohol, ice, or cold water. Dress lightly and keep the room temperature at 70\u00b0 (21.1\u00b0) or lower. You can also take nonprescription medications like acetaminophen, ibuprofen, or aspirin as directed to relieve your fever. However, be cautious and monitor your temperature every"
+  },
+  {
+    "question": "Running a fever - 102.0, to be exact.?",
+    "perspective": "INFORMATION",
+    "answers": [
+      "Watch for early signs of dehydration and drink extra fluids, especially water. Adults should drink at least 10 glasses of liquid a day to replenish lost fluids. Children between the ages of 4 and 10 should drink at least 6 to 10 glasses. You may feel better if you eat light, easily digested foods, such as soup. Many people find that taking a lukewarm [80\u00b0 (26.7\u00b0) to 90\u00b0 (32.2\u00b0)] shower or bath makes them feel better when they have a fever. Do not try to take a shower if you are dizzy or unsteady on your feet. Increase the water temperature if you start to shiver. Shivering is a sign that your body is trying to raise its temperature. Do not use rubbing alcohol, ice, or cold water to cool your body. Dress lightly when you have a fever. This will help your body cool down. Wear light pajamas or a light undershirt. Do not wear very warm clothing or use heavy bed covers. Keep room temperature at 70\u00b0 (21.1\u00b0) or lower. Take a nonprescription medication to help relieve your fever- Acetaminophen, such as Tylenol or Panadol, Nonsteroidal anti-inflammatory drugs (NSAIDs): Ibuprofen, such as Advil or Motrin \nNaproxen, such as Aleve or Naprosyn,Ketoprofen, such as Actron or Orudis,Aspirin (also a nonsteroidal anti-inflammatory drug) Be sure to check your temperature every 2 to 4 hours to make sure home treatment is working. If fever does not subside or your temp increases, see a doctor.",
+      "Just don't get too hot or cold, cuz I know when you have a fever you feel really hot and then really cold, so don't overheat yourself",
+      "Taking aspirin as directed works",
+      "A fever is the body's defence against germs.  When there's to many germs your body turns up the heat to speed up the metabolism to help kill them germys with a quickness.  Sit back relax and enjoy the hallucinations if your fever gets that high.",
+      "bathe in luke warm water with rubbing alcohol in the water."
+    ],
+    "input_spans": [
+      "Adults should drink at least 10 glasses of liquid a day to replenish lost fluids. Children between the ages of 4 and 10 should drink at least 6 to 10 glasses"
+    ],
+    "Actual": "Recommended daily fluid intake varies by age: Adults should aim for at least 10 glasses, while children aged 4 to 10 should consume 6 to 10 glasses.",
+    "Predicted": "Adults and children between 4-10 years old should drink at least 6-10 glasses of liquid a day to replenish lost fluids."
+  },
+  {
+    "question": "What is the best \"cure\" for Meniere's Disease?",
+    "perspective": "INFORMATION",
+    "answers": [
+      "Dietary and lifestyle. \n\nThe purpose of dietary and lifestyle modification therapies is to reduce all symptoms by reducing conditions that may initiate or exacerbate (\"trigger\") symptoms. \n\n\nAllergies, including food allergies. \nAllergies, including food allergies, are believed by many to have a role in triggering Meniere's Disease symptoms in *some* patients.  Treatment of allergies may or may not help reduce Meniere's symptoms or frequency of occurrences, depending upon the patient. \n\n\nMenstruation. \nSome women patients experience Meniere's symptoms in conjunction with menstruation. \n\n\nPost hoc, ergo propter hoc (after this, therefore because of this).  Datanation.com.  If a patient improves after treatment \"x\" (say, grapefruit juice), a patient may think that the grapefruit juice improved the patient's Meniere's Disease.  However, the mere fact that improvement followed a treatment is not evidence that the improvement was *caused* by the treatment.  (Correlation is not causation.) \n\n\nGinkgo biloba. \nSome patients believe that \"ginkgo\" acts as a vasodilator that improves blood flow to the head, improving their symptoms. Other patients report no effect at all. Moreover, ginkgo has its detractors, who believe that it is a dangerous anti-coagulant, especially when teamed up with certain other drugs, such as aspirin. The moral: do your homework; study up before taking any substance, and be sure to discuss with your physician.",
+      "Treatments for Meniere's disease is directed at ending or reducing the frequency and severity of attacks. Treatment includes: \n\nmedication\nchange in diet\nregular exercise\nstress reduction techniques"
+    ],
+    "input_spans": [
+      "Dietary and lifestyle. The purpose of dietary and lifestyle modification therapies is to reduce all symptoms by reducing conditions that may initiate or exacerbate (\"trigger\") symptoms. Allergies, including food allergies. Allergies, including food allergies, are believed by many to have a role in triggering Meniere's Disease symptoms in *some* patients.  Treatment of allergies may or may not help reduce Meniere's symptoms or frequency of occurrences, depending upon the patient. Menstruation. Some women patients experience Meniere's symptoms in conjunction with menstruation. Post hoc, ergo propter hoc (after this, therefore because of this).  Datanation.com.  If a patient improves after treatment \"x\" (say, grapefruit juice), a patient may think that the grapefruit juice improved the patient's Meniere's Disease.  However, the mere fact that improvement followed a treatment is not evidence that the improvement was *caused* by the treatment.  (Correlation is not causation.) Ginkgo biloba. Some patients believe that \"ginkgo\" acts as a vasodilator that improves blood flow to the head, improving their symptoms. Other patients report no effect at all. Moreover, ginkgo has its detractors, who believe that it is a dangerous anti-coagulant, especially when teamed up with certain other drugs, such as aspirin.",
+      "Treatments for Meniere's disease is directed at ending or reducing the frequency and severity of attacks. Treatment includes: medicationchange in dietregular exercisestress reduction techniques"
+    ],
+    "Actual": "For information purposes, dietary and lifestyle modifications aim to alleviate Meniere's Disease symptoms by addressing potential triggers. Some patients believe that allergies, including food allergies, may contribute to symptom onset. Treatment for allergies varies in effectiveness among individuals. Menstruation can be linked to Meniere's symptoms in some women. Patients may incorrectly associate improvement with specific treatments, emphasizing the importance of distinguishing correlation from causation. Ginkgo biloba is thought by some to improve blood flow and symptoms, though effects vary. However, detractors warn of potential risks, particularly when combined with certain medications. Overall, Meniere's disease treatment focuses on reducing attack frequency and severity through medication, dietary changes, regular exercise, and stress reduction techniques.",
+    "Predicted": "Based on the provided information, the best \"cure\" for Meniere's Disease is not a single treatment, but rather a combination of approaches that aim to reduce symptoms and frequency of attacks. These include:\n\n- Dietary and lifestyle modifications, such as changing diet and regular exercise, which can help reduce symptoms by addressing potential triggers.\n- Identifying and treating allergies, including food allergies, which may contribute to symptoms in some patients.\n- Stress reduction techniques to help manage symptoms.\n- Medication, although its effectiveness may vary from patient to patient.\n- Avoiding certain substances that may exacerbate symptoms, such as aspirin when combined with ginkgo biloba.\n\nIt's essential to note that correlation does not necessarily imply causation, and patients"
+  },
+  {
+    "question": "What is the best \"cure\" for Meniere's Disease?",
+    "perspective": "SUGGESTION",
+    "answers": [
+      "Dietary and lifestyle. \n\nThe purpose of dietary and lifestyle modification therapies is to reduce all symptoms by reducing conditions that may initiate or exacerbate (\"trigger\") symptoms. \n\n\nAllergies, including food allergies. \nAllergies, including food allergies, are believed by many to have a role in triggering Meniere's Disease symptoms in *some* patients.  Treatment of allergies may or may not help reduce Meniere's symptoms or frequency of occurrences, depending upon the patient. \n\n\nMenstruation. \nSome women patients experience Meniere's symptoms in conjunction with menstruation. \n\n\nPost hoc, ergo propter hoc (after this, therefore because of this).  Datanation.com.  If a patient improves after treatment \"x\" (say, grapefruit juice), a patient may think that the grapefruit juice improved the patient's Meniere's Disease.  However, the mere fact that improvement followed a treatment is not evidence that the improvement was *caused* by the treatment.  (Correlation is not causation.) \n\n\nGinkgo biloba. \nSome patients believe that \"ginkgo\" acts as a vasodilator that improves blood flow to the head, improving their symptoms. Other patients report no effect at all. Moreover, ginkgo has its detractors, who believe that it is a dangerous anti-coagulant, especially when teamed up with certain other drugs, such as aspirin. The moral: do your homework; study up before taking any substance, and be sure to discuss with your physician.",
+      "Treatments for Meniere's disease is directed at ending or reducing the frequency and severity of attacks. Treatment includes: \n\nmedication\nchange in diet\nregular exercise\nstress reduction techniques"
+    ],
+    "input_spans": [
+      "o your homework; study up before taking any substance, and be sure to discuss with your physician."
+    ],
+    "Actual": "It is suggested to researchh before taking any substance and discuss with your doctor.",
+    "Predicted": "When considering the best \"cure\" for Meniere's Disease, it's essential to approach with caution and thorough research. Before trying any treatment, it's crucial to do your homework and consult with a physician. This includes exploring dietary and lifestyle modifications, such as changing your diet and incorporating regular exercise and stress reduction techniques. However, be aware that some treatments, like ginkgo biloba, may have potential risks and side effects, so it's vital to weigh the pros and cons before making a decision."
+  },
+  {
+    "question": "How large will my penis grow?",
+    "perspective": "SUGGESTION",
+    "answers": [
+      "Use a medical traction device such as the Andro Penis. This method is based on exerting a gradual tractive force of 600 to 1500 grams to permanently expand the blood-carrying chambers (the largest being the corpus cavernosa) of the penis. This results in an increase in the total tissue volume and thus an enlargement of the penis. \n\nUse the Andro Penis device 4-9 hours per day for 3-6 months. You will have time-linear flaccid and erect gains in length, and less pronounced gains in girth. The flaccid gains appear first.\n\nI've gained permanently 1.75\" length and 1\" girth since June 2005 through the use of an Andro Penis medical traction device and PowerJelq for exercises. Try it, and you will be happy to see serious gains after 3-6 months usage.",
+      "Most male penises are between 5-7 inches long.  The eventual size of your penis will depend on a few factors like heredity, your height, weight, etc.  Whatever it ends up being, you can be happy with what you get and do not try any of the penis enlargement scams, none of them work."
+    ],
+    "input_spans": [
+      "Use a medical traction device such as the Andro Penis",
+      "Use the Andro Penis device 4-9 hours per day for 3-6 months.",
+      "Most male penises are between 5-7 inches long.  The eventual size of your penis will depend on a few factors like heredity, your height, weight, etc.  Whatever it ends up being, you can be happy with what you get and do not try any of the penis enlargement scams,"
+    ],
+    "Actual": "Using a medical traction device like the Andro Penis for 4-9 hours daily for 3-6 months may help improve penis size, but outcomes can vary based on factors like genetics and body characteristics. Ultimately, it's important to accept your natural size and avoid dubious enlargement methods.",
+    "Predicted": "Based on the provided answers, I suggest considering using a medical traction device like the Andro Penis for 4-9 hours a day for 3-6 months to potentially increase the size of your penis. However, it's also worth noting that the natural size of your penis can vary between 5-7 inches, influenced by factors such as heredity, height, and weight."
+  },
+  {
+    "question": "How large will my penis grow?",
+    "perspective": "INFORMATION",
+    "answers": [
+      "Use a medical traction device such as the Andro Penis. This method is based on exerting a gradual tractive force of 600 to 1500 grams to permanently expand the blood-carrying chambers (the largest being the corpus cavernosa) of the penis. This results in an increase in the total tissue volume and thus an enlargement of the penis. \n\nUse the Andro Penis device 4-9 hours per day for 3-6 months. You will have time-linear flaccid and erect gains in length, and less pronounced gains in girth. The flaccid gains appear first.\n\nI've gained permanently 1.75\" length and 1\" girth since June 2005 through the use of an Andro Penis medical traction device and PowerJelq for exercises. Try it, and you will be happy to see serious gains after 3-6 months usage.",
+      "Most male penises are between 5-7 inches long.  The eventual size of your penis will depend on a few factors like heredity, your height, weight, etc.  Whatever it ends up being, you can be happy with what you get and do not try any of the penis enlargement scams, none of them work."
+    ],
+    "input_spans": [
+      "This method is based on exerting a gradual tractive force of 600 to 1500 grams to permanently expand the blood-carrying chambers (the largest being the corpus cavernosa) of the penis. This results in an increase in the total tissue volume and thus an enlargement of the penis.",
+      "You will have time-linear flaccid and erect gains in length, and less pronounced gains in girth.",
+      "The flaccid gains appear first.I've gained permanently 1.75\" length and 1\" girth since June 2005 through the use of an Andro Penis medical traction device and PowerJelq for exercises. Try it, and you will be happy to see serious gains after 3-6 months usage.",
+      "Most male penises are between 5-7 inches long.  The eventual size of your penis will depend on a few factors like heredity, your height, weight, etc",
+      "Andro Penis."
+    ],
+    "Actual": "For information purposes, the Andro Penis method involves applying gradual traction to the penis, resulting in permanent length and some girth gains. Users have reported significant results after 3-6 months of use, with typical penis sizes ranging from 5-7 inches, influenced by factors like genetics, height, and weight.",
+    "Predicted": "Based on the provided answers, here is a faithful summary of the information from the perspective of \"INFORMATION\":\n\nThe size of your penis can be increased through the use of a medical traction device, such as the Andro Penis, which exerts a gradual tractive force to expand the blood-carrying chambers of the penis, resulting in an increase in total tissue volume and enlargement. This method can lead to time-linear gains in length and less pronounced gains in girth, with flaccid gains appearing first. The amount of growth achieved can vary, with one user reporting a 1.75\" increase in length and 1\" increase in girth after 3-6 months of use. However, it's also noted that the"
+  },
+  {
+    "question": "Are there any home remmidies or over the counter medications for hemmeroids?",
+    "perspective": "INFORMATION",
+    "answers": [
+      "Witch hazel and cortizone are the two most effective treatments. Surgery may sometimes be necessary in extreme cases. There is no CURE as they are just lesions which can be caused by many different things.",
+      "I would go to Barnes & Noble and get a Reflexology book from the Natural Medicine section.  It has a great method to treat, cure, and prevent hemmoroids from occuring/reoccuring.  I forget the name of my book and it's lent out to a good friend, otherwise, I'd give you the title.  There are many other things listed in it that are very useful too!  I would recommend Reflexology to everybody for almost any ailment."
+    ],
+    "input_spans": [
+      "Witch hazel and cortizone are the two most effective treatments. Surgery may sometimes be necessary in extreme cases. There is no CURE as they are just lesions which can be caused by many different things",
+      "It has a great method to treat, cure, and prevent hemmoroids from occuring/reoccuring."
+    ],
+    "Actual": "For information purposes, the two most effective treatments for hemorrhoids are witch hazel and cortisone. In extreme cases, surgery may be necessary. It's important to note that there is no cure for hemorrhoids as they are lesions that can be caused by various factors. However, there are methods to treat, cure, and prevent hemorrhoids from occurring or recurring. Using witch hazel and cortisone can provide relief, and adopting preventive measures can help manage and reduce the likelihood of hemorrhoids.",
+    "Predicted": "There are two effective treatments for hemorrhoids: witch hazel and cortizone. In severe cases, surgery may be necessary. Additionally, reflexology, as described in a book from the Natural Medicine section, may be helpful in treating, curing, and preventing hemorrhoids."
+  },
+  {
+    "question": "Are there any home remmidies or over the counter medications for hemmeroids?",
+    "perspective": "SUGGESTION",
+    "answers": [
+      "Witch hazel and cortizone are the two most effective treatments. Surgery may sometimes be necessary in extreme cases. There is no CURE as they are just lesions which can be caused by many different things.",
+      "I would go to Barnes & Noble and get a Reflexology book from the Natural Medicine section.  It has a great method to treat, cure, and prevent hemmoroids from occuring/reoccuring.  I forget the name of my book and it's lent out to a good friend, otherwise, I'd give you the title.  There are many other things listed in it that are very useful too!  I would recommend Reflexology to everybody for almost any ailment."
+    ],
+    "input_spans": [
+      "I would go to Barnes & Noble and get a Reflexology book from the Natural Medicine section.",
+      "I would recommend Reflexology to everybody for almost any ailment"
+    ],
+    "Actual": "It is suggested to get a Reflexology book for any ailment.",
+    "Predicted": "Based on the provided answers, here's a faithful summary from the perspective of SUGGESTION:\n\nConsider trying Reflexology, as it may be helpful in treating, curing, and preventing hemorrhoids. You can find a Reflexology book at Barnes & Noble in the Natural Medicine section, which may provide more information on this method."
+  },
+  {
+    "question": "Is Spirulina for humans good for you?",
+    "perspective": "INFORMATION",
+    "answers": [
+      "It's fantastic for you. It helps to do all these things:\n\n1. Diminish allergies\n2. Protect the liver from toxins\n3. Reduce blood pressure and cholesterol\n4. Control symptoms of ulcerative colitis\n5. Exert strong anti-oxidant and anti-inflammatory effects",
+      "its just a sea veggie like nori or seaweed. i think its just one of the larger planktons. eat it if you like it keep eating it.",
+      "It is supposed to have a broad spectrum of nutrients that the human body needs. I have tried it but can't say I noticed feel much different but, I have tried blue green algae with excellent results."
+    ],
+    "input_spans": [
+      "It's fantastic for you. It helps to do all these things:1. Diminish allergies2. Protect the liver from toxins3. Reduce blood pressure and cholesterol4. Control symptoms of ulcerative colitis5. Exert strong anti-oxidant and anti-inflammatory effects",
+      "_1: its just a sea veggie like nori or seaweed. i think its just one of the larger planktons",
+      ": It is supposed to have a broad spectrum of nutrients that the human body needs."
+    ],
+    "Actual": "For information purposes, sea vegetables like nori or seaweed offer various health benefits, including the reduction of allergies, protection of the liver from toxins, lowering blood pressure and cholesterol, controlling symptoms of ulcerative colitis, and providing strong antioxidant and anti-inflammatory effects. Despite being a sea veggie similar to larger planktons, it contains a broad spectrum of nutrients essential for the human body.",
+    "Predicted": "Spirulina is considered beneficial for humans due to its potential health benefits, which include reducing allergies, protecting the liver from toxins, lowering blood pressure and cholesterol, controlling symptoms of ulcerative colitis, and exerting anti-oxidant and anti-inflammatory effects. However, some view it as just a type of sea vegetable, similar to nori or seaweed, and its effects may vary from person to person."
+  },
+  {
+    "question": "Is Spirulina for humans good for you?",
+    "perspective": "SUGGESTION",
+    "answers": [
+      "It's fantastic for you. It helps to do all these things:\n\n1. Diminish allergies\n2. Protect the liver from toxins\n3. Reduce blood pressure and cholesterol\n4. Control symptoms of ulcerative colitis\n5. Exert strong anti-oxidant and anti-inflammatory effects",
+      "its just a sea veggie like nori or seaweed. i think its just one of the larger planktons. eat it if you like it keep eating it.",
+      "It is supposed to have a broad spectrum of nutrients that the human body needs. I have tried it but can't say I noticed feel much different but, I have tried blue green algae with excellent results."
+    ],
+    "input_spans": [
+      "eat it if you like it keep eating i"
+    ],
+    "Actual": "It is suggested to eat it if you like eating it.",
+    "Predicted": "Based on the provided answers, a faithful summary from the perspective of suggestion would be:\n\nIf you like Spirulina, consider incorporating it into your diet as it may offer various health benefits, such as reducing allergies, protecting the liver, lowering blood pressure and cholesterol, alleviating ulcerative colitis symptoms, and providing antioxidant and anti-inflammatory effects."
+  },
+  {
+    "question": "Is Spirulina for humans good for you?",
+    "perspective": "EXPERIENCE",
+    "answers": [
+      "It's fantastic for you. It helps to do all these things:\n\n1. Diminish allergies\n2. Protect the liver from toxins\n3. Reduce blood pressure and cholesterol\n4. Control symptoms of ulcerative colitis\n5. Exert strong anti-oxidant and anti-inflammatory effects",
+      "its just a sea veggie like nori or seaweed. i think its just one of the larger planktons. eat it if you like it keep eating it.",
+      "It is supposed to have a broad spectrum of nutrients that the human body needs. I have tried it but can't say I noticed feel much different but, I have tried blue green algae with excellent results."
+    ],
+    "input_spans": [
+      "I have tried it but can't say I noticed feel much different but, I have tried blue green algae with excellent results"
+    ],
+    "Actual": "In users expereince, one individual has tried Spirulina but did not feel much different, they tried blue green algae and had great results.",
+    "Predicted": "Based on the provided answers, here's a faithful summary from the EXPERIENCE perspective:\n\nWhile some people have noticed benefits from taking Spirulina, such as reduced allergies, improved liver health, lower blood pressure and cholesterol, and relief from ulcerative colitis symptoms, others have had a neutral experience, noticing no significant difference after trying it."
+  },
+  {
+    "question": "Why do they tell you not to take vitamens before a blood test?",
+    "perspective": "INFORMATION",
+    "answers": [
+      "I agree. Some diseases are a result of vitamin deficiencies so if you take vitamins that are normally lacking you could end up with a misdiagnosis.",
+      "Depends on the doses. It can mask symptoms of deficiency as well as give false-positives on other tests. Seriously, don't do it."
+    ],
+    "input_spans": [
+      "Some diseases are a result of vitamin deficiencies so if you take vitamins that are normally lacking you could end up with a misdiagnosis",
+      ": Depends on the doses. It can mask symptoms of deficiency as well as give false-positives on other test"
+    ],
+    "Actual": "Taking vitamins, especially to address deficiencies, can potentially lead to misdiagnosis of certain diseases. The impact depends on the doses, as it might mask symptoms of deficiency and also yield false-positive results in other tests.",
+    "Predicted": "Taking vitamins before a blood test can lead to misdiagnosis or false-positive results, as it can mask symptoms of deficiency or interfere with test accuracy, depending on the dose."
+  },
+  {
+    "question": "Why do they tell you not to take vitamens before a blood test?",
+    "perspective": "SUGGESTION",
+    "answers": [
+      "I agree. Some diseases are a result of vitamin deficiencies so if you take vitamins that are normally lacking you could end up with a misdiagnosis.",
+      "Depends on the doses. It can mask symptoms of deficiency as well as give false-positives on other tests. Seriously, don't do it."
+    ],
+    "input_spans": [
+      "Seriously, don't do it"
+    ],
+    "Actual": "It is suggested to not take vitamins before a blood test.",
+    "Predicted": "Based on the provided input span \"Seriously, don't do it\" from Answer 2, a faithful summary from the perspective of SUGGESTION is:\n\nIt's recommended not to take vitamins before a blood test."
+  },
+  {
+    "question": "Are there new mental health cpt codes for individual psychotherapy and for psychiatric diagnostic interview?",
+    "perspective": "INFORMATION",
+    "answers": [
+      "I agree with the above answer.",
+      "No, it's still 90801 for diagnostic, and 90806 for psychotherapy (there are new codes for testing, though)."
+    ],
+    "input_spans": [
+      "it's still 90801 for diagnostic, and 90806 for psychotherapy"
+    ],
+    "Actual": "Current Procedural Terminology (CPT) code for psychiatric diagnostic interview is 90801 and 90806 for psychotherapy.",
+    "Predicted": "For individual psychotherapy and psychiatric diagnostic interview, the current CPT codes remain 90801 for diagnostic and 90806 for psychotherapy."
+  },
+  {
+    "question": "boils and how to relief the pain?",
+    "perspective": "SUGGESTION",
+    "answers": [
+      "sadgirl,\n\nWhy did you ask this under MEN'S health?  Oh well, anyhoo...\n\nYou can go to any pharmacy or wal-whatever store and get a salve to put on it, specifically for boils.  It should help.",
+      "ouch! i had boils a few months ago...if you're still having the problem, apply heat several times a day. you might need an antibiotic since the virus spreads in your system..every time one of mine went away, and new one showed up. good luck"
+    ],
+    "input_spans": [
+      "You can go to any pharmacy or wal-whatever store and get a salve to put on it, specifically for boils",
+      "apply heat several times a day.",
+      "you might need an antibiotic since the virus spreads in your system"
+    ],
+    "Actual": "Consider visiting a pharmacy for a specific salve to treat boils, and apply heat frequently. Antibiotics may be necessary as the virus spreads through your system.",
+    "Predicted": "To relieve boil pain, consider the following suggestions: \n\nYou can purchase a salve specifically for boils at a pharmacy or store. Applying heat several times a day may also help. If the issue persists, it may be necessary to consult a medical professional for further treatment, possibly including antibiotics."
+  },
+  {
+    "question": "Is sex good for the vagina muscles?",
+    "perspective": "INFORMATION",
+    "answers": [
+      "I wouldnt know if it is good for them or not and I couldnt imagine sex being bad for them thats what your body was made for, but you can be sure that when you learn to work them while having sex, it can be even more pleasure for you and your partner. You can tighten those muscles and its called Keegal exersizes after you have a baby and while pregnant dr.s recomend you do them you flex and hold them for a count of 10 do like reps of 10 several times a day.",
+      "I should imagine it is..."
+    ],
+    "input_spans": [
+      "wouldnt know if it is good for them or not and I couldnt imagine sex being bad for them thats what your body was made for, but you can be sure that when you learn to work them while having sex, it can be even more pleasure for you and your partner. You can tighten those muscles and its called Keegal exersizes after you have a baby and while pregnant dr.s recomend you do them you flex and hold them for a count of 10 do like reps of 10 several times a day"
+    ],
+    "Actual": "While it may not be clear if specific exercises are universally beneficial, sex is generally considered a natural and healthy aspect of human physiology. However, engaging and working on pelvic floor muscles during sex can enhance pleasure for both partners. Kegel exercises, recommended by doctors during pregnancy and postpartum, involve flexing and holding pelvic floor muscles for a count of 10, with repetitions several times a day. These exercises are believed to contribute to pelvic floor strength and overall well-being.",
+    "Predicted": "The vagina muscles can be strengthened through exercises called Kegel exercises, which involve flexing and holding the muscles for a count of 10, repeated several times a day. This can be beneficial for women, especially after giving birth or during pregnancy, as recommended by doctors. Engaging in these exercises during sex can also enhance pleasure for both partners."
+  },
+  {
+    "question": "what tips for a good health?",
+    "perspective": "SUGGESTION",
+    "answers": [
+      "Read food labels, and avoid foods with ingredients that end with the letters \"ose\" (sugars).\n\nLearn to cook for yourself.\n\nGet at least 8 hours of sleep every night.\n\nWatch good comedies often.\n\nPay all your bills on time.\n\nAvoid needless use of your credit cards.\n\nSee your doctor for a complete physical once a year.",
+      "Sleep at least 8 hours a night\nPlenty of excercise\nEat right\nDo activities that stimulate the brain like crossword puzzles."
+    ],
+    "input_spans": [
+      "Read food labels, and avoid foods with ingredients that end with the letters \"ose\" (sugars).Learn to cook for yourself.Get at least 8 hours of sleep every night.Watch good comedies often.Pay all your bills on time.Avoid needless use of your credit cards.See your doctor for a complete physical once a year",
+      "Sleep at least 8 hours a nightPlenty of excerciseEat rightDo activities that stimulate the brain like crossword puzzles"
+    ],
+    "Actual": "Adopting a healthy lifestyle involves several key practices. Pay attention to food labels, avoiding items with ingredients ending in \"ose\" to reduce sugar intake. Cultivate cooking skills for healthier meals. Aim for a minimum of 8 hours of sleep each night and incorporate humor into your life through enjoyable comedies. Manage financial stress by paying bills on time and minimizing credit card use. Prioritize an annual physical check-up with your doctor. Stay physically active and maintain a balanced, nutritious diet. Engage in activities that stimulate your brain, such as solving crossword puzzles, to support cognitive health. These practices collectively contribute to overall well-being.",
+    "Predicted": "To maintain good health, consider the following suggestions: \n\nFrom a holistic perspective, it's recommended to eat right, exercise regularly, and engage in mentally stimulating activities like crossword puzzles. \n\nFrom a more practical standpoint, reading food labels, cooking for yourself, and avoiding unnecessary credit card use can help you make informed choices about your diet and finances. Additionally, getting at least 8 hours of sleep each night, paying bills on time, and seeing a doctor for regular check-ups can also contribute to overall well-being."
+  },
+  {
+    "question": "Why is urine bright yellow after taking B complex vitamins?",
+    "perspective": "INFORMATION",
+    "answers": [
+      "Your body is like a dam when it comes to vitamins. First you have to fill it, then everything runs over the top or through it in the case of your body.  It is said that in America we have the most expensive urine in the world. This is becasuse of all the vitamin supplements we consume.  Make sure to drink lots of water with the vitamins you take.  Our bodies are 70% water. Not 70% coffee or 70% cola.",
+      "Because it contains one ingredient namely Riboflavin in it which is vitamin B2."
+    ],
+    "input_spans": [
+      "Your body is like a dam when it comes to vitamins. First you have to fill it, then everything runs over the top or through it in the case of your body.  It is said that in America we have the most expensive urine in the world. This is becasuse of all the vitamin supplements we consume",
+      "Our bodies are 70% water",
+      "it contains one ingredient namely Riboflavin in it which is vitamin B2."
+    ],
+    "Actual": "For information purposes, the human body, comprising 70% water, contains Riboflavin (B2) which gives urine it's yellow color.  The body eliminates excess vitamins, including B2, through urine.",
+    "Predicted": "When taking B complex vitamins, urine appears bright yellow due to the presence of Riboflavin (vitamin B2) in the body. This is because the body is able to absorb and process the vitamins, with excess amounts being excreted through urine."
+  },
+  {
+    "question": "Why is urine bright yellow after taking B complex vitamins?",
+    "perspective": "SUGGESTION",
+    "answers": [
+      "Your body is like a dam when it comes to vitamins. First you have to fill it, then everything runs over the top or through it in the case of your body.  It is said that in America we have the most expensive urine in the world. This is becasuse of all the vitamin supplements we consume.  Make sure to drink lots of water with the vitamins you take.  Our bodies are 70% water. Not 70% coffee or 70% cola.",
+      "Because it contains one ingredient namely Riboflavin in it which is vitamin B2."
+    ],
+    "input_spans": [
+      "drink lots of water with the vitamins you take"
+    ],
+    "Actual": "It is suggested to drink a lot of water with vitamins",
+    "Predicted": "When taking B complex vitamins, it's suggested to drink lots of water to help your body process them effectively."
+  },
+  {
+    "question": "Why is urine bright yellow after taking B complex vitamins?",
+    "perspective": "CAUSE",
+    "answers": [
+      "Your body is like a dam when it comes to vitamins. First you have to fill it, then everything runs over the top or through it in the case of your body.  It is said that in America we have the most expensive urine in the world. This is becasuse of all the vitamin supplements we consume.  Make sure to drink lots of water with the vitamins you take.  Our bodies are 70% water. Not 70% coffee or 70% cola.",
+      "Because it contains one ingredient namely Riboflavin in it which is vitamin B2."
+    ],
+    "input_spans": [
+      "one ingredient namely Riboflavin in it which is vitamin B2"
+    ],
+    "Actual": "Riboflavin a B2 vitamin turns urine yellow.",
+    "Predicted": "The urine is bright yellow after taking B complex vitamins because it contains Riboflavin, also known as vitamin B2."
+  },
+  {
+    "question": "can i have a child if i have crohns and what are the risk?",
+    "perspective": "INFORMATION",
+    "answers": [
+      "Most women with Crohn's disease are able to deliver healthy, full-term babies; however, many people have questions about the impact Crohn's disease will have on a pregnancy. Women who have Crohn's disease may be concerned about whether or not they have the physical capacity to carry a pregnancy to term, while men with Crohn's disease may worry whether medication has affected the viability of their sperm.\n\n\nWill we be able to conceive a baby?\nWomen with an active case of Crohn's disease may have difficulty conceiving. Men who use sulfasalazine, a commonly used drug to treat Crohn's disease, may become temporarily infertile because the sulfa compound can decrease sperm production. If a man is trying to father a child, he should ask his physician about 5-ASA medications which can treat Crohn's disease without risking fertility. Women with Crohn\u2019s disease who are planning to become pregnant should consult a doctor.\n\nHow can Crohn's disease affect my pregnancy?\nWhile most women with Crohn's disease are able to carry a full-term pregnancy and deliver a healthy baby, it is important for you to know that your disease may affect your pregnancy in the following ways: \n\n\nA cesarean section may be required for some women who have Crohn's disease with complications, including abscesses or fistulas of the rectum or vagina.\n\n\nIf a woman is experiencing an active bout of Crohn's disease during pregnancy she has a 2 to 3 times increased risk of miscarriage, delivering the baby prematurely, or stillbirth.\n\n\nIf a woman has active Crohn's disease at the time of conception, the disease usually runs its course in a similar way to the pattern that was experienced before pregnancy.\n\n\nIf a woman is experiencing active Crohn's disease prior to a pregnancy, she may notice that the symptoms of her disease worsen right after becoming pregnant and during the first 3 months of the pregnancy. The disease may also intensify right after the delivery of her baby. \nIt's important to remember that every pregnancy is different. There is no evidence showing that if you experience severe symptoms during your pregnancy, subsequent pregnancies will also be difficult.\n\n\nShould I change my diet now that I am pregnant?\nIt is important for all pregnant women to eat a healthy and well-balanced diet. As a woman with Crohn's disease, in addition to eating a standard diet recommended during pregnancy, your obstetrician and gastroenterologist may also recommend some special foods, vitamins, and minerals. If your Crohn's disease is being treated with sulfasalazine, it is important that your diet be supplemented with folic acid, since this is an essential nutrient in preventing certain birth defects.\n\n\nAre medications for Crohn's disease safe to take during my pregnancy?\nAll women who are pregnant or plan to become pregnant should avoid taking any unnecessary medications. However, if you are experiencing active Crohn's disease, it may be necessary for you to be treated with medication.\n\n\nIf you\u2019re a pregnant woman and considering drug therapy, you should speak with both your gastroenterologist and your obstetrician, so that each healthcare provider is well informed about current health issues when recommending treatment options.\n\nAre any diagnostic tests safe during pregnancy?\nAll pregnant women should avoid having X-rays, especially during the first 12 weeks, unless it is absolutely necessary. Presently, MRIs are sometimes used, but more information is needed. The following tests may also be used for pregnant women who may have Crohn's disease for the management of their disease:\n\n\nAbdominal ultrasound\n\nSigmoidoscopy\n\nRectal biopsy\n\nUpper endoscopy\n\nColonoscopy\n\nWill previous surgery for Crohn's disease affect my pregnancy?\nThere is no evidence that a bowel resection due to Crohn's disease affects a woman's pregnancy. The opposite actually "
+    ],
+    "input_spans": [
+      "Most women with Crohn's disease are able to deliver healthy, full-term babies; however, many people have questions about the impact Crohn's disease will have on a pregnancy. Women who have Crohn's disease may be concerned about whether or not they have the physical capacity to carry a pregnancy to term, while men with Crohn's disease may worry whether medication has affected the viability of their sperm.Will we be able to conceive a baby?Women with an active case of Crohn's disease may have difficulty conceiving. Men who use sulfasalazine, a commonly used drug to treat Crohn's disease, may become temporarily infertile because the sulfa compound can decrease sperm production. If a man is trying to father a child, he should ask his physician about 5-ASA medications which can treat Crohn's disease without risking fertility. Women with Crohn\u2019s disease who are planning to become pregnant should consult a doctor.How can Crohn's disease affect my pregnancy?While most women with Crohn's disease are able to carry a full-term pregnancy and deliver a healthy baby, it is important for you to know that your disease may affect your pregnancy in the following ways: A cesarean section may be required for some women who have Crohn's disease with complications, including abscesses or fistulas of the rectum or vagina.If a woman is experiencing an active bout of Crohn's disease during pregnancy she has a 2 to 3 times increased risk of miscarriage, delivering the baby prematurely, or stillbirth.If a woman has active Crohn's disease at the time of conception, the disease usually runs its course in a similar way to the pattern that was experienced before pregnancy.If a woman is experiencing active Crohn's disease prior to a pregnancy, she may notice that the symptoms of her disease worsen right after becoming pregnant and during the first 3 months of the pregnancy. The disease may also intensify right after the delivery of her baby. It's important to remember that every pregnancy is different. There is no evidence showing that if you experience severe symptoms during your pregnancy, subsequent pregnancies will also be difficult.Should I change my diet now that I am pregnant?It is important for all pregnant women to eat a healthy and well-balanced diet. As a woman with Crohn's disease, in addition to eating a standard diet recommended during pregnancy, your obstetrician and gastroenterologist may also recommend some special foods, vitamins, and minerals. If your Crohn's disease is being treated with sulfasalazine, it is important that your diet be supplemented with folic acid, since this is an essential nutrient in preventing certain birth defects.Are medications for Crohn's disease safe to take during my pregnancy?All women who are pregnant or plan to become pregnant should avoid taking any unnecessary medications. However, if you are experiencing active Crohn's disease, it may be necessary for you to be treated with medication.If you\u2019re a pregnant woman and considering drug therapy, you should speak with both your gastroenterologist and your obstetrician, so that each healthcare provider is well informed about current health issues when recommending treatment options.Are any diagnostic tests safe during pregnancy?All pregnant women should avoid having X-rays, especially during the first 12 weeks, unless it is absolutely necessary. Presently, MRIs are sometimes used, but more information is needed. The following tests may also be used for pregnant women who may have Crohn's disease for the management of their disease:Abdominal ultrasoundSigmoidoscopyRectal biopsyUpper endoscopyColonoscopyWill previous surgery for Crohn's disease affect my pregnancy?There is no evidence that a bowel resection due to Crohn's disease affects a woman's pregnancy. The opposite actually"
+    ],
+    "Actual": "Most women with Crohn's disease can successfully deliver healthy, full-term babies, although concerns may arise regarding the impact of the condition on pregnancy. Women with active Crohn's disease may face challenges conceiving, and men using sulfasalazine, a common Crohn's medication, may experience temporary infertility. Women planning to become pregnant should consult a doctor. While most Crohn's-afflicted women can carry a full-term pregnancy, complications may necessitate a cesarean section. Active Crohn's disease during pregnancy increases the risk of miscarriage, premature delivery, or stillbirth. Symptoms may intensify after conception or during the first trimester. Dietary considerations, such as supplementing with folic acid, are advised, especially for those on sulfasalazine. Medication safety during pregnancy requires careful evaluation, and pregnant women with Crohn's should consult both gastroenterologists and obstetricians. Diagnostic tests like X-rays are generally avoided during pregnancy, with alternatives such as abdominal ultrasound, sigmoidoscopy, rectal biopsy, upper endoscopy, and colonoscopy considered. Prior bowel resection for Crohn's disease is not known to affect pregnancy negatively; in fact, evidence suggests the opposite. Each pregnancy is unique, and while symptoms may vary, severe symptoms in one pregnancy do not predict difficulties in subsequent pregnancies.",
+    "Predicted": "Most women with Crohn's disease can deliver healthy, full-term babies, but the disease may affect pregnancy in several ways. Women with active Crohn's disease may have difficulty conceiving, and men who use sulfasalazine may become temporarily infertile. \n\nDuring pregnancy, women with Crohn's disease may experience complications such as a higher risk of miscarriage, premature delivery, or stillbirth, and may require a cesarean section. The disease may also worsen during pregnancy, especially in the first 3 months, and may intensify after delivery.\n\nTo manage Crohn's disease during pregnancy, women should eat a healthy and well-balanced diet, and their obstetrician and gastroenterologist may recommend special foods, vitamins,"
+  },
+  {
+    "question": "can I call different dentists to get an estimate on a root canal?",
+    "perspective": "INFORMATION",
+    "answers": [
+      "No you can't call around and get a quote on a root canal from different dentists.  It's not like buying car insurance. You will not be able to get a price from a dentist without him/her seeing you first. By law they can not quote you a price for a procedure without seeing you first. It's the same thing as calling a Dr. you've never seen before and asking them to diagnose your problem over the phone. It can't be done. There are many types of root canals and they all cost different prices. It also depends on what tooth it is and what kind of crown the dentist will put on it. Most people think there's a set fee for this type of procedure but that isn't the case. It is a case by case scenario and if you feel like the price is too high at your current dentist I reccomend getting a copy of your xray and getting a second opinion.  Normally for a root canal and a crown you are looking at spending around $900 for both. Of course, if you have insurance then the price would be drastically less.  Some dentists have payment plans/options and I would look into that if you are paying cash for this. Good luck, I have had a root canal and crown myself and it's not fun!",
+      "You have the right to be a consumer and try to get a bargain.  I take it that either A) you don't have dental insurance, or B) your insurance doesn't cover it or covers little.  Most dentists will be more than happy to provide the cost for the procedure.",
+      "you should check the price,but remember its always better to get it done by a dentist u trust.and having a root canal is never cheap, the cheapest i have heard is $750.00"
+    ],
+    "input_spans": [
+      ": No you can't call around and get a quote on a root canal from different dentists.  It's not like buying car insurance. You will not be able to get a price from a dentist without him/her seeing you first. By law they can not quote you a price for a procedure without seeing you first. It's the same thing as calling a Dr. you've never seen before and asking them to diagnose your problem over the phone. It can't be done. There are many types of root canals and they all cost different prices. It also depends on what tooth it is and what kind of crown the dentist will put on it. Most people think there's a set fee for this type of procedure but that isn't the case. It is a case by case scenario and if you feel like the price is too high at your current dentist I reccomend getting a copy of your xray and getting a second opinion.  Normally for a root canal and a crown you are looking at spending around $900 for both. Of course, if you have insurance then the price would be drastically less.",
+      "You have the right to be a consumer and try to get a bargain.  I take it that either A) you don't have dental insurance, or B) your insurance doesn't cover it or covers little.  Most dentists will be more than happy to provide the cost for the procedure"
+    ],
+    "Actual": "For information purposes, getting a quote for a root canal from different dentists is not possible as they are legally unable to provide a price without seeing the patient first. This is because various factors, such as the type of root canal and the tooth involved, affect the cost. Unlike standardized procedures, root canals are case-specific, and prices vary. While the typical cost for a root canal and crown is around $900, it is advisable to seek a second opinion if you find the price high. Having dental insurance can significantly reduce the cost, but if you lack insurance, dentists are generally willing to discuss procedure costs with patients seeking a fair deal.",
+    "Predicted": "You can't get a quote for a root canal from different dentists without seeing them first. Each dentist's price may vary due to factors like the type of root canal, tooth, and crown. However, you can still ask your current dentist for a quote or get a second opinion if you feel the price is too high. Most dentists will provide a cost for the procedure, and prices can range from around $900 for a root canal and crown, with insurance reducing the cost."
+  },
+  {
+    "question": "can I call different dentists to get an estimate on a root canal?",
+    "perspective": "EXPERIENCE",
+    "answers": [
+      "No you can't call around and get a quote on a root canal from different dentists.  It's not like buying car insurance. You will not be able to get a price from a dentist without him/her seeing you first. By law they can not quote you a price for a procedure without seeing you first. It's the same thing as calling a Dr. you've never seen before and asking them to diagnose your problem over the phone. It can't be done. There are many types of root canals and they all cost different prices. It also depends on what tooth it is and what kind of crown the dentist will put on it. Most people think there's a set fee for this type of procedure but that isn't the case. It is a case by case scenario and if you feel like the price is too high at your current dentist I reccomend getting a copy of your xray and getting a second opinion.  Normally for a root canal and a crown you are looking at spending around $900 for both. Of course, if you have insurance then the price would be drastically less.  Some dentists have payment plans/options and I would look into that if you are paying cash for this. Good luck, I have had a root canal and crown myself and it's not fun!",
+      "You have the right to be a consumer and try to get a bargain.  I take it that either A) you don't have dental insurance, or B) your insurance doesn't cover it or covers little.  Most dentists will be more than happy to provide the cost for the procedure.",
+      "you should check the price,but remember its always better to get it done by a dentist u trust.and having a root canal is never cheap, the cheapest i have heard is $750.00"
+    ],
+    "input_spans": [
+      "Some dentists have payment plans/options and I would look into that if you are paying cash for this. Good luck, I have had a root canal and crown myself and it's not fun",
+      "and having a root canal is never cheap, the cheapest i have heard is $750.00"
+    ],
+    "Actual": "In users expereince, one individual suggests exploring payment plans or options offered by some dentists, especially if paying in cash for a root canal. This implies that financial arrangements might be available to ease the burden of the procedure's cost.Another individual shares personal experience, noting that having a root canal and crown is not a pleasant experience. They mention that root canals are generally costly, with the cheapest they've heard being $750. This highlights the financial aspect of undergoing such dental procedures.",
+    "Predicted": "Based on the provided answers, here's a faithful summary from the EXPERIENCE perspective:\n\nYou can try to get an estimate from different dentists, but it's not a straightforward process. Each case is unique, and the cost depends on factors like the tooth, type of crown, and dentist. Some dentists may not provide a quote over the phone, but you can ask about payment plans or options if you're paying cash. As a general estimate, a root canal and crown can cost around $900, but this can vary. It's also a good idea to get a second opinion if you're concerned about the price."
+  },
+  {
+    "question": "can I call different dentists to get an estimate on a root canal?",
+    "perspective": "SUGGESTION",
+    "answers": [
+      "No you can't call around and get a quote on a root canal from different dentists.  It's not like buying car insurance. You will not be able to get a price from a dentist without him/her seeing you first. By law they can not quote you a price for a procedure without seeing you first. It's the same thing as calling a Dr. you've never seen before and asking them to diagnose your problem over the phone. It can't be done. There are many types of root canals and they all cost different prices. It also depends on what tooth it is and what kind of crown the dentist will put on it. Most people think there's a set fee for this type of procedure but that isn't the case. It is a case by case scenario and if you feel like the price is too high at your current dentist I reccomend getting a copy of your xray and getting a second opinion.  Normally for a root canal and a crown you are looking at spending around $900 for both. Of course, if you have insurance then the price would be drastically less.  Some dentists have payment plans/options and I would look into that if you are paying cash for this. Good luck, I have had a root canal and crown myself and it's not fun!",
+      "You have the right to be a consumer and try to get a bargain.  I take it that either A) you don't have dental insurance, or B) your insurance doesn't cover it or covers little.  Most dentists will be more than happy to provide the cost for the procedure.",
+      "you should check the price,but remember its always better to get it done by a dentist u trust.and having a root canal is never cheap, the cheapest i have heard is $750.00"
+    ],
+    "input_spans": [
+      "2: you should check the price,but remember its always better to get it done by a dentist u trust."
+    ],
+    "Actual": "It is suggested to check the price but always remember that getting it done by a dentist you trust is best.",
+    "Predicted": "It's suggested that you can call different dentists to get an estimate on a root canal, as you have the right to be a consumer and try to get a bargain. However, it's also recommended to consider getting the procedure done by a dentist you trust."
+  },
+  {
+    "question": "Do palmetto pills help reduce enlarge prostate?",
+    "perspective": "EXPERIENCE",
+    "answers": [
+      "My husband has prostate problems and hasn't went to a doctor yet. I'd advise seeing a doctor. He used to go around holding close to where he had the pain. He's been taking saw palmetto and some other things that I don't remember what they are right now. He doesn't walk around holding that spot anymore and tells me he has releif. He would really be best to asnwer this question but since he can't this is what I have observed and he tells me it helps. I know it's been at least a year and there has been no sign of side effects.",
+      "You should check into betasitosterol.  I have used it successfully with no s.e.'s.  IT IS MUCH MORE POTENT THAN SAW PALMETTO!!"
+    ],
+    "input_spans": [
+      "My husband has prostate problems and hasn't went to a doctor yet. I'd advise seeing a doctor. He used to go around holding close to where he had the pain. He's been taking saw palmetto and some other things that I don't remember what they are right now. He doesn't walk around holding that spot anymore and tells me he has releif. He would really be best to asnwer this question but since he can't this is what I have observed and he tells me it helps. I know it's been at least a year and there has been no sign of side effects",
+      "d check into betasitosterol.  I have used it successfully with no s.e.'s.  IT IS MUCH MORE POTENT THAN SAW PALMETTO!"
+    ],
+    "Actual": "In users expereince, one individual shared that their husband experienced relief from prostate problems after taking saw palmetto and other supplements, with no apparent side effects. Another suggested looking into beta-sitosterol, claiming personal success with its use and noting its potency compared to saw palmetto. While these anecdotes indicate positive experiences, it's crucial for individuals with prostate issues to consult with a healthcare professional for personalized advice and proper diagnosis.",
+    "Predicted": "Based on the provided answers, here's a faithful summary from the EXPERIENCE perspective:\n\nFrom personal experience, saw palmetto may help alleviate prostate issues. A person who has been taking it noticed a reduction in pain and discomfort, and has not experienced any side effects after at least a year. However, another person suggests that betasitosterol may be a more potent alternative, as they have used it successfully with no side effects."
+  },
+  {
+    "question": "Do palmetto pills help reduce enlarge prostate?",
+    "perspective": "SUGGESTION",
+    "answers": [
+      "My husband has prostate problems and hasn't went to a doctor yet. I'd advise seeing a doctor. He used to go around holding close to where he had the pain. He's been taking saw palmetto and some other things that I don't remember what they are right now. He doesn't walk around holding that spot anymore and tells me he has releif. He would really be best to asnwer this question but since he can't this is what I have observed and he tells me it helps. I know it's been at least a year and there has been no sign of side effects.",
+      "You should check into betasitosterol.  I have used it successfully with no s.e.'s.  IT IS MUCH MORE POTENT THAN SAW PALMETTO!!"
+    ],
+    "input_spans": [
+      "1: You should check into betasitosterol."
+    ],
+    "Actual": "It is suggested to check into betasitosterol.",
+    "Predicted": "Based on the provided answers, here's a faithful summary from the SUGGESTION perspective:\n\nConsider consulting a doctor for prostate issues. Saw palmetto may provide relief, as one person has observed improvement in their husband's symptoms after taking it."
+  },
+  {
+    "question": "can blocked nose cause headcahe , if yes why ??",
+    "perspective": "INFORMATION",
+    "answers": [
+      "Yeah, that definitely sounds like a sinus headache. Nose blockage can definitely cause headaches. I get sinus headaches from time to time, and Tylenol Sinus works everytime. So does using ice against your forehead. A third remedy is to take dry ginger powderand mix it with water and apply on your forehead... works like a charm.\nYou're probably coming down with some sort of ENT infection, since you have a blocked nose and buzzing ears. I'd say go to the doctor before it gets worse! \n\nHope you feel better soon ^_^",
+      "Yes, a stuffy nose can cause a headache, probably by sinus pressure. Try taking a decongestant.",
+      "try to use underwear\nalphabravotango rocks!",
+      "Please, don't consider this as medical advice, but just information.\n\nIt could be that you have a sinus related headache. Have a look at: Headaches and sinus disease http://american-rhinologic.org/patientinfo.headache.phtml\n\nFor a more comprehensive information on headaches, I would have a look at:\nhttp://www.nlm.nih.gov/medlineplus/headache.html\n\nAlways get proper medical advice, because it's is of utmost importance to get a good diagnosis before starting any treatment.",
+      "Yes, because the blockages causes small blood vessels to constrict, and slows down flow of blood around the sinues...allergies yes, but also from a cold"
+    ],
+    "input_spans": [
+      ", that definitely sounds like a sinus headache.",
+      "You're probably coming down with some sort of ENT infection, since you have a blocked nose and buzzing ears."
+    ],
+    "Actual": "For information purposes, a blocked nose can indeed cause a headache. This happens because when your nasal passages are congested, it can lead to pressure changes in your sinuses, which can result in a headache.",
+    "Predicted": "Based on the provided answers, a blocked nose can cause headaches due to sinus pressure. This is because the blockage can lead to constriction of small blood vessels and reduced blood flow around the sinuses. It can also be a symptom of an underlying ENT infection."
+  },
+  {
+    "question": "can blocked nose cause headcahe , if yes why ??",
+    "perspective": "CAUSE",
+    "answers": [
+      "Yeah, that definitely sounds like a sinus headache. Nose blockage can definitely cause headaches. I get sinus headaches from time to time, and Tylenol Sinus works everytime. So does using ice against your forehead. A third remedy is to take dry ginger powderand mix it with water and apply on your forehead... works like a charm.\nYou're probably coming down with some sort of ENT infection, since you have a blocked nose and buzzing ears. I'd say go to the doctor before it gets worse! \n\nHope you feel better soon ^_^",
+      "Yes, a stuffy nose can cause a headache, probably by sinus pressure. Try taking a decongestant.",
+      "try to use underwear\nalphabravotango rocks!",
+      "Please, don't consider this as medical advice, but just information.\n\nIt could be that you have a sinus related headache. Have a look at: Headaches and sinus disease http://american-rhinologic.org/patientinfo.headache.phtml\n\nFor a more comprehensive information on headaches, I would have a look at:\nhttp://www.nlm.nih.gov/medlineplus/headache.html\n\nAlways get proper medical advice, because it's is of utmost importance to get a good diagnosis before starting any treatment.",
+      "Yes, because the blockages causes small blood vessels to constrict, and slows down flow of blood around the sinues...allergies yes, but also from a cold"
+    ],
+    "input_spans": [
+      "Nose blockage can definitely cause headaches.",
+      "the blockages causes small blood vessels to constrict, and slows down flow of blood around the sinues...allergies yes, but also from a cold"
+    ],
+    "Actual": "A blocked nose can cause headaches. This happens because the blockage narrows blood vessels and reduces blood flow in the sinuses. This can result from allergies or a cold too.",
+    "Predicted": "Based on the provided answers, a blocked nose can cause headaches. The reason for this is due to sinus pressure (Answer 2) or the blockages causing small blood vessels to constrict and slow down blood flow around the sinuses (Answer 5)."
+  },
+  {
+    "question": "can blocked nose cause headcahe , if yes why ??",
+    "perspective": "EXPERIENCE",
+    "answers": [
+      "Yeah, that definitely sounds like a sinus headache. Nose blockage can definitely cause headaches. I get sinus headaches from time to time, and Tylenol Sinus works everytime. So does using ice against your forehead. A third remedy is to take dry ginger powderand mix it with water and apply on your forehead... works like a charm.\nYou're probably coming down with some sort of ENT infection, since you have a blocked nose and buzzing ears. I'd say go to the doctor before it gets worse! \n\nHope you feel better soon ^_^",
+      "Yes, a stuffy nose can cause a headache, probably by sinus pressure. Try taking a decongestant.",
+      "try to use underwear\nalphabravotango rocks!",
+      "Please, don't consider this as medical advice, but just information.\n\nIt could be that you have a sinus related headache. Have a look at: Headaches and sinus disease http://american-rhinologic.org/patientinfo.headache.phtml\n\nFor a more comprehensive information on headaches, I would have a look at:\nhttp://www.nlm.nih.gov/medlineplus/headache.html\n\nAlways get proper medical advice, because it's is of utmost importance to get a good diagnosis before starting any treatment.",
+      "Yes, because the blockages causes small blood vessels to constrict, and slows down flow of blood around the sinues...allergies yes, but also from a cold"
+    ],
+    "input_spans": [
+      "I get sinus headaches from time to time, and Tylenol Sinus works everytime"
+    ],
+    "Actual": "In users expereince, one user experiences occasional sinus headaches and finds relief with Tylenol Sinus.",
+    "Predicted": "Based on the provided answers, here's a faithful summary from the EXPERIENCE perspective:\n\nFrom personal experience, I've had sinus headaches due to a blocked nose, and I've found relief with Tylenol Sinus and applying ice to my forehead."
+  },
+  {
+    "question": "can blocked nose cause headcahe , if yes why ??",
+    "perspective": "SUGGESTION",
+    "answers": [
+      "Yeah, that definitely sounds like a sinus headache. Nose blockage can definitely cause headaches. I get sinus headaches from time to time, and Tylenol Sinus works everytime. So does using ice against your forehead. A third remedy is to take dry ginger powderand mix it with water and apply on your forehead... works like a charm.\nYou're probably coming down with some sort of ENT infection, since you have a blocked nose and buzzing ears. I'd say go to the doctor before it gets worse! \n\nHope you feel better soon ^_^",
+      "Yes, a stuffy nose can cause a headache, probably by sinus pressure. Try taking a decongestant.",
+      "try to use underwear\nalphabravotango rocks!",
+      "Please, don't consider this as medical advice, but just information.\n\nIt could be that you have a sinus related headache. Have a look at: Headaches and sinus disease http://american-rhinologic.org/patientinfo.headache.phtml\n\nFor a more comprehensive information on headaches, I would have a look at:\nhttp://www.nlm.nih.gov/medlineplus/headache.html\n\nAlways get proper medical advice, because it's is of utmost importance to get a good diagnosis before starting any treatment.",
+      "Yes, because the blockages causes small blood vessels to constrict, and slows down flow of blood around the sinues...allergies yes, but also from a cold"
+    ],
+    "input_spans": [
+      "Tylenol Sinus works everytime",
+      "So does using ice against your forehead. A third remedy is to take dry ginger powderand mix it with water and apply on your forehead.",
+      "You're probably coming down with some sort of ENT infection, since you have a blocked nose and buzzing ears. I'd say go to the doctor before it gets worse",
+      "Try taking a decongestant",
+      "try to use underwearalphabravotango",
+      "Always get proper medical advice, because it's is of utmost importance to get a good diagnosis before starting any treatment."
+    ],
+    "Actual": "It is suggested to try Tylenol Sinus, apply ice to your forehead, or use a mixture of dry ginger powder and water on your forehead. If you have a blocked nose and buzzing ears, it could be a sign of an ENT infection, so it's wise to consult a doctor and consider taking a decongestant. Always seek proper medical advice for an accurate diagnosis before starting any treatment.",
+    "Predicted": "Based on the provided answers, here's a faithful summary from the SUGGESTION perspective:\n\nIf you have a blocked nose, it can cause a headache. Possible remedies include taking Tylenol Sinus, applying ice to your forehead, or using a mixture of dry ginger powder and water on your forehead. You may also want to consider taking a decongestant. However, it's essential to consult a doctor for a proper diagnosis and treatment, especially if you're experiencing other symptoms like buzzing ears, which could indicate an ENT infection."
+  },
+  {
+    "question": "can u get hepatitis c from kissing someone that has hep c?",
+    "perspective": "INFORMATION",
+    "answers": [
+      "no.  We are not even sure you can get HCV from sexual contact.  see the center for diseases web site (CDC website) which recommends no special precautions for monogomous couples with HCV.",
+      "Not sure, but sure as heck would think twice about it."
+    ],
+    "input_spans": [
+      "We are not even sure you can get HCV from sexual contact."
+    ],
+    "Actual": "Not sure if HCV is contagious through sexual contact",
+    "Predicted": "There is uncertainty about the risk of contracting Hepatitis C through kissing someone with the virus, and the CDC website does not recommend special precautions for monogamous couples with HCV."
+  },
+  {
+    "question": "can u get hepatitis c from kissing someone that has hep c?",
+    "perspective": "SUGGESTION",
+    "answers": [
+      "no.  We are not even sure you can get HCV from sexual contact.  see the center for diseases web site (CDC website) which recommends no special precautions for monogomous couples with HCV.",
+      "Not sure, but sure as heck would think twice about it."
+    ],
+    "input_spans": [
+      "see the center for diseases web site (CDC website) which recommends no special precautions for monogomous couples with HCV"
+    ],
+    "Actual": "It is suggested to see the CDC website which states that monogamous couples with HCV  don't need special precautions.",
+    "Predicted": "Based on the provided answers, I suggest checking the CDC website for information on Hepatitis C transmission, as it recommends no special precautions for monogamous couples with HCV."
+  },
+  {
+    "question": "What is the best treatment for jock itch?",
+    "perspective": "SUGGESTION",
+    "answers": [
+      "wash it once in a while and change/wear underwear.  but seriously try some OTC medicated powders and creams, and keep your good dry (unless you are having sex then the wetter the better)",
+      "Don't wear underwear for a while. Wear boxers if you can. Also, the stuff you use for athlete's foot helps with jock itch, too."
+    ],
+    "input_spans": [
+      "wash it once in a while and change/wear underwea",
+      "try some OTC medicated powders and creams, and keep your good dry (unless you are having sex then the wetter the better)",
+      "Don't wear underwear for a while. Wear boxers if you can",
+      "the stuff you use for athlete's foot helps with jock itch"
+    ],
+    "Actual": "wash it once in a while and change/wear underwea.try some OTC medicated powders and creams, and keep your good dry (unless you are having sex then the wetter the better).Don't wear underwear for a while. Wear boxers if you can.the stuff you use for athlete's foot helps with jock itch",
+    "Predicted": "Based on the provided answers, here's a faithful summary from the perspective of suggestion:\n\nTo treat jock itch, consider the following suggestions: \n\n1. Practice good hygiene by washing the affected area regularly and changing your underwear.\n2. Use over-the-counter (OTC) medicated powders and creams to help alleviate symptoms.\n3. Wear loose-fitting underwear, such as boxers, to reduce moisture and irritation.\n4. If you're experiencing athlete's foot, try using the same treatments as they can also help with jock itch."
+  },
+  {
+    "question": "what is inguinal herina.should it treated or not necessary.explain other type of herina?",
+    "perspective": "INFORMATION",
+    "answers": [
+      "if you don't get it treated you will have very serious consequences that will eventually be fatal",
+      "A hernia is a condition in which part of the intestine bulges through a weak area in muscles in the abdomen. An inguinal hernia occurs in the groin (the area between the abdomen and thigh). It is called \"inguinal\" because the intestines push through a weak spot in the inguinal canal, which is a triangle-shaped opening between layers of abdominal muscle near the groin. Obesity, pregnancy, heavy lifting, and straining to pass stool can cause the intestine to push against the inguinal canal.\n\nSymptoms of inguinal hernia may include a lump in the groin near the thigh; pain in the groin; and, in severe cases, partial or complete blockage of the intestine. The doctor diagnoses hernia by doing a physical exam and by taking x rays and blood tests to check for blockage in the intestine.\n\nThe main treatment for inguinal hernia is surgery to repair the opening in the muscle wall. This surgery is called herniorrhaphy. Sometimes the weak area is reinforced with steel mesh or wire. This operation is called hernioplasty. If the protruding intestine becomes twisted or traps stool, part of the intestine might need to be removed. This surgery is called bowel resection. (Bowel is another word for intestine.)",
+      "Its a protrusion of abdominal content frm inguinal canal. It must be treated to prevent further complications. Another hernia is femoral hernia where the content comes frm femoral canal. There are many other uncomman hernia also."
+    ],
+    "input_spans": [
+      ": if you don't get it treated you will have very serious consequences that will eventually be fatal",
+      "A hernia is a condition in which part of the intestine bulges through a weak area in muscles in the abdomen. An inguinal hernia occurs in the groin (the area between the abdomen and thigh). It is called \"inguinal\" because the intestines push through a weak spot in the inguinal canal, which is a triangle-shaped opening between layers of abdominal muscle near the groin. Obesity, pregnancy, heavy lifting, and straining to pass stool can cause the intestine to push against the inguinal canal.Symptoms of inguinal hernia may include a lump in the groin near the thigh; pain in the groin; and, in severe cases, partial or complete blockage of the intestine. The doctor diagnoses hernia by doing a physical exam and by taking x rays and blood tests to check for blockage in the intestine.The main treatment for inguinal hernia is surgery to repair the opening in the muscle wall. This surgery is called herniorrhaphy. Sometimes the weak area is reinforced with steel mesh or wire. This operation is called hernioplasty. If the protruding intestine becomes twisted or traps stool, part of the intestine might need to be removed. This surgery is called bowel resection. (Bowel is another word for intestine.)",
+      ": Its a protrusion of abdominal content frm inguinal canal. It must be treated to prevent further complications. Another hernia is femoral hernia where the content comes frm femoral canal. There are many other uncomman hernia also"
+    ],
+    "Actual": "If left untreated, a hernia can lead to severe and potentially fatal consequences. A hernia occurs when part of the intestine protrudes through a weakened area in the abdominal muscles, particularly in the groin for an inguinal hernia. Factors such as obesity, pregnancy, heavy lifting, and straining can contribute to its development. Symptoms include a lump in the groin, pain, and, in severe cases, intestinal blockage. Diagnosis involves a physical exam, x-rays, and blood tests. The primary treatment is surgery, either herniorrhaphy to repair the muscle opening or hernioplasty to reinforce it with mesh or wire. In some cases, bowel resection may be necessary if the protruding intestine is twisted or trapping stool. The passage also mentions femoral hernia as another type and acknowledges various uncommon hernias.",
+    "Predicted": "An inguinal hernia is a condition where part of the intestine bulges through a weak area in the abdominal muscles near the groin. It can be caused by factors such as obesity, pregnancy, heavy lifting, and straining to pass stool. Symptoms include a lump in the groin, pain, and in severe cases, partial or complete blockage of the intestine. If left untreated, it can lead to fatal consequences. Treatment involves surgery to repair the opening in the muscle wall, which may include reinforcing the weak area with steel mesh or wire. There are other types of hernias, including femoral hernia, where the content protrudes through the femoral canal."
+  },
+  {
+    "question": "when mutiple women live in the same house for extend periods of time do their periods really start to sycnrani",
+    "perspective": "INFORMATION",
+    "answers": [
+      "Apparently so.",
+      "they sure do.  and call it a blessing, instead of continuous PMS it's all over at the same time.",
+      "Yes it is true!  This is what one site had to say:\n\n\"Synchronous menstruation has been observed among mothers, sisters, and daughters who live together, and sometimes among women who simply work together. Of seven female lifeguards who started out one summer with widely scattered periods. Three months later they were all menstruating within four days of one another.\n\nA study of 135 residents of a women's college dorm confirmed the effect. Most of the cycle shifting occurred within the first four months and was usually complete after seven months. Fortunately for the dorm's plumbing, the whole building didn't synchronize, just roommates and close friends. As often as not, the women were unaware of what had happened.  Later research has suggested that synchrony is caused by some sort of scent cue, or pheromone.\"",
+      "yea they actually do, it's because each woman gives off hormones, and when there are several living together, for a long time, each of their hormones notices the other hormones and their bodies regulates the hormones to all release at the same time because the same \"mechanism\" is controlling all of the women's bodies.  This makes all three human bodies more efficient from the \"mechanisms\" view point.",
+      "yes and its a bloody mess!!!"
+    ],
+    "input_spans": [
+      "es it is true!  This is what one site had to say:\"Synchronous menstruation has been observed among mothers, sisters, and daughters who live together, and sometimes among women who simply work together. Of seven female lifeguards who started out one summer with widely scattered periods. Three months later they were all menstruating within four days of one another.A study of 135 residents of a women's college dorm confirmed the effect. Most of the cycle shifting occurred within the first four months and was usually complete after seven months. Fortunately for the dorm's plumbing, the whole building didn't synchronize, just roommates and close friends. As often as not, the women were unaware of what had happened.  Later research has suggested that synchrony is caused by some sort of scent cue, or pheromo",
+      "instead of continuous PMS it's all over at the same time.",
+      "yea they actually do, it's because each woman gives off hormones, and when there are several living together, for a long time, each of their hormones notices the other hormones and their bodies regulates the hormones to all release at the same time because the same \"mechanism\" is controlling all of the women's bodies.  This makes all three human bodies more efficient from the \"mechanisms\" view point"
+    ],
+    "Actual": "For information purposes, the phenomenon of synchronized menstruation, also known as menstrual synchrony or the McClintock effect, has been observed among women who live or work closely together. This synchronization is thought to be influenced by scent cues or pheromones. Studies have shown that women living in close proximity, such as in dorms or workplaces, may experience a convergence of their menstrual cycles over time. The mechanism behind this phenomenon is not fully understood, but it has been suggested that hormonal signaling plays a role.",
+    "Predicted": "Research has observed that women living together for extended periods can experience synchronized menstruation. This phenomenon has been noted among mothers, sisters, daughters, and even women who work together. Studies have shown that this synchronization can occur within a few months, with most of the cycle shifting happening within the first four months and usually completing after seven months. The cause of this synchronization is believed to be due to scent cues or pheromones, which can influence the hormonal cycles of the women living together. This synchronization can be beneficial, as it can reduce the duration of PMS symptoms, making it \"all over at the same time\" instead of continuous."
+  },
+  {
+    "question": "What are the best foods for liver disease?",
+    "perspective": "INFORMATION",
+    "answers": [
+      "it depends on your type of disease - hep c or cirrhosis... try to lower your fat and sodium intake at any rate. if i have my studying right, too much fat increases bile secretion, which deposits excess bile salts in the liver. and if you drink alcohol, stop. its sugars are too simple and get processed too quickly (spike in blood sugar levels) making you crave more. which could be said about other simple sugars/carbs. get a glycemic index and try foods with a low g.i. number - more complex carbs take longer to process. i'm no professional, just a college student taking some nutrition classes. try webmd.com. they usually have some good info."
+    ],
+    "input_spans": [
+      "it depends on your type of disease - hep c or cirrhosis... try to lower your fat and sodium intake at any rate. if i have my studying right, too much fat increases bile secretion, which deposits excess bile salts in the liver. and if you drink alcohol, stop. its sugars are too simple and get processed too quickly (spike in blood sugar levels) making you crave more. which could be said about other simple sugars/carbs. get a glycemic index and try foods with a low g.i. number - more complex carbs take longer to process. i'm no professional, just a college student taking some nutrition classes. try webmd.com. they usually have some good info"
+    ],
+    "Actual": "It's important to note that dietary recommendations may vary based on the specific liver condition. For hep C or cirrhosis, general advice often includes reducing fat and sodium intake. Excessive fat can lead to increased bile secretion and the deposition of excess bile salts in the liver. Alcohol cessation is commonly advised due to its impact on blood sugar levels and potential liver damage. Choosing foods with a low glycemic index (G.I.)\u2014indicating slower processing of carbohydrates\u2014can be beneficial. However, individual cases may differ, and personalized guidance from a healthcare professional or nutritionist is recommended for comprehensive and accurate advice. WebMD can serve as a useful resource, but specific medical advice should be sought for personalized care.",
+    "Predicted": "For individuals with liver disease, it's essential to consider the type of disease, such as Hepatitis C or cirrhosis. In general, reducing fat and sodium intake is recommended. Consuming high amounts of fat can increase bile secretion, which may harm the liver. Additionally, limiting or avoiding alcohol and simple sugars/carbohydrates is advised, as they can cause a spike in blood sugar levels and lead to cravings. Instead, opt for complex carbohydrates with a low glycemic index, which take longer to process."
+  },
+  {
+    "question": "how to relieve symptoms of hyatal hernia?",
+    "perspective": "SUGGESTION",
+    "answers": [
+      "I would recommend that you consult a gi doc and possibly get on medication but in the meantime avoid high stress, eating too fast, chocolate, coffee, laying doing right after eating, and spaghetti sauce or any foods high in acid.",
+      "GI Nurse is giving you good advice.\n\nIn my experience, patients who lose at least 15 lbs almost all have almost complete relief of their symptoms. Gaviscon is a good over-the-counter medicine for you to try if you're having bad heartburn due to your hiatal hernia."
+    ],
+    "input_spans": [
+      "I would recommend that you consult a gi doc and possibly get on medication but in the meantime avoid high stress, eating too fast, chocolate, coffee, laying doing right after eating, and spaghetti sauce or any foods high in acid"
+    ],
+    "Actual": "The recommendation advises consulting a GI (gastrointestinal) doctor and potentially starting medication. In the interim, it suggests avoiding high-stress situations, fast eating, chocolate, coffee, lying down right after eating, and acidic foods like spaghetti sauce.",
+    "Predicted": "Consult a GI doctor and consider medication. In the meantime, avoid high-stress situations, eating too quickly, chocolate, coffee, lying down after eating, and foods high in acid, such as spaghetti sauce."
+  },
+  {
+    "question": "how to relieve symptoms of hyatal hernia?",
+    "perspective": "INFORMATION",
+    "answers": [
+      "I would recommend that you consult a gi doc and possibly get on medication but in the meantime avoid high stress, eating too fast, chocolate, coffee, laying doing right after eating, and spaghetti sauce or any foods high in acid.",
+      "GI Nurse is giving you good advice.\n\nIn my experience, patients who lose at least 15 lbs almost all have almost complete relief of their symptoms. Gaviscon is a good over-the-counter medicine for you to try if you're having bad heartburn due to your hiatal hernia."
+    ],
+    "input_spans": [
+      "patients who lose at least 15 lbs almost all have almost complete relief of their symptoms. Gaviscon is a good over-the-counter medicine for you to try if you're having bad heartburn due to your hiatal hernia"
+    ],
+    "Actual": "Patients who lose at least 15 lbs often find almost complete relief from their symptoms. Additionally, for those experiencing severe heartburn due to a hiatal hernia, Gaviscon is recommended as a beneficial over-the-counter medicine to try.",
+    "Predicted": "Losing at least 15 pounds can provide almost complete relief of symptoms for many patients with a hiatal hernia. Additionally, Gaviscon, an over-the-counter medicine, can help alleviate bad heartburn associated with the condition."
+  },
+  {
+    "question": "How much calcium can the body absorb in one meal?",
+    "perspective": "INFORMATION",
+    "answers": [
+      "It depends on the form of the calcium - it is bound to other elements, some of which are easier to absorb than others.  It also requires Vitamin D to be aborbed and used.\n\nCalcium and all the minerals also need a fairly acidic stomach to be absorbed.  So if you're stomach acidity is low, or you have it with a big meal (which uses up the hydrochloric acid that makes your stomach acid) you may not absorb so much.\n\nWomen need about 2-3 gm (2,000 - 3,000 mg) of calcium.  I don't think the value is too high in total, but the form in which it's present may or may not be readily aborbed.  I would guess that Total also have vitamin D.\n\nYour body is seldom able to absorb all of the vitamins or minerals you eat at once.  A lot of it is lost, but the actual amount you need to be absorbed is less than the required daily intake.  So, the RDA of 2,000 mg for a mineral is based on the expectation that you will only aborb say 20% of it, so your body's actual need would be 400 mg.\n\nThe best source for minerals in the most bioavailable form is broth - from beef, chicken, pork bones."
+    ],
+    "input_spans": [
+      "It depends on the form of the calcium - it is bound to other elements, some of which are easier to absorb than others",
+      "It also requires Vitamin D to be aborbed and used",
+      "Calcium and all the minerals also need a fairly acidic stomach to be absorbed",
+      "So if you're stomach acidity is low, or you have it with a big meal (which uses up the hydrochloric acid that makes your stomach acid) you may not absorb so much",
+      "Women need about 2-3 gm (2,000 - 3,000 mg) of calcium",
+      "I don't think the value is too high in total, but the form in which it's present may or may not be readily aborbed",
+      "I would guess that Total also have vitamin D.Your body is seldom able to absorb all of the vitamins or minerals you eat at once.",
+      "A lot of it is lost, but the actual amount you need to be absorbed is less than the required daily intake.  So, the RDA of 2,000 mg for a mineral is based on the expectation that you will only aborb say 20% of it, so your body's actual need would be 400 mg."
+    ],
+    "Actual": "For information purposes, the amount of calcium the body can absorb in one meal depends on factors like the form of calcium, its binding elements, and the presence of Vitamin D. Calcium absorption also relies on stomach acidity, and low acidity or consumption with a large meal may hinder absorption. Women typically need 2,000-3,000 mg of calcium daily. The form of calcium in foods, such as Total cereal, may affect absorption. The body doesn't absorb all consumed vitamins and minerals at once, but the Recommended Dietary Allowance (RDA) of 2,000 mg factors in lower absorption rates, suggesting that the actual needed absorption may be less than the daily intake recommendations.",
+    "Predicted": "The body's ability to absorb calcium from a meal depends on several factors. The form of calcium, whether it is bound to other elements, affects its absorbability. Additionally, Vitamin D is necessary for calcium absorption. A fairly acidic stomach environment is also required for mineral absorption, and a low stomach acidity or eating a large meal can reduce absorption. The recommended daily intake of calcium for women is 2,000-3,000 mg, but the actual amount absorbed may vary based on the form of calcium and individual factors."
+  },
+  {
+    "question": "How much calcium can the body absorb in one meal?",
+    "perspective": "SUGGESTION",
+    "answers": [
+      "It depends on the form of the calcium - it is bound to other elements, some of which are easier to absorb than others.  It also requires Vitamin D to be aborbed and used.\n\nCalcium and all the minerals also need a fairly acidic stomach to be absorbed.  So if you're stomach acidity is low, or you have it with a big meal (which uses up the hydrochloric acid that makes your stomach acid) you may not absorb so much.\n\nWomen need about 2-3 gm (2,000 - 3,000 mg) of calcium.  I don't think the value is too high in total, but the form in which it's present may or may not be readily aborbed.  I would guess that Total also have vitamin D.\n\nYour body is seldom able to absorb all of the vitamins or minerals you eat at once.  A lot of it is lost, but the actual amount you need to be absorbed is less than the required daily intake.  So, the RDA of 2,000 mg for a mineral is based on the expectation that you will only aborb say 20% of it, so your body's actual need would be 400 mg.\n\nThe best source for minerals in the most bioavailable form is broth - from beef, chicken, pork bones."
+    ],
+    "input_spans": [
+      "The best source for minerals in the most bioavailable form is broth - from beef, chicken, pork bones."
+    ],
+    "Actual": "The best sources of minerals in their bio-available form are the broth from beef, chicken and pork bones.",
+    "Predicted": "For the perspective of suggesting a meal option, the best source of bioavailable minerals, including calcium, is broth made from beef, chicken, or pork bones."
+  },
+  {
+    "question": "Why do men have nipples?",
+    "perspective": "INFORMATION",
+    "answers": [
+      "well when we're still developing within the womb, we have parts for both sexes. except i guess guys will have ovaries that will eventually move and change into testicles but other than that we're born with both. so like im guessing the nipple thing is just like god's way of like \"oh screw it i dont want to have to double my time working by having to create both a citizen nipple and a citizen non-nipple",
+      "It's because the Y chromosome isn't added until after the nipples are formed on a baby in the mother's womb. So, I guess technically, we're all females at some point in our existence."
+    ],
+    "input_spans": [
+      "well when we're still developing within the womb, we have parts for both sexes.",
+      "guys will have ovaries that will eventually move and change into testicles but other than that we're born with both.",
+      "because the Y chromosome isn't added until after the nipples are formed on a baby in the mother's womb.",
+      "technically, we're all females at some point in our existence."
+    ],
+    "Actual": "For information purposes, during fetal development, both males and females start with the same basic blueprint, including nipples. As the fetus matures, the Y chromosome triggers the formation of male characteristics like testicles, but the nipples develop before this distinction. Thus, all embryos start with nipples, irrespective of their eventual gender. That's why men have nipples.",
+    "Predicted": "During fetal development, the formation of nipples occurs before the sex of the baby is determined. This is because the Y chromosome, which determines male sex, is added after the nipples have formed. As a result, both males and females are born with nipples, as the initial development process is the same for both sexes."
+  }
+]
