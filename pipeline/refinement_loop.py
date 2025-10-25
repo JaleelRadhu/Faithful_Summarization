@@ -6,15 +6,10 @@ from utils.evaluator import get_evaluator
 import yaml
 
 
-def refinement_loop(summary_data, evaluator_prompt, improver_prompt, pipe, max_iterations=5, tolerance=0.01):
+def refinement_loop(summary_data, evaluator_prompt, improver_prompt, pipe, max_iterations, stopping_criteria, tolerance=0.01):
     previous_summary = summary_data["Predicted"]
     previous_score = None
 
-    # load yaml 
-    config = yaml.safe_load(open("/home/abdullahm/jaleel/Faithfullness_Improver/configs/default.yaml"))
-    max_iterations = config["iteration"]["max_iterations"]
-    # get stopping criteria from config file
-    stopping_criteria = config["iteration"]["stopping_criterion"]
     evaluator = get_evaluator(stopping_criteria)
     
     total_iterations = 0
@@ -55,14 +50,16 @@ def refinement_loop(summary_data, evaluator_prompt, improver_prompt, pipe, max_i
             break
         
         
-        reference = summary_data["Actual"] #THIS IS PROBLEMATIC, YOU ARE USING THE | GOLD SUMMARY | TO EVALUATE THE PREDICTION !!!
+        reference = summary_data["Actual"] #
 
         # scores = calculate_rouge_scores(summary_data["Actual"], revised_summary)
         current_score = evaluator(reference, revised_summary)
-        print(f"Iteration {iteration+1} {stopping_criteria} Score: {current_score}")
+        # print(f"Iteration {iteration+1} {stopping_criteria} Score: {current_score}")
 
         if previous_score is not None and current_score <= previous_score:
-            print(f"Iteration {iteration+1}: No improvement in {stopping_criteria}. Stopping.")
+            # print(f"Iteration {iteration+1}: No improvement in {stopping_criteria}. Stopping.")
+            # current_score = previous_score
+            revised_summary = previous_summary
             break
         previous_score = current_score
         previous_summary = revised_summary

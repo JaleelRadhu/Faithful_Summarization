@@ -11,6 +11,8 @@ import yaml
 
 
 def get_rouge_l_score(reference: str, candidate: str) -> float:
+    if not candidate or not reference:
+        return 0.0
     rouge = Rouge()
     scores = rouge.get_scores(candidate, reference)[0]
     # print(scores)
@@ -18,12 +20,16 @@ def get_rouge_l_score(reference: str, candidate: str) -> float:
 
 def get_rouge_1_score(reference: str, candidate: str) -> float:
     """returns the f1 of Rouge 1"""
+    if not candidate or not reference:
+        return 0.0
     rouge = Rouge()
     scores = rouge.get_scores(candidate, reference)[0]
     return scores['rouge-1']['f']
 
 def get_rouge_2_score(reference: str, candidate: str) -> float:
     """returns the f1 of Rouge 2"""
+    if not candidate or not reference:
+        return 0.0
     rouge = Rouge()
     scores = rouge.get_scores(candidate, reference)[0]
     return scores['rouge-2']['f']
