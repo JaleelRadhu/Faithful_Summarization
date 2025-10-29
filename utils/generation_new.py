@@ -46,22 +46,12 @@ class ChatGenerator:
             "temperature": temperature,
         }
         
-        last_exception = None
-        for attempt in range(self.max_retries):
-            try:
-                # Use the requests library to make the API call with a timeout
-                response = self.session.post(self.api_url, json=payload, timeout=self.timeout)
-                response.raise_for_status()  # Raise an exception for bad status codes (4xx or 5xx)
-                
-                completion = response.json()['choices'][0]['message']['content']
+        # Use the requests library to make the API call.
+        # Without a timeout, it will wait indefinitely for a response.
+        response = self.session.post(self.api_url, json=payload)
+        response.raise_for_status()  # Raise an exception for bad status codes (4xx or 5xx)
+        
+        completion = response.json()['choices'][0]['message']['content']
 
-                # Return in the same format as the original ChatGenerator to ensure compatibility
-                return [{"generated_text": completion}]
-
-            except (requests.exceptions.Timeout, requests.exceptions.ConnectionError) as e:
-                last_exception = e
-                print(f"\nWorker {os.getpid()}: Request failed (attempt {attempt + 1}/{self.max_retries}): {e}. Retrying in 5 seconds...", file=sys.stderr, flush=True) # type: ignore
-                time.sleep(5) # Wait before retrying
-
-        # If all retries fail, raise the last captured exception
-        raise last_exception
+        # Return in the same format as the original ChatGenerator to ensure compatibility
+        return [{"generated_text": completion}]

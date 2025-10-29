@@ -27,10 +27,18 @@ iteration:
   tolerance: 0.01
 
 # Network settings for vLLM requests
-request_timeout: 300 # Timeout in seconds (e.g., 3 minutes)
+request_timeout: 1200 # Timeout in seconds (e.g., 3 minutes)
 max_retries: 3 # Number of times to retry on a timeout
 
 is_improver_evaluator_model_same: True
+
+evaluator_model:
+  name:  mistralai/Mistral-7B-Instruct-v0.3 #Qwen/Qwen2.5-7B-Instruct
+  quantization: None
+  backend: hf
+  device: 0
+  max_new_tokens: 512
+  temperature: 0.7
 
 improver_model:
   name: Qwen/Qwen2.5-7B-Instruct #mistralai/Mistral-7B-Instruct-v0.3 
@@ -40,10 +48,3 @@ improver_model:
   max_new_tokens: 512
   temperature: 0.7
 
-evaluator_model:
-  name:  mistralai/Mistral-7B-Instruct-v0.3 #Qwen/Qwen2.5-7B-Instruct
-  quantization: None
-  backend: hf
-  device: 0
-  max_new_tokens: 512
-  temperature: 0.7

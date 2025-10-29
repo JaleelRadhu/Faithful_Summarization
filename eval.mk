@@ -44,7 +44,11 @@ run:
 		--tensor-parallel-size $(TENSOR_PARALLEL_SIZE) \
 		--port $(PORT) \
 		--host "$(HOST)" \
-		--gpu-memory-utilization $(GPU_MEM_UTIL)
+		--gpu-memory-utilization $(GPU_MEM_UTIL) \
+
+# 		--max-num-batched-tokens 60000 \
+# # 		--max-num-seqs 256 \
+# # 		--max-model-len 8192
 
 # --- Helper Target ---
 

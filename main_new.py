@@ -258,7 +258,7 @@ def main():
     parser.add_argument('--is_evaluator_and_improver_same', default=True, help="to keep the evaluator and improver model same or not")
     parser.add_argument('--stopping_criteria', default='rouge-l-f', help='the stopping criterial for the refinement loop')
     parser.add_argument('--max_iterations', default=5, help="max number iterations for the refinement loop")
-    parser.add_argument('--num_workers', type=int, default=100, help='Number of parallel worker processes. Use 0 for sequential debugging. Defaults to 16.')
+    parser.add_argument('--num_workers', type=int, default=200, help='Number of parallel worker processes. Use 0 for sequential debugging. Defaults to 16.')
     parser.add_argument('--general_eval_and_improver', default=False, help="the prompt will be general ones")
 
     args = parser.parse_args()

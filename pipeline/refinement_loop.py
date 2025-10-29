@@ -25,29 +25,29 @@ def refinement_loop(summary_data, evaluator_prompt, improver_prompt, evaluator_p
         # write the above in a single line
         
         # cot, revised_summary = revise_summary(summary_data, feedback, improver_prompt, pipe)
-        print("="*20)
-        print("--feedback_start--"*5)
-        print("="*20)
-        print(f"Iteration {iteration+1} Feedback:\n {feedback}")
-        print("="*20)
-        print("--feedback_end--"*5)
-        print("="*20)
+        # print("="*20)
+        # print("--feedback_start--"*5)
+        # print("="*20)
+        # print(f"Iteration {iteration+1} Feedback:\n {feedback}")
+        # print("="*20)
+        # print("--feedback_end--"*5)
+        # print("="*20)
         #generate revised summary using improver prompt
         improved_summary_data = revise_summary(summary_data, feedback, improver_prompt, improver_pipe)
         
         cot = improved_summary_data["part1_improvements"]
         revised_summary = improved_summary_data["revised_summary"]
         full_output = improved_summary_data["full_output"]
-        print("="*20)
-        print("--full output_start--"*5)
-        print("="*20)
-        print(f"Iteration {iteration+1} Full Improvement Output:\n {full_output}")
-        print("="*20)
-        print("--full output_end--"*5)
-        print("="*20)
-        print("--revised_summary_start--"*5)
-        print(f"Iteration {iteration+1} Revised Summary:\n {revised_summary}")
-        print("--revised_summary_end--"*5)
+        # print("="*20)
+        # print("--full output_start--"*5)
+        # print("="*20)
+        # print(f"Iteration {iteration+1} Full Improvement Output:\n {full_output}")
+        # print("="*20)
+        # print("--full output_end--"*5)
+        # print("="*20)
+        # print("--revised_summary_start--"*5)
+        # print(f"Iteration {iteration+1} Revised Summary:\n {revised_summary}")
+        # print("--revised_summary_end--"*5)
         
         if not revised_summary or revised_summary.strip() == "":
             print(f"⚠️ Warning: Iteration {iteration+1} produced empty summary. Using previous summary.")
