@@ -79,7 +79,7 @@ def get_file_metrics(file_path):
 
         for metric_name, evaluator_func in metric_funs_with_names:
             if metric_name == "llm_metrics":
-                print("correct this llm metrics part implementation")
+                # print("correct this llm metrics part implementation")
                 # Assuming get_llm_metrics takes (summary_text, source_text)
                 # and returns either a single float or a dictionary of sub-scores.
                 starting_llm_result = evaluator_func(start_feedback)

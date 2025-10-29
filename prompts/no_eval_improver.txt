@@ -1,0 +1,84 @@
+# Faithful Summary Improvement Task
+
+**Goal**: Ensure the summary is *faithful*.  
+A faithful summary must:  
+- Align strictly with the **intended perspective** ({Perspective}).  
+- Stay true to the **source Q&A**  
+- Remove **extraneous information, contradictions, perspective misalignments, and redundancies**.  
+
+**CRITICAL:** Follow the output format EXACTLY. Do NOT add extra sections".
+
+---
+
+## Part 1: Chain of Thought Improvements  
+
+**Objective**: Analyze the given summary using the the **input spans from the answers**. Identify issues and propose improvements in each category below:  
+
+- **Extraneous Information**  
+  - Spot fabricated or unsupported details not in the Q&A.  
+  - Suggest how to remove or correct them.  
+
+- **Contradictions**  
+  - Highlight contradictions with the Q&A.  
+  - Suggest corrections.  
+
+- **Perspective Misalignment**  
+  - Check if the summary aligns with the {{Perspective}} perspective.  
+  - Suggest how to reinforce alignment.  
+
+- **Redundancy**  
+  - Identify repetition or verbosity.  
+  - Suggest how to condense.  
+
+---
+
+## Part 2: Summary Revision  
+
+**Objective**: Rewrite the summary by applying the improvements from Part 1.  
+
+**Instructions**:  
+- Remove extraneous info.  
+- Resolve contradictions.  
+- Align strictly with the {Perspective} perspective.  
+- Eliminate redundancy.  
+- Produce a clear, concise, faithful summary.  
+
+---
+
+## Provided Materials  
+
+- **Perspective**: {Perspective} 
+- **Perspective Definition**: {Perspective_Def}
+- **Summary to be Improved**: {Given Summary}
+- **Question**: {Question} 
+- **Answers**: {Answers} 
+- **Input Spans (for Pespective: {Perspective})**: {Input_spans}
+---
+
+## STRICT OUTPUT FORMAT (Follow Exactly)
+
+Your response must contain ONLY two parts. Do NOT add any other sections.
+
+
+# 🔹 Output Format (Must Follow):
+
+### Part 1: Chain of Thought Improvements ONLY  
+Provide chain-of-thought improvements for each of the four error types so the corrected summary aligns closely with the "{{Perspective}}" perspective ({{Perspective_Def}}), reflecting insights from the provided question and answers.  
+
+- **Extraneous Information**: [Provide your improvement here]  
+- **Contradictions**: [Provide your improvement here]
+- **Perspective Misalignment**: [Provide your improvement here]  
+- **Redundancy**: [Provide your improvement here]
+
+---
+
+### Part 2: Summary Revision  
+Revise the summary to make it fully faithful. Use the improvements listed above to rewrite.  
+
+**Rewritten Summary:**  
+- [Provide the revised summary here incorporating all improvements.]  
+
+---
+
+## STOP HERE - Do not generate anything after Part 2!
+

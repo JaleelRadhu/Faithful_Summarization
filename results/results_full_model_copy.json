@@ -35,24 +35,6 @@
             "final_score": 0.31610892286404885
         }
     },
-    "dumm_improved_stop-rouge-l-f_impr-Qwen_Qwen2.5_7B_Instruct_eval-Qwen_Qwen2.5_7B_Instruct": {
-        "rouge_l": {
-            "starting_score": 0.26691644075350385,
-            "final_score": 0.3804359507883351
-        },
-        "rouge_1": {
-            "starting_score": 0.2892529816920507,
-            "final_score": 0.4147750745739915
-        },
-        "rouge_2": {
-            "starting_score": 0.1036335236088002,
-            "final_score": 0.1997204196419435
-        },
-        "meteor": {
-            "starting_score": 0.2561857333461825,
-            "final_score": 0.33384883092908235
-        }
-    },
     "filtered_complete_base_meta-llama_Llama-3.1-8B-Instruct_improved_stop-rouge-l-f_imp_eval_model-Qwen_Qwen2.5_7B_Instruct": {
         "rouge_l": {
             "starting_score": 0.303383111936887,
@@ -123,6 +105,24 @@
         "meteor": {
             "starting_score": 0.19988286591311036,
             "final_score": 0.31503352873877594
+        }
+    },
+    "dumm_improved_stop-rouge-l-f_imp_eval_model-Qwen_Qwen2.5_7B_Instruct": {
+        "rouge_l": {
+            "starting_score": 0.26691644075350385,
+            "final_score": 0.37058285903729166
+        },
+        "rouge_1": {
+            "starting_score": 0.2892529816920507,
+            "final_score": 0.4003468702213411
+        },
+        "rouge_2": {
+            "starting_score": 0.1036335236088002,
+            "final_score": 0.18686491696279256
+        },
+        "meteor": {
+            "starting_score": 0.2561857333461825,
+            "final_score": 0.3159942342000383
         }
     },
     "filtered_complete_plasma_test_improved_stop-rouge-l-f_imp_eval_model-Qwen_Qwen2.5_7B_Instruct": {

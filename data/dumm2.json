@@ -1,0 +1,29 @@
+[
+  {
+    "question": "is the dr atkins diet good for the health if you have a heart problem?",
+    "perspective": "EXPERIENCE",
+    "answers": [
+      "I would say No. I can only tell you from personal experience. I remember when the Atkins diet was all the rage and everyone that couldn't loose weight wanted to try it. It did help some people, but I wasn't able to do the diet because of the kidney problem I have. The diet puts too much protein in your blood. You have to use good judgment when trying new things. A good rule of thumb: always check things out and find out what your alternatives are.",
+      "Whether or not it is good for you will depend on how you implement it.  \n\nThe problem is that some of what he says (depending on which version you have) is amazingly wrong and can lead you to very unhealthy behaviors - such as \"Bacon won't hurt you!\" and \"Fried Pork Rinds are a great way to lose weight\"\n\nRight.  Yes, he was a doctor, but he blatantly argued against good research with very bad \"research\" to support his (very lucrative) diet book.  \n\nSo if you want to follow Dr. Atkins and not risk aggravating your heart problem, you will also need to follow the health guidelines of the American Heart Association.  You might as well start with their recommendations, eh?"
+    ],
+    "input_spans": [
+      "y No. I can only tell you from personal experience. I remember when the Atkins diet was all the rage and everyone that couldn't loose weight wanted to try it. It did help some people, but I wasn't able to do the diet because of the kidney problem I have"
+    ],
+    "Actual": "In users experience, an individual personally experienced challenges with the Atkins diet due to a kidney problem during the diet's popularity. While the diet helped some people with weight loss, it was not a viable option for this person given their specific health condition.",
+    "Predicted": "The Atkins diet may not be suitable for everyone, especially those with kidney problems. It can help some people lose weight, but it may not be the best option for everyone."
+  },
+  {
+    "question": "is the dr atkins diet good for the health if you have a heart problem?",
+    "perspective": "SUGGESTION",
+    "answers": [
+      "I would say No. I can only tell you from personal experience. I remember when the Atkins diet was all the rage and everyone that couldn't loose weight wanted to try it. It did help some people, but I wasn't able to do the diet because of the kidney problem I have. The diet puts too much protein in your blood. You have to use good judgment when trying new things. A good rule of thumb: always check things out and find out what your alternatives are.",
+      "Whether or not it is good for you will depend on how you implement it.  \n\nThe problem is that some of what he says (depending on which version you have) is amazingly wrong and can lead you to very unhealthy behaviors - such as \"Bacon won't hurt you!\" and \"Fried Pork Rinds are a great way to lose weight\"\n\nRight.  Yes, he was a doctor, but he blatantly argued against good research with very bad \"research\" to support his (very lucrative) diet book.  \n\nSo if you want to follow Dr. Atkins and not risk aggravating your heart problem, you will also need to follow the health guidelines of the American Heart Association.  You might as well start with their recommendations, eh?"
+    ],
+    "input_spans": [
+      "he diet puts too much protein in your blood. You have to use good judgment when trying new things. A good rule of thumb: always check things out and find out what your alternatives are",
+      "he was a doctor, but he blatantly argued against good research with very bad \"research\" to support his (very lucrative) diet book.  So if you want to follow Dr. Atkins and not risk aggravating your heart problem, you will also need to follow the health guidelines of the American Heart Association.  You might as well start with their recommendations, eh"
+    ],
+    "Actual": "The Atkins Diet can potentially elevate protein levels in the blood, requiring careful consideration and exploration of alternative options. While Dr. Atkins was a doctor, some argue that he contradicted sound research in support of his lucrative diet book. To mitigate potential risks, adherents should also follow the health guidelines of the American Heart Association to safeguard against heart-related issues. Prioritizing good judgment and consulting various sources is advisable when embarking on new dietary practices.",
+    "Predicted": "The Atkins diet may not be suitable for individuals with heart problems due to its high protein content, which can lead to kidney issues. It is important to exercise caution and consult with a healthcare professional before trying any new diet. Additionally, it is recommended to follow the health guidelines of the American Heart Association to ensure a healthy lifestyle."
+  }
+]

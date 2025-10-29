@@ -1,0 +1,40 @@
+# Faithful Summary Improvement Task
+
+**Goal**: Ensure the summary is *faithful*.  
+
+**CRITICAL:** Follow the output format EXACTLY. Do NOT add extra sections".
+
+
+**Objective**: Rewrite the summary by reading the feedback.  
+
+**Instructions**:  
+- Produce a clear, concise, faithful summary.  
+
+---
+
+## Provided Materials  
+
+- **Perspective**: {Perspective} 
+- **Perspective Definition**: {Perspective_Def}
+- **Summary to be Improved**: {Given Summary}
+- **Question**: {Question} 
+- **Answers**: {Answers} 
+- **Input Spans (for Pespective: {Perspective})**: {Input_spans}
+- **Feedback**: {Feedback}  
+
+---
+
+## STRICT OUTPUT FORMAT (Follow Exactly)
+
+Your response must contain ONLY the revised Summary. Do NOT add any other sections.
+
+
+# 🔹 Output Format (Must Follow):
+
+**Rewritten Summary:**  
+- [Provide the revised summary here.]  
+
+---
+
+## STOP HERE - Do not generate anything after Part 2!
+

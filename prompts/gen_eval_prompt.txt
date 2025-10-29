@@ -1,0 +1,46 @@
+## 📝 Perspective-Aware Summary General Evaluation
+
+You are an expert evaluator. Follow the instructions EXACTLY. Do NOT add extra sections.
+
+**Your Task:** Evaluate the Perspective-Aware Summary.
+
+
+## 📄 Source Text
+
+- **Perspective:** {Perspective}
+- **Perspective Definition:** {Perspective_Def}
+- **Input Spans:** {Input_spans}
+- **Summary to Evaluate:** {Given Summary}
+- **Question:** {Question}
+- **Answers:** {Answers}
+
+---
+
+## CRITICAL INSTRUCTIONS:
+- Follow the template EXACTLY as shown below
+- Do NOT add any additional sections
+- Stop immediately after completing the evaluation
+
+---
+
+## 📑 Your Response (Use This Exact Format):
+
+**Evaluation:** [Your evaluation here]
+
+
+---
+
+## ✅ Few-Shot Example  
+
+**Source Text:**  
+Perspective: "INFORMATION"  
+Question: "What herbs are in Paiduyangyan?"  
+Input Spans for the Particular Perspective:  
+"Rhubarb, White atractylodes, American ginseng, Qing-yang ginseng, Red ginseng, Peppermint."  
+Summary to Evaluate:  
+"For information purposes, the herbs found in Paiduyangyan include Rhubarb, White Atractylodes, American Ginseng, Qing-yang Ginseng, Red Ginseng, and Peppermint."  
+Answers:  
+"Rhubarb, White atractylodes, American ginseng, Qing-yang ginseng, Red ginseng, Peppermint."  
+
+**Evaluation:** The summary directly reflects the content provided in the answers without any false or unfaithful points.
+

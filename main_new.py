@@ -22,7 +22,6 @@ from dotenv import load_dotenv
 load_dotenv()
 import ijson
 
-
 def check_server_connection(api_url_str):
     """
     Pings the vLLM server to ensure it is reachable before starting the main process.
@@ -55,7 +54,6 @@ def check_server_connection(api_url_str):
             print(f"   ❌ Connection failed on attempt {attempt}: {e}")
             if attempt < max_retries:
                 print(f"   Retrying in {retry_delay_seconds} seconds...")
-                time.sleep(retry_delay_seconds)
 
     # This part is only reached if all retries fail
     print(f"\n❌ FATAL: Failed to connect to the vLLM server at {api_url_str} after {max_retries} attempts.")
@@ -106,7 +104,7 @@ def save_results(results, output_path): # helper
 # Global object to be initialized by each worker
 worker_globals = {}
 
-def init_worker(config, evaluator_prompt_path, improver_prompt_path, perspective_definitions_path):
+def init_worker(config, evaluator_prompt_path, improver_prompt_path, perspective_definitions_path, is_evaluator_and_improver_same):
     """
     Initializes resources for each worker process.
     This prevents reloading models/prompts for every single item.
@@ -120,72 +118,114 @@ def init_worker(config, evaluator_prompt_path, improver_prompt_path, perspective
     
     system_prompt = "You are an expert summary faithfulness evaluator and improver. Follow the instructions exactly and provide structured outputs."
     
-    # Each worker gets its own ChatGenerator client instance
-    pipe = ChatGenerator(
-        model_name=config['model']['name'],
-        system_prompt=system_prompt
-    )
+    # Get timeout and retry settings from config, with sensible defaults
+    timeout = config.get('request_timeout', 120)
+    retries = config.get('max_retries', 3)
 
-    worker_globals['pipe'] = pipe
+    if is_evaluator_and_improver_same:
+        # Use a single model for both tasks
+        pipe = ChatGenerator(
+            model_name=config['model']['name'],
+            system_prompt=system_prompt,
+            request_timeout=timeout,
+            max_retries=retries
+        )
+        worker_globals['evaluator_pipe'] = pipe
+        worker_globals['improver_pipe'] = pipe
+    else:
+        # Use different models for evaluator and improver
+        evaluator_pipe = ChatGenerator(
+            model_name=config['evaluator_model']['name'],
+            system_prompt=system_prompt,
+            vllm_api_url=os.environ.get("VLLM_EVALUATOR_API_URL"),
+            request_timeout=timeout,
+            max_retries=retries
+        )
+        improver_pipe = ChatGenerator(
+            model_name=config['improver_model']['name'],
+            system_prompt=system_prompt,
+            vllm_api_url=os.environ.get("VLLM_IMPROVER_API_URL"),
+            request_timeout=timeout,
+            max_retries=retries
+        )
+        worker_globals['evaluator_pipe'] = evaluator_pipe
+        worker_globals['improver_pipe'] = improver_pipe
+
     worker_globals['evaluator_prompt'] = evaluator_prompt
     worker_globals['improver_prompt'] = improver_prompt
     worker_globals['perspective_defs'] = perspective_defs
     worker_globals['config'] = config
 
-def process_row(row_tuple, stopping_criteria):
+def process_row(row_tuple, stopping_criteria, is_evaluator_and_improver_same):
     """
     The main processing function for a single row, to be executed by a worker process.
     """
+    import sys # Import sys here for worker process compatibility
     idx, row = row_tuple
-    # We now access prompts, pipe, etc., from the initialized worker_globals
-    pipe = worker_globals['pipe']
-    evaluator_prompt = worker_globals['evaluator_prompt']
-    improver_prompt = worker_globals['improver_prompt']
-    perspective_defs = worker_globals['perspective_defs']
-    config = worker_globals['config']
+    try:
+        # We now access prompts, pipe, etc., from the initialized worker_globals
+        evaluator_pipe = worker_globals['evaluator_pipe']
+        improver_pipe = worker_globals['improver_pipe']
+        evaluator_prompt = worker_globals['evaluator_prompt']
+        improver_prompt = worker_globals['improver_prompt']
+        perspective_defs = worker_globals['perspective_defs']
+        config = worker_globals['config']
 
-    answer_str = format_answers(row['answers'])
-    perspective_spans_str = format_spans(row['input_spans'])
-    # Prepare summary data
-    summary_data = {
-        "Perspective": row['perspective'],          
-        "Perspective_Def": perspective_defs.get(row['perspective'], ""),
-        "Question": row['question'],
-        "Answers": answer_str,
-        "Input_spans": perspective_spans_str,
-        "Predicted": row['Predicted'],
-        "Actual": row['Actual'],
-        "Given Summary": row['Predicted']  # Initial summary
-    }
-    # starting rouge l f score
-    evaluator = get_evaluator(stopping_criteria)
-    starting_score = evaluator(row['Actual'], row['Predicted'])
-    
+        # Check for potentially missing keys in the input row
+        required_keys = ['answers', 'input_spans', 'perspective', 'question', 'Predicted', 'Actual']
+        if not all(key in row for key in required_keys):
+            error_message = f"Worker {os.getpid()}: Skipping item #{idx} due to missing data keys."
+            print(f"\n{error_message}\n", file=sys.stderr, flush=True)
+            return {"error": error_message, "index": idx}
 
-    # This logic can be expanded as you implement the other branches
-    first_feedback, feedback, revised_summary, cot, total_iterations = refinement_loop(
-        summary_data,
-        evaluator_prompt,
-        improver_prompt,
-        pipe,
-        max_iterations=config['iteration']['max_iterations'],
-        stopping_criteria=stopping_criteria
-    )
+        answer_str = format_answers(row['answers'])
+        perspective_spans_str = format_spans(row['input_spans'])
+        # Prepare summary data
+        summary_data = {
+            "Perspective": row['perspective'],
+            "Perspective_Def": perspective_defs.get(row['perspective'], ""),
+            "Question": row['question'],
+            "Answers": answer_str,
+            "Input_spans": perspective_spans_str,
+            "Predicted": row['Predicted'],
+            "Actual": row['Actual'],
+            "Given Summary": row['Predicted']  # Initial summary
+        }
+        # starting rouge l f score
+        evaluator = get_evaluator(stopping_criteria)
+        starting_score = evaluator(row['Actual'], row['Predicted'])
 
-    result = {
-        "original_summary": row['Predicted'],
-        "revised_summary": revised_summary,
-        "Gold Summary": row['Actual'],
-        "first_feedback": first_feedback,
-        "feedback": feedback,
-        "cot": cot,
-        "perspective": row['perspective'],
-        "question": row['question'],
-        "starting score": starting_score,
-        "final score": evaluator(row['Actual'], revised_summary),
-        "total_iterations": total_iterations
-    }
-    return result
+        first_feedback, feedback, revised_summary, cot, total_iterations = refinement_loop(
+            summary_data,
+            evaluator_prompt,
+            improver_prompt,
+            evaluator_pipe,
+            improver_pipe,
+            max_iterations=config['iteration']['max_iterations'],
+            stopping_criteria=stopping_criteria
+        )
+
+        return {
+            "original_summary": row['Predicted'],
+            "revised_summary": revised_summary,
+            "Gold Summary": row['Actual'],
+            "first_feedback": first_feedback,
+            "feedback": feedback,
+            "cot": cot,
+            "perspective": row['perspective'],
+            "question": row['question'],
+            "starting score": starting_score,
+            "final score": evaluator(row['Actual'], revised_summary),
+            "total_iterations": total_iterations
+        }
+    except Exception as e:
+        # Catch any exception, print it, and return an error object
+        # This prevents the worker from crashing and stalling the pool
+        error_message = f"Worker {os.getpid()}: CRITICAL ERROR on item #{idx}: {e}"
+        # Print to stderr to avoid mixing with stdout/tqdm
+        print(f"\n{error_message}\n", file=sys.stderr, flush=True)
+        # Return an error object so the main loop can handle it
+        return {"error": error_message, "index": idx}
 
 def stream_json_data(filepath):
     """
@@ -206,6 +246,10 @@ def count_json_items(filepath):
 
 def main():
     
+    # --- Main Process Logging Setup ---
+    # This is important for messages printed before the worker pool starts
+    # logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+
     parser = argparse.ArgumentParser()
     parser.add_argument('--input_data', required=True, help='Path to input CSV file')
     parser.add_argument('--config', default='configs/default.yaml', help='Path to config file')
@@ -214,13 +258,25 @@ def main():
     parser.add_argument('--is_evaluator_and_improver_same', default=True, help="to keep the evaluator and improver model same or not")
     parser.add_argument('--stopping_criteria', default='rouge-l-f', help='the stopping criterial for the refinement loop')
     parser.add_argument('--max_iterations', default=5, help="max number iterations for the refinement loop")
-    parser.add_argument('--num_workers', type=int, default=200, help='Number of parallel worker processes to use.')
+    parser.add_argument('--num_workers', type=int, default=100, help='Number of parallel worker processes. Use 0 for sequential debugging. Defaults to 16.')
+    parser.add_argument('--general_eval_and_improver', default=False, help="the prompt will be general ones")
 
     args = parser.parse_args()
-    print(os.cpu_count())
+    if args.is_evaluator_and_improver_same=="False":
+        args.is_evaluator_and_improver_same = False
+    elif args.is_evaluator_and_improver_same=="True":
+        args.is_evaluator_and_improver_same = True
+    
+    if args.general_eval_and_improver=="False":
+        args.general_eval_and_improver = False
+    elif args.general_eval_and_improver=="True":
+        args.general_eval_and_improver = True
+
+
     # Load config
     with open(args.config, 'r') as f:
         config = yaml.safe_load(f)
+
     if args.is_evaluator_and_improver_same:
         print(f"Starting the Main Script...\n\t-Evaluator and Improver Model: {config['model']['name']}\n\t")
     else:
@@ -235,9 +291,17 @@ def main():
     print(f"\r{static_text}✅") # End with a checkmark
 
     # --- Verify Server Connection ---
-    # Get the API URL from environment or default, then check the connection.
-    api_url = os.environ.get("VLLM_API_URL", "http://localhost:8000/v1/chat/completions")
-    # check_server_connection(api_url)
+    if args.is_evaluator_and_improver_same:
+        # Check the single model API URL
+        api_url = os.environ.get("VLLM_API_URL")
+        if api_url:
+            check_server_connection(api_url)
+    else:
+        # Check both evaluator and improver API URLs
+        evaluator_api_url = os.environ.get("VLLM_EVALUATOR_API_URL")
+        improver_api_url = os.environ.get("VLLM_IMPROVER_API_URL")
+        check_server_connection(evaluator_api_url)
+        check_server_connection(improver_api_url)
 
     # Load input data
     print("🚀 Preparing to stream data from input file...")
@@ -273,42 +337,59 @@ def main():
         suffix_parts.append(f"impr-{improver_model_name_cleaned}")
         suffix_parts.append(f"eval-{evaluator_model_name_cleaned}")
 
+    if args.general_eval_and_improver:
+        suffix_parts.append("general_prompts")
 
     
     output_filename = f"{input_filename}_{'_'.join(suffix_parts)}.json"
     output_path = os.path.join(output_dir, output_filename)
     
-    # Prepare for multiprocessing
-    print(f"Using {args.num_workers} worker processes.")
+    process_row_with_criteria = partial(process_row, stopping_criteria=args.stopping_criteria, is_evaluator_and_improver_same=args.is_evaluator_and_improver_same)
 
-    # --- Fully Streaming Pipeline ---
-    # Create a partial function to pass the stopping_criteria from args
-    # to the process_row worker function.
-    process_row_with_criteria = partial(process_row, stopping_criteria=args.stopping_criteria)
+    if args.general_eval_and_improver:
+        evaluator_path = config['general_evaluator_prompt_path']
+        improver_path = config['general_improver_prompt_path']
+    else:
+        evaluator_path = config['evaluator_prompt_path']
+        improver_path = config['improver_prompt_path']
 
-    # This block now streams both input and output. It reads one item from the
-    # input file, sends it to a worker, and writes the result to the output
-    # file as soon as it's ready.
-    with open(output_path, 'w') as f_out, multiprocessing.Pool(
-            processes=args.num_workers,
-            initializer=init_worker,
-            initargs=(
-                config,
-                config['evaluator_prompt_path'],
-                config['improver_prompt_path'],
-                config['perspective_definitions_path']
-            )
-    ) as pool:
-        f_out.write('[\n') # Start of the JSON array
+    with open(output_path, 'w') as f_out:
+        f_out.write('[\n')  # Start of the JSON array
         first_result = True
-        # pool.imap_unordered is perfect for streaming as it takes an iterable (our generator)
-        for result in tqdm(pool.imap_unordered(process_row_with_criteria, tasks), total=total_tasks, desc="Processing samples"):
+
+        def write_result(result):
+            nonlocal first_result
             if result:
                 if not first_result:
-                    f_out.write(',\n') # Add a comma before each result except the first
+                    f_out.write(',\n')
                 json.dump(result, f_out, indent=2)
                 first_result = False
-        f_out.write('\n]\n') # End of the JSON array
+
+        if args.num_workers > 0:
+            # --- Multiprocessing Pipeline ---
+            print(f"🚀 Starting parallel processing with {args.num_workers} workers...")
+            with multiprocessing.Pool(
+                    processes=args.num_workers,
+                    initializer=init_worker,
+                    initargs=(
+                        config,
+                        evaluator_path,
+                        improver_path,
+                        config['perspective_definitions_path'],
+                        args.is_evaluator_and_improver_same
+                    )
+            ) as pool:
+                for result in tqdm(pool.imap_unordered(process_row_with_criteria, tasks), total=total_tasks, desc="Processing samples"):
+                    write_result(result)
+        else:
+            # --- Sequential (Debug) Pipeline ---
+            print("🚀 Starting sequential processing (num_workers=0)...")
+            init_worker(config, evaluator_path, improver_path, config['perspective_definitions_path'], args.is_evaluator_and_improver_same)
+            for task in tqdm(tasks, total=total_tasks, desc="Processing samples"):
+                result = process_row_with_criteria(task)
+                write_result(result)
+
+        f_out.write('\n]\n')  # End of the JSON array
     
     print(f"\n{'='*80}")
     print(f"✅ All samples processed. Results saved to: {output_path}")
