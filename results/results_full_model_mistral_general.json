@@ -1,0 +1,128 @@
+{
+    "filtered_complete_base_google_gemma-3-12b-it_improved_stop-rouge-l-f_imp_eval_model-mistralai_Mistral_7B_Instruct_v0.3_general_prompts": {
+        "rouge_l": {
+            "starting_score": 0.2966287639797315,
+            "final_score": 0.3092478499105708
+        },
+        "rouge_1": {
+            "starting_score": 0.3327151750072911,
+            "final_score": 0.33994970262293944
+        },
+        "rouge_2": {
+            "starting_score": 0.1226774283561432,
+            "final_score": 0.12451691765691601
+        },
+        "meteor": {
+            "starting_score": 0.2785584410680369,
+            "final_score": 0.315985716146274
+        }
+    },
+    "filtered_complete_base_meta-llama_Llama-3.1-8B_improved_stop-rouge-l-f_imp_eval_model-mistralai_Mistral_7B_Instruct_v0.3_general_prompts": {
+        "rouge_l": {
+            "starting_score": 0.19740942656594196,
+            "final_score": 0.3151256927930013
+        },
+        "rouge_1": {
+            "starting_score": 0.21339587893921172,
+            "final_score": 0.34344878598876255
+        },
+        "rouge_2": {
+            "starting_score": 0.07485427290910224,
+            "final_score": 0.1310527612975857
+        },
+        "meteor": {
+            "starting_score": 0.19988286591311036,
+            "final_score": 0.32453588409065776
+        }
+    },
+    "filtered_complete_plasma_test_improved_stop-rouge-l-f_imp_eval_model-mistralai_Mistral_7B_Instruct_v0.3_general_prompts": {
+        "rouge_l": {
+            "starting_score": 0.12137787828910108,
+            "final_score": 0.31315521887291187
+        },
+        "rouge_1": {
+            "starting_score": 0.13299963260813674,
+            "final_score": 0.34189873926083086
+        },
+        "rouge_2": {
+            "starting_score": 0.02496911440320003,
+            "final_score": 0.13080337126606456
+        },
+        "meteor": {
+            "starting_score": 0.10154935241894583,
+            "final_score": 0.3173801063344208
+        }
+    },
+    "filtered_complete_base_mistralai_Mistral-7B-Instruct-v0.3_improved_stop-rouge-l-f_imp_eval_model-mistralai_Mistral_7B_Instruct_v0.3_general_prompts": {
+        "rouge_l": {
+            "starting_score": 0.30046791909272946,
+            "final_score": 0.31002948981436235
+        },
+        "rouge_1": {
+            "starting_score": 0.33355888138408635,
+            "final_score": 0.33915076770164054
+        },
+        "rouge_2": {
+            "starting_score": 0.1259936954439118,
+            "final_score": 0.12640584034096777
+        },
+        "meteor": {
+            "starting_score": 0.30901180309023735,
+            "final_score": 0.3223540257141662
+        }
+    },
+    "filtered_complete_base_Qwen_Qwen2.5-7B-Instruct_improved_stop-rouge-l-f_imp_eval_model-mistralai_Mistral_7B_Instruct_v0.3_general_prompts": {
+        "rouge_l": {
+            "starting_score": 0.28136616557841737,
+            "final_score": 0.3124077784330129
+        },
+        "rouge_1": {
+            "starting_score": 0.31460123946784024,
+            "final_score": 0.3426407035123848
+        },
+        "rouge_2": {
+            "starting_score": 0.11952404686594488,
+            "final_score": 0.12612797062189143
+        },
+        "meteor": {
+            "starting_score": 0.25112949322105543,
+            "final_score": 0.3141523976344608
+        }
+    },
+    "filtered_complete_base_meta-llama_Llama-3.1-8B-Instruct_improved_stop-rouge-l-f_imp_eval_model-mistralai_Mistral_7B_Instruct_v0.3_general_prompts": {
+        "rouge_l": {
+            "starting_score": 0.303383111936887,
+            "final_score": 0.31243363895656057
+        },
+        "rouge_1": {
+            "starting_score": 0.34074925985909865,
+            "final_score": 0.3416215217753584
+        },
+        "rouge_2": {
+            "starting_score": 0.13209558611550393,
+            "final_score": 0.129158520494497
+        },
+        "meteor": {
+            "starting_score": 0.30354655397957153,
+            "final_score": 0.3250686269401236
+        }
+    },
+    "filtered_complete_base_google_gemma-2-9b_improved_stop-rouge-l-f_imp_eval_model-mistralai_Mistral_7B_Instruct_v0.3_general_prompts": {
+        "rouge_l": {
+            "starting_score": 0.2767474682703248,
+            "final_score": 0.320019105540623
+        },
+        "rouge_1": {
+            "starting_score": 0.2990319538608661,
+            "final_score": 0.348545660953164
+        },
+        "rouge_2": {
+            "starting_score": 0.11435344417045509,
+            "final_score": 0.13507835964182807
+        },
+        "meteor": {
+            "starting_score": 0.2691078880552274,
+            "final_score": 0.32834037854001863
+        }
+    }
+}

@@ -1,9 +1,6 @@
 # Faithful Summary Improvement Task
 
-**Goal**: Ensure the summary is *faithful*.  
-
 **CRITICAL:** Follow the output format EXACTLY. Do NOT add extra sections".
-
 
 **Objective**: Rewrite the summary by reading the feedback.  
 

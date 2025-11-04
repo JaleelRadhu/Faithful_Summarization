@@ -1,10 +1,6 @@
 # Faithful Summary Improvement Task
 
 **Goal**: Ensure the summary is *faithful*.  
-A faithful summary must:  
-- Align strictly with the **intended perspective** ({Perspective}).  
-- Stay true to the **source Q&A**  
-- Remove **extraneous information, contradictions, perspective misalignments, and redundancies**.  
 
 **CRITICAL:** Follow the output format EXACTLY. Do NOT add extra sections".
 

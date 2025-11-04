@@ -2,12 +2,13 @@
 
 import sys
 import os
+# Add the project root directory to the Python path
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 import yaml 
 import json
 import argparse
-
-# Add the project root directory to the Python path
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from utils.process_results import process_and_plot_results
 
 from utils.evaluator import get_rouge_l_score, get_rouge_1_score, get_rouge_2_score, get_meteor_score, get_BERTScore, get_BARTScore, get_llm_metrics, get_llm_metrics_from_a_model
 
@@ -179,9 +180,10 @@ def main():
     
     #take config path in argument using argparser
     
+    
     parser = argparse.ArgumentParser()
     parser.add_argument('--config', default='configs/default.yaml', help='Path to config file')
-    parser.add_argument('--output_file_suffix')
+    parser.add_argument('--output_sub_dir', default="")
     args = parser.parse_args()
     
     # Load config
@@ -189,6 +191,9 @@ def main():
         config = yaml.safe_load(f)
     
     output_dir = config["data"]["output_dir"] # Directory where all the improved summaries are saved
+    if args.output_sub_dir != "":
+        output_dir += "/" + args.output_sub_dir # Directory where all the improved summaries are saved
+    
     results_dir = config.get("results_dir", "results") # Directory to save the aggregated results
 
     # Ensure the results directory exists
@@ -217,15 +222,19 @@ def main():
 
     # Define the output file name for the aggregated results
     # Can be specified in config or use a default
-    output_results_filename = "results_full_model.json"
+    if args.output_sub_dir != "":
+        output_results_filename = "results_full_model_" + args.output_sub_dir+ ".json"
+    else:
+        output_results_filename = "results_full_model" +  ".json"
     output_results_path = os.path.join(results_dir, output_results_filename)
 
     # Dump final_results in result_file_name and save it in the results directory
     with open(output_results_path, 'w') as f:
         json.dump(final_results, f, indent=4)
-
+    image_file_name = "results_comparison" + args.output_sub_dir + ".png"
+    image_path = os.path.join(results_dir, image_file_name)
     print(f"All evaluation results saved to: {output_results_path}")
-
+    process_and_plot_results(output_results_path, output_image_path=image_path)
 
 if __name__ == "__main__":
     main()

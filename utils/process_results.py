@@ -23,6 +23,7 @@ def process_and_plot_results(json_path: str, output_image_path: str = 'results_c
         print(f"Error: Could not decode JSON from the file '{json_path}'.")
         return
 
+
     # --- Helper to flatten nested JSON ---
     def flatten_dict(d, parent_key='', sep='_'):
         items = []
@@ -42,9 +43,7 @@ def process_and_plot_results(json_path: str, output_image_path: str = 'results_c
     processed_data = []
     for experiment_name, metrics in data.items():
         # Clean up the long experiment names for readability
-        clean_name = experiment_name.replace(
-            '_improved_stop-rouge-l-f_imp_eval_model-Qwen_Qwen2.5_7B_Instruct', ''
-        ).replace(
+        clean_name = experiment_name.split('_improved')[0].replace(
             'filtered_complete_base_', ''
         )
         

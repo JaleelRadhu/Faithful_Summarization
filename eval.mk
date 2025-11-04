@@ -39,16 +39,16 @@ run:
 	@echo "   - Host: $(HOST) (0.0.0.0 allows remote connections)"
 	@echo "   - GPU Memory Utilization: $(GPU_MEM_UTIL)"
 	@echo "--------------------------------------------------"
-	CUDA_VISIBLE_DEVICES=0 python -m vllm.entrypoints.openai.api_server \
+	CUDA_VISIBLE_DEVICES=0  python -m vllm.entrypoints.openai.api_server \
 		--model $(MODEL_NAME) \
 		--tensor-parallel-size $(TENSOR_PARALLEL_SIZE) \
 		--port $(PORT) \
 		--host "$(HOST)" \
 		--gpu-memory-utilization $(GPU_MEM_UTIL) \
+		--max-num-batched-tokens 60000 \
+		--max-num-seqs 256 \
 
-# 		--max-num-batched-tokens 60000 \
-# # 		--max-num-seqs 256 \
-# # 		--max-model-len 8192
+# 		--max-model-len 8192
 
 # --- Helper Target ---
 

@@ -4,6 +4,14 @@ def revise_summary(summary_data, feedback, improver_prompt, pipe):
     # Fill the improver prompt with summary, perspective, etc.
     final_improver_prompt = improver_prompt.format(**{**summary_data, "Feedback": feedback})
     
+    # print("="*100)
+    # print("improver prompt start")
+    # print("="*100)
+    # print(final_improver_prompt)
+    # print("="*100)
+    # print("improver prompt end")
+    # print("="*100)
+    
     # Get model response
     response = pipe(final_improver_prompt, max_new_tokens=512, temperature=0.7, return_full_text=False)
     revised_text = response[0]["generated_text"]

@@ -45,10 +45,9 @@ run:
 		--port $(PORT) \
 		--host "$(HOST)" \
 		--gpu-memory-utilization $(GPU_MEM_UTIL) \
+		--max-num-batched-tokens 50000 \
+		--max-num-seqs 256 \
 
-
-# 		--max-num-batched-tokens 50000 \
-# 		--max-num-seqs 256 \
 # 		--max-model-len 8192
 
 # --- Helper Target ---

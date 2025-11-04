@@ -1,5 +1,5 @@
 model:
-  name: meta-llama/Llama-3.1-8B-Instruct  #mistralai/Mistral-7B-Instruct-v0.3  #Qwen/Qwen2.5-7B-Instruct # #microsoft/Phi-3-mini-4k-instruct
+  name:  mistralai/Mistral-7B-Instruct-v0.3 #Qwen/Qwen2.5-7B-Instruct #meta-llama/Llama-3.1-8B-Instruct  #  #Qwen/Qwen2.5-7B-Instruct # #microsoft/Phi-3-mini-4k-instruct
   quantization: None
   backend: hf
   device: 0
@@ -19,6 +19,10 @@ improver_prompt_path: /home/abdullahm/jaleel/Faithfullness_Improver/prompts/impr
 general_evaluator_prompt_path: /home/abdullahm/jaleel/Faithfullness_Improver/prompts/gen_eval_prompt.txt
 general_improver_prompt_path: /home/abdullahm/jaleel/Faithfullness_Improver/prompts/gen_improver_prompt.txt
 
+no_eval_eval_prompt_path: /home/abdullahm/jaleel/Faithfullness_Improver/prompts/no_eval_eval_prompt.txt
+no_eval_improver_prompt_path: /home/abdullahm/jaleel/Faithfullness_Improver/prompts/no_eval_improver.txt
+
+no_improver_improver_prompt_path: /home/abdullahm/jaleel/Faithfullness_Improver/prompts/no_improver_prompt.txt
 
 
 iteration:
@@ -27,13 +31,13 @@ iteration:
   tolerance: 0.01
 
 # Network settings for vLLM requests
-request_timeout: 1200 # Timeout in seconds (e.g., 3 minutes)
-max_retries: 3 # Number of times to retry on a timeout
+request_timeout: 60 # Timeout in seconds (e.g., 3 minutes)
+max_retries: 1000 # Number of times to retry on a timeout
 
 is_improver_evaluator_model_same: True
 
 evaluator_model:
-  name:  mistralai/Mistral-7B-Instruct-v0.3 #Qwen/Qwen2.5-7B-Instruct
+  name: Qwen/Qwen2.5-7B-Instruct #mistralai/Mistral-7B-Instruct-v0.3
   quantization: None
   backend: hf
   device: 0
@@ -41,7 +45,7 @@ evaluator_model:
   temperature: 0.7
 
 improver_model:
-  name: Qwen/Qwen2.5-7B-Instruct #mistralai/Mistral-7B-Instruct-v0.3 
+  name: mistralai/Mistral-7B-Instruct-v0.3  #Qwen/Qwen2.5-7B-Instruct
   quantization: None
   backend: hf
   device: 0

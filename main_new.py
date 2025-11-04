@@ -64,6 +64,8 @@ def check_server_connection(api_url_str):
 
 def load_prompts(evaluator_path, improver_path):
     """Load evaluator and improver prompts from files"""
+    # print(evaluator_path)
+    # print(improver_path)
     with open(evaluator_path, 'r') as f:
         evaluator_prompt = f.read()
     with open(improver_path, 'r') as f:
@@ -109,11 +111,20 @@ def init_worker(config, evaluator_prompt_path, improver_prompt_path, perspective
     Initializes resources for each worker process.
     This prevents reloading models/prompts for every single item.
     """
-    # Load prompts and perspective definitions
+    # # Load prompts and perspective definitions
+    # print("&"*100)
+    # print(evaluator_prompt_path)
+    # print("&"*100)
+    # print("()"*100)
+    # print(improver_prompt_path)
+    # print("()"*100  )
     evaluator_prompt, improver_prompt = load_prompts(
         evaluator_prompt_path,
         improver_prompt_path
     )
+    # print("*"*100)
+    # print(improver_prompt)
+    # print("*"*100)
     perspective_defs = load_perspective_definitions(perspective_definitions_path)
     
     system_prompt = "You are an expert summary faithfulness evaluator and improver. Follow the instructions exactly and provide structured outputs."
@@ -258,7 +269,7 @@ def main():
     parser.add_argument('--is_evaluator_and_improver_same', default=True, help="to keep the evaluator and improver model same or not")
     parser.add_argument('--stopping_criteria', default='rouge-l-f', help='the stopping criterial for the refinement loop')
     parser.add_argument('--max_iterations', default=5, help="max number iterations for the refinement loop")
-    parser.add_argument('--num_workers', type=int, default=200, help='Number of parallel worker processes. Use 0 for sequential debugging. Defaults to 16.')
+    parser.add_argument('--num_workers', type=int, default=250, help='Number of parallel worker processes. Use 0 for sequential debugging. Defaults to 16.')
     parser.add_argument('--general_eval_and_improver', default=False, help="the prompt will be general ones")
 
     args = parser.parse_args()
@@ -271,12 +282,23 @@ def main():
         args.general_eval_and_improver = False
     elif args.general_eval_and_improver=="True":
         args.general_eval_and_improver = True
+        
+    if args.without_cot=="False":
+        args.without_cot = False
+    elif args.without_cot=="True":
+        args.without_cot = True
+        
+    if args.without_evaluator=="False":
+        args.without_evaluator = False
+    elif args.without_evaluator=="True":
+        args.without_evaluator = True
 
 
     # Load config
     with open(args.config, 'r') as f:
         config = yaml.safe_load(f)
-
+    if args.general_eval_and_improver:
+        print("General Evaluation and Improver prompt is being used...")
     if args.is_evaluator_and_improver_same:
         print(f"Starting the Main Script...\n\t-Evaluator and Improver Model: {config['model']['name']}\n\t")
     else:
@@ -344,14 +366,22 @@ def main():
     output_filename = f"{input_filename}_{'_'.join(suffix_parts)}.json"
     output_path = os.path.join(output_dir, output_filename)
     
-    process_row_with_criteria = partial(process_row, stopping_criteria=args.stopping_criteria, is_evaluator_and_improver_same=args.is_evaluator_and_improver_same)
-
     if args.general_eval_and_improver:
         evaluator_path = config['general_evaluator_prompt_path']
         improver_path = config['general_improver_prompt_path']
+    elif args.without_cot:
+        evaluator_path = config['evaluator_prompt_path']
+        improver_path = config['no_improver_improver_prompt_path'] #this will be no_improver_prompt
+    elif args.without_evaluator:
+        evaluator_path = config['no_eval_eval_prompt_path'] #this will be empty
+        improver_path = config['no_eval_improver_prompt_path'] #this will be the no_eval_improver_prompt.
     else:
         evaluator_path = config['evaluator_prompt_path']
         improver_path = config['improver_prompt_path']
+        
+    process_row_with_criteria = partial(process_row, stopping_criteria=args.stopping_criteria, is_evaluator_and_improver_same=args.is_evaluator_and_improver_same)
+
+
 
     with open(output_path, 'w') as f_out:
         f_out.write('[\n')  # Start of the JSON array
