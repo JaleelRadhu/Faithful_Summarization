@@ -1,0 +1,122 @@
+{
+    "filtered_complete_base_microsoft_Phi-3-mini-4k-instruct_improved_stop-rouge-l-f_imp_eval_model-mistralai_Mistral_7B_Instruct_v0.3": {
+        "llm_metrics": {
+            "perspective_misalignment": {
+                "starting_score": 4.533557046979865,
+                "final_score": 4.599552572706935
+            },
+            "extraneous_information": {
+                "starting_score": 4.412751677852349,
+                "final_score": 4.428970917225951
+            },
+            "redundancy": {
+                "starting_score": 4.507270693512305,
+                "final_score": 4.524049217002237
+            },
+            "contradiction": {
+                "starting_score": 4.6470917225950785,
+                "final_score": 4.639821029082774
+            }
+        }
+    },
+    "filtered_complete_base_mistralai_Mistral-7B-Instruct-v0.3_improved_stop-rouge-l-f_imp_eval_model-mistralai_Mistral_7B_Instruct_v0.3": {
+        "llm_metrics": {
+            "perspective_misalignment": {
+                "starting_score": 4.433618233618233,
+                "final_score": 4.581766381766382
+            },
+            "extraneous_information": {
+                "starting_score": 4.189173789173789,
+                "final_score": 4.364102564102564
+            },
+            "redundancy": {
+                "starting_score": 4.2809116809116805,
+                "final_score": 4.453561253561253
+            },
+            "contradiction": {
+                "starting_score": 4.491737891737892,
+                "final_score": 4.626210826210826
+            }
+        }
+    },
+    "filtered_complete_base_google_gemma-2-9b_improved_stop-rouge-l-f_imp_eval_model-mistralai_Mistral_7B_Instruct_v0.3": {
+        "llm_metrics": {
+            "perspective_misalignment": {
+                "starting_score": 4.409778812572759,
+                "final_score": 4.526193247962747
+            },
+            "extraneous_information": {
+                "starting_score": 4.529994175888177,
+                "final_score": 4.368666278392545
+            },
+            "redundancy": {
+                "starting_score": 4.422584400465658,
+                "final_score": 4.487776484284051
+            },
+            "contradiction": {
+                "starting_score": 4.737485448195576,
+                "final_score": 4.629802095459837
+            }
+        }
+    },
+    "filtered_complete_base_google_gemma-3-12b-it_improved_stop-rouge-l-f_imp_eval_model-mistralai_Mistral_7B_Instruct_v0.3": {
+        "llm_metrics": {
+            "perspective_misalignment": {
+                "starting_score": 4.483583750695604,
+                "final_score": 4.558708959376739
+            },
+            "extraneous_information": {
+                "starting_score": 4.351140790205899,
+                "final_score": 4.385086254869226
+            },
+            "redundancy": {
+                "starting_score": 4.454646633277685,
+                "final_score": 4.485253199777407
+            },
+            "contradiction": {
+                "starting_score": 4.608792431830829,
+                "final_score": 4.61324429604897
+            }
+        }
+    },
+    "filtered_complete_base_meta-llama_Llama-3.1-8B-Instruct_improved_stop-rouge-l-f_imp_eval_model-mistralai_Mistral_7B_Instruct_v0.3": {
+        "llm_metrics": {
+            "perspective_misalignment": {
+                "starting_score": 4.560088202866593,
+                "final_score": 4.590959206174201
+            },
+            "extraneous_information": {
+                "starting_score": 4.458356315499173,
+                "final_score": 4.4423607280750135
+            },
+            "redundancy": {
+                "starting_score": 4.572216097023153,
+                "final_score": 4.496692392502756
+            },
+            "contradiction": {
+                "starting_score": 4.6736493936052925,
+                "final_score": 4.654355016538037
+            }
+        }
+    },
+    "filtered_complete_plasma_test_improved_stop-rouge-l-f_imp_eval_model-mistralai_Mistral_7B_Instruct_v0.3": {
+        "llm_metrics": {
+            "perspective_misalignment": {
+                "starting_score": 3.797603195739015,
+                "final_score": 4.509986684420772
+            },
+            "extraneous_information": {
+                "starting_score": 4.329560585885486,
+                "final_score": 4.3415446071904125
+            },
+            "redundancy": {
+                "starting_score": 4.019307589880159,
+                "final_score": 4.412782956058589
+            },
+            "contradiction": {
+                "starting_score": 4.533288948069241,
+                "final_score": 4.603195739014647
+            }
+        }
+    }
+}

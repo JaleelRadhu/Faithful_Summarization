@@ -1,0 +1,95 @@
+## 📝 Perspective-Aware Summary Evaluation
+
+You are an expert evaluator. Follow the instructions EXACTLY. Do NOT add extra sections.
+
+**Your Task:** Evaluate the summary using ONLY the four metrics below. Provide reasoning and a score (1-5) for each.
+
+---
+
+## 📊 Evaluation Criteria
+
+### 1. Extraneous Information (1-5)
+- **5** – No extraneous information, fully supported
+- **4** – Minimal extraneous info, mostly aligned
+- **3** – Moderate extraneous info, somewhat aligned
+- **2** – Significant extraneous info, poorly aligned
+- **1** – Mostly or entirely extraneous, not supported
+
+### 2. Contradiction (1-5)
+- **5** – No contradictions at all
+- **4** – Minor contradictions
+- **3** – Some noticeable contradictions
+- **2** – Major contradictions
+- **1** – Completely inconsistent with answers
+
+### 3. Perspective Misalignment (1-5)
+- **5** – Fully aligned with the given perspective
+- **4** – Mostly aligned, small deviations
+- **3** – Balanced between correct and different perspectives
+- **2** – Primarily presents a different perspective
+- **1** – Completely different perspective, misaligned
+
+### 4. Redundancy (1-5)
+- **5** – No redundancy, concise and clear
+- **4** – Slight redundancy, does not harm clarity
+- **3** – Moderate redundancy, some repetition
+- **2** – High redundancy, frequent repetition
+- **1** – Extremely redundant, overwhelming repetition
+
+---
+
+## 📄 Source Text
+
+- **Perspective:** {Perspective}
+- **Perspective Definition:** {Perspective_Def}
+- **Gold Summary:** {Gold Summary}
+- **Summary to Evaluate:** {Given Summary}
+
+---
+
+## CRITICAL INSTRUCTIONS:
+- Provide EXACTLY 4 evaluations (one per metric)
+- Follow the template EXACTLY as shown below
+- Do NOT add any additional sections
+- Stop immediately after completing the 4th evaluation
+
+---
+
+## 📑 Your Response (Use This Exact Format):
+
+**Reasoning for Extraneous Information:** [Your reasoning here]
+**Score for Extraneous Information:** [1-5]
+
+**Reasoning for Contradiction:** [Your reasoning here]
+**Score for Contradiction:** [1-5]
+
+**Reasoning for Perspective Misalignment:** [Your reasoning here]
+**Score for Perspective Misalignment:** [1-5]
+
+**Reasoning for Redundancy:** [Your reasoning here]
+**Score for Redundancy:** [1-5]
+
+---
+
+## ✅ Few-Shot Example  
+
+**Source Text:**  
+Perspective: "INFORMATION"
+Perspective Definition: "Defined as knowledge about diseases, disorders, and health-related facts, providing insights into symptoms and diagnosis"
+Gold Summary: "For information purposes, the herbs found in Paiduyangyan include Rhubarb, White Atractylodes, American Ginseng, Qing-yang Ginseng, Red Ginseng, and Peppermint."  
+Summary to Evaluate:"For information purposes, the herbs found in Paiduyangyan include Rhubarb, White Atractylodes, American Ginseng, Qing-yang Ginseng, Red Ginseng, and Peppermint."  
+
+
+**Evaluation Form (Completed):**  
+
+- **Reasoning for Extraneous Information:** The summary directly reflects the content provided in the answers without adding unrelated information. All listed herbs match exactly with those mentioned in the answers.  
+- **Score for Extraneous Information:** 5  
+
+- **Reasoning for Contradiction:** There are no contradictions in the summary. It accurately lists the herbs as mentioned in the answers without contradicting any of the details.  
+- **Score for Contradiction:** 5  
+
+- **Reasoning for Perspective Misalignment:** The summary maintains the specified 'INFORMATION' perspective by factually listing the herbs found in Paiduyangyan, which aligns perfectly with the perspective and information provided in the answers.  
+- **Score for Perspective Misalignment:** 5  
+
+- **Reasoning for Redundancy:** The summary lists all the herbs without unnecessary repetition. It is concise and provides the information directly.  
+- **Score for Redundancy:** 5  

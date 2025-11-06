@@ -60,36 +60,36 @@ def get_BARTScore(reference: str, candidate: str) -> float:
     scores = _bart_scorer_instance.score(candidates=[candidate], references=[reference], batch_size=4)
     return scores[0] # The score method returns a list of scores, we need the first (and only) one
     
-def get_llm_metrics(llm_feedback: str) -> dict[str, dict]:
+def get_llm_metrics(llm_feedback: str) -> dict:
     """Given the llm feedback, it extracts the reasoning and score for each metric.
-
     This function uses a regular expression to find all occurrences of
     "Reasoning for [Criterion]: [Text]... Score for [Criterion]: [Score]"
     and returns a nested dictionary.
-
     Args:
         llm_feedback: A string containing the feedback from the LLM.
-
     Returns:
         A dictionary where keys are normalized criteria names (e.g.,
         "perspective_misalignment") and values are dictionaries containing
         the 'reasoning' (str) and 'score' (int).
     """
-    # This pattern captures the criterion name, the reasoning text, and the score.
-    # re.DOTALL is crucial for the 'reasoning' part to match across newlines.
-    pattern = re.compile(
-        r"\*\*Reasoning for (.+?):\*\* (.*?)\n\*\*Score for \1:\*\* (\d+)",
-        re.DOTALL
-    )
-    matches = pattern.findall(llm_feedback)
-    
     metrics = {}
-    for criterion, reasoning, score in matches:
-        normalized_key = criterion.strip().lower().replace(' ', '_')
-        metrics[normalized_key] = {
-            'reasoning': reasoning.strip(),
-            'score': int(score)
-        }
+    try:
+        # This pattern captures the criterion name, the reasoning text, and the score.
+        # re.DOTALL is crucial for the 'reasoning' part to match across newlines.
+        pattern = re.compile(
+            r"\*\*Reasoning for (.+?):\*\* (.*?)\n\*\*Score for \1:\*\* (\d+)",
+            re.DOTALL
+        )
+        matches = pattern.findall(llm_feedback)
+
+        for criterion, reasoning, score in matches:
+            normalized_key = criterion.strip().lower().replace(' ', '_')
+            metrics[normalized_key] = {
+                'reasoning': reasoning.strip(),
+                'score': int(score)
+            }
+    except Exception as e:
+        print(f"Error processing LLM feedback: {e}")
     return metrics
 
 def get_llm_metrics_from_a_model(summary_data: dict, llm_pipe): 

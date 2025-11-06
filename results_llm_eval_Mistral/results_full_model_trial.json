@@ -1,0 +1,38 @@
+{
+    "filtered_complete_base_Qwen_Qwen2.5-7B-Instruct_improved_stop-rouge-l-f_impr-Qwen_Qwen2.5_7B_Instruct_eval-mistralai_Mistral_7B_Instruct_v0.3.json": {
+        "Extraneous Information": {
+            "original": 4.220502901353965,
+            "revised": 4.411149825783972
+        },
+        "Contradiction": {
+            "original": 4.620116054158608,
+            "revised": 4.72861014324429
+        },
+        "Perspective Misalignment": {
+            "original": 4.5539651837524175,
+            "revised": 4.664730933023616
+        },
+        "Redundancy": {
+            "original": 4.313346228239845,
+            "revised": 4.525174283501162
+        }
+    },
+    "filtered_complete_base_mistralai_Mistral-7B-Instruct-v0.3_improved_stop-rouge-l-f_impr-Qwen_Qwen2.5_7B_Instruct_eval-mistralai_Mistral_7B_Instruct_v0.3.json": {
+        "Extraneous Information": {
+            "original": 4.220502901353965,
+            "revised": 4.411149825783972
+        },
+        "Contradiction": {
+            "original": 4.620116054158608,
+            "revised": 4.72861014324429
+        },
+        "Perspective Misalignment": {
+            "original": 4.5539651837524175,
+            "revised": 4.664730933023616
+        },
+        "Redundancy": {
+            "original": 4.313346228239845,
+            "revised": 4.525174283501162
+        }
+    }
+}

@@ -1,0 +1,162 @@
+{
+    "filtered_complete_base_microsoft_Phi-3-mini-4k-instruct_improved_stop-rouge-l-f_impr-mistralai_Mistral_7B_Instruct_v0.3_eval-Qwen_Qwen2.5_7B_Instruct": {
+        "llm_metrics": {
+            "contradiction": {
+                "starting_score": 4.563249516441005,
+                "final_score": 4.599226305609284
+            },
+            "redundancy": {
+                "starting_score": 4.55899419729207,
+                "final_score": 4.598452611218569
+            },
+            "extraneous_information": {
+                "starting_score": 4.193423597678917,
+                "final_score": 4.280077369439072
+            },
+            "perspective_misalignment": {
+                "starting_score": 4.482785299806577,
+                "final_score": 4.569439071566731
+            }
+        }
+    },
+    "filtered_complete_base_Qwen_Qwen2.5-7B-Instruct_improved_stop-rouge-l-f_impr-mistralai_Mistral_7B_Instruct_v0.3_eval-Qwen_Qwen2.5_7B_Instruct": {
+        "llm_metrics": {
+            "contradiction": {
+                "starting_score": 4.635198135198135,
+                "final_score": 4.64996114996115
+            },
+            "redundancy": {
+                "starting_score": 4.651515151515151,
+                "final_score": 4.624708624708624
+            },
+            "extraneous_information": {
+                "starting_score": 4.343045843045843,
+                "final_score": 4.346153846153846
+            },
+            "perspective_misalignment": {
+                "starting_score": 4.555555555555555,
+                "final_score": 4.605672105672106
+            }
+        }
+    },
+    "filtered_complete_base_meta-llama_Llama-3.1-8B-Instruct_improved_stop-rouge-l-f_impr-mistralai_Mistral_7B_Instruct_v0.3_eval-Qwen_Qwen2.5_7B_Instruct": {
+        "llm_metrics": {
+            "contradiction": {
+                "starting_score": 4.672987616099071,
+                "final_score": 4.613777089783282
+            },
+            "redundancy": {
+                "starting_score": 4.665247678018575,
+                "final_score": 4.609133126934984
+            },
+            "extraneous_information": {
+                "starting_score": 4.397445820433436,
+                "final_score": 4.334752321981425
+            },
+            "perspective_misalignment": {
+                "starting_score": 4.5828173374613,
+                "final_score": 4.595201238390093
+            }
+        }
+    },
+    "filtered_complete_base_google_gemma-3-12b-it_improved_stop-rouge-l-f_impr-mistralai_Mistral_7B_Instruct_v0.3_eval-Qwen_Qwen2.5_7B_Instruct": {
+        "llm_metrics": {
+            "contradiction": {
+                "starting_score": 4.573472544470224,
+                "final_score": 4.615622583139984
+            },
+            "redundancy": {
+                "starting_score": 4.575019334880124,
+                "final_score": 4.595514307811292
+            },
+            "extraneous_information": {
+                "starting_score": 4.238979118329467,
+                "final_score": 4.295823665893272
+            },
+            "perspective_misalignment": {
+                "starting_score": 4.496906419180201,
+                "final_score": 4.571152358855375
+            }
+        }
+    },
+    "filtered_complete_base_meta-llama_Llama-3.1-8B_improved_stop-rouge-l-f_impr-mistralai_Mistral_7B_Instruct_v0.3_eval-Qwen_Qwen2.5_7B_Instruct": {
+        "llm_metrics": {
+            "contradiction": {
+                "starting_score": 4.606341840680588,
+                "final_score": 4.593580819798917
+            },
+            "redundancy": {
+                "starting_score": 4.075792730085073,
+                "final_score": 4.574632637277649
+            },
+            "extraneous_information": {
+                "starting_score": 3.8468677494199537,
+                "final_score": 4.252513534416087
+            },
+            "perspective_misalignment": {
+                "starting_score": 4.209203402938901,
+                "final_score": 4.529002320185615
+            }
+        }
+    },
+    "filtered_complete_base_mistralai_Mistral-7B-Instruct-v0.3_improved_stop-rouge-l-f_impr-mistralai_Mistral_7B_Instruct_v0.3_eval-Qwen_Qwen2.5_7B_Instruct": {
+        "llm_metrics": {
+            "contradiction": {
+                "starting_score": 4.408510638297872,
+                "final_score": 4.548162475822051
+            },
+            "redundancy": {
+                "starting_score": 4.333075435203095,
+                "final_score": 4.53384912959381
+            },
+            "extraneous_information": {
+                "starting_score": 3.895164410058027,
+                "final_score": 4.206576402321083
+            },
+            "perspective_misalignment": {
+                "starting_score": 4.359767891682785,
+                "final_score": 4.528820116054159
+            }
+        }
+    },
+    "filtered_complete_base_google_gemma-2-9b_improved_stop-rouge-l-f_impr-mistralai_Mistral_7B_Instruct_v0.3_eval-Qwen_Qwen2.5_7B_Instruct": {
+        "llm_metrics": {
+            "contradiction": {
+                "starting_score": 4.7826759474091265,
+                "final_score": 4.633023975251353
+            },
+            "redundancy": {
+                "starting_score": 4.719644238205723,
+                "final_score": 4.607888631090487
+            },
+            "extraneous_information": {
+                "starting_score": 4.573085846867749,
+                "final_score": 4.313611755607115
+            },
+            "perspective_misalignment": {
+                "starting_score": 4.658932714617169,
+                "final_score": 4.5742459396751745
+            }
+        }
+    },
+    "filtered_complete_plasma_test_improved_stop-rouge-l-f_impr-mistralai_Mistral_7B_Instruct_v0.3_eval-Qwen_Qwen2.5_7B_Instruct": {
+        "llm_metrics": {
+            "contradiction": {
+                "starting_score": 4.056866537717601,
+                "final_score": 4.52147001934236
+            },
+            "redundancy": {
+                "starting_score": 2.6508120649651974,
+                "final_score": 4.487238979118329
+            },
+            "extraneous_information": {
+                "starting_score": 2.0719257540603246,
+                "final_score": 4.124903325599381
+            },
+            "perspective_misalignment": {
+                "starting_score": 2.351508120649652,
+                "final_score": 4.479505027068832
+            }
+        }
+    }
+}

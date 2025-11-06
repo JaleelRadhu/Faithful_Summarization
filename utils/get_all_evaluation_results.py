@@ -48,13 +48,13 @@ def get_file_metrics(file_path):
 
     # Define metrics with their names for easier aggregation and clarity
     metric_funs_with_names = [
-        ("rouge_l", get_rouge_l_score),
-        ("rouge_1", get_rouge_1_score),
-        ("rouge_2", get_rouge_2_score),
-        ("meteor", get_meteor_score),
+        # ("rouge_l", get_rouge_l_score),
+        # ("rouge_1", get_rouge_1_score),
+        # ("rouge_2", get_rouge_2_score),
+        # ("meteor", get_meteor_score),
         # ("bertscore", get_BERTScore),
         # ("bartscore", get_BARTScore),
-        # ("llm_metrics", get_llm_metrics) # This one might return multiple sub-scores
+        ("llm_metrics", get_llm_metrics) # This one might return multiple sub-scores
     ]
 
     # This list will store all individual scores for each item, before averaging them out.
@@ -87,8 +87,11 @@ def get_file_metrics(file_path):
                 final_llm_result = evaluator_func(final_feedback)
 
                 if isinstance(starting_llm_result, dict) and isinstance(final_llm_result, dict):
-                    # If LLM metrics return multiple sub-scores (e.g., {"faithfulness": 0.8, "coherence": 0.9})
                     llm_sub_scores = {}
+                    if not starting_llm_result or not final_llm_result:
+                        print(f"Warning: Skipping sub-metric calculation for item (ID: {item.get('id', 'N/A')}) due to missing starting or final LLM result.")
+                        continue
+
                     for sub_metric in starting_llm_result.keys():
                         llm_sub_scores[sub_metric] = {
                             "starting_score": starting_llm_result.get(sub_metric).get("score"),
@@ -97,12 +100,18 @@ def get_file_metrics(file_path):
                     item_metric_scores[metric_name] = llm_sub_scores
                 else:
                     # If LLM metrics return a single score (float)
-                    item_metric_scores[metric_name] = {
-                        "starting_score": starting_llm_result,
-                        "final_score": final_llm_result
-                    }
+                    try:
+                        item_metric_scores[metric_name] = {
+                            "starting_score": starting_llm_result,
+                            "final_score": final_llm_result
+                        }
+                    except Exception as e:
+                        print(f"Error processing LLM metrics for item (ID: {item.get('id', 'N/A')}): {e}")
+                        item_metric_scores[metric_name] = None
             else:
                 # For general metrics (ROUGE, METEOR, BERTScore, BARTScore)
+
+
                 # Assuming evaluator_func takes (candidate_summary, reference_summary)
                 starting_score = evaluator_func( reference, original_summary,)
                 final_score = evaluator_func( reference, improved_summary)
@@ -136,6 +145,7 @@ def get_file_metrics(file_path):
 
             aggregated_results[metric_name] = {}
             for sub_metric in sub_metric_names:
+                # try:
                 starting_scores_list = [
                     item_scores[metric_name][sub_metric]["starting_score"]
                     for item_scores in all_item_scores
@@ -174,6 +184,7 @@ def get_file_metrics(file_path):
 
     return aggregated_results
 
+
     
 
 def main():
@@ -194,8 +205,8 @@ def main():
     if args.output_sub_dir != "":
         output_dir += "/" + args.output_sub_dir # Directory where all the improved summaries are saved
     
-    results_dir = config.get("results_dir", "results") # Directory to save the aggregated results
-
+    # results_dir = config.get("results_dir", "results") # Directory to save the aggregated results
+    results_dir = config["data"]["results_dir"]
     # Ensure the results directory exists
     os.makedirs(results_dir, exist_ok=True)
 

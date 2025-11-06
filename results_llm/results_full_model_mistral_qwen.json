@@ -1,0 +1,122 @@
+{
+    "filtered_complete_base_meta-llama_Llama-3.1-8B-Instruct_improved_stop-rouge-l-f_impr-Qwen_Qwen2.5_7B_Instruct_eval-mistralai_Mistral_7B_Instruct_v0.3": {
+        "llm_metrics": {
+            "redundancy": {
+                "starting_score": 4.566666666666666,
+                "final_score": 4.637777777777778
+            },
+            "extraneous_information": {
+                "starting_score": 4.478888888888889,
+                "final_score": 4.522222222222222
+            },
+            "contradiction": {
+                "starting_score": 4.641666666666667,
+                "final_score": 4.727777777777778
+            },
+            "perspective_misalignment": {
+                "starting_score": 4.570555555555556,
+                "final_score": 4.633333333333334
+            }
+        }
+    },
+    "filtered_complete_base_Qwen_Qwen2.5-7B-Instruct_improved_stop-rouge-l-f_impr-Qwen_Qwen2.5_7B_Instruct_eval-mistralai_Mistral_7B_Instruct_v0.3": {
+        "llm_metrics": {
+            "redundancy": {
+                "starting_score": 4.558543417366947,
+                "final_score": 4.637535014005603
+            },
+            "extraneous_information": {
+                "starting_score": 4.425210084033614,
+                "final_score": 4.526050420168067
+            },
+            "contradiction": {
+                "starting_score": 4.6268907563025214,
+                "final_score": 4.709803921568628
+            },
+            "perspective_misalignment": {
+                "starting_score": 4.495798319327731,
+                "final_score": 4.63249299719888
+            }
+        }
+    },
+    "filtered_complete_base_mistralai_Mistral-7B-Instruct-v0.3_improved_stop-rouge-l-f_impr-Qwen_Qwen2.5_7B_Instruct_eval-mistralai_Mistral_7B_Instruct_v0.3": {
+        "llm_metrics": {
+            "redundancy": {
+                "starting_score": 4.326944757609921,
+                "final_score": 4.547350620067644
+            },
+            "extraneous_information": {
+                "starting_score": 4.258173618940248,
+                "final_score": 4.439684329199549
+            },
+            "contradiction": {
+                "starting_score": 4.498308906426155,
+                "final_score": 4.692784667418263
+            },
+            "perspective_misalignment": {
+                "starting_score": 4.477452085682074,
+                "final_score": 4.608793686583991
+            }
+        }
+    },
+    "filtered_complete_base_microsoft_Phi-3-mini-4k-instruct_improved_stop-rouge-l-f_impr-Qwen_Qwen2.5_7B_Instruct_eval-mistralai_Mistral_7B_Instruct_v0.3": {
+        "llm_metrics": {
+            "redundancy": {
+                "starting_score": 4.500278862242053,
+                "final_score": 4.615727830451757
+            },
+            "extraneous_information": {
+                "starting_score": 4.369213608477412,
+                "final_score": 4.487451199107641
+            },
+            "contradiction": {
+                "starting_score": 4.62520914668154,
+                "final_score": 4.696040156162856
+            },
+            "perspective_misalignment": {
+                "starting_score": 4.477969882877859,
+                "final_score": 4.633017289459008
+            }
+        }
+    },
+    "filtered_complete_plasma_test_improved_stop-rouge-l-f_impr-Qwen_Qwen2.5_7B_Instruct_eval-mistralai_Mistral_7B_Instruct_v0.3": {
+        "llm_metrics": {
+            "redundancy": {
+                "starting_score": 3.972955569864778,
+                "final_score": 4.506117192530586
+            },
+            "extraneous_information": {
+                "starting_score": 4.30328396651642,
+                "final_score": 4.4011590470057955
+            },
+            "contradiction": {
+                "starting_score": 4.524790727623953,
+                "final_score": 4.627817128139085
+            },
+            "perspective_misalignment": {
+                "starting_score": 3.7520927237604638,
+                "final_score": 4.5183515775917575
+            }
+        }
+    },
+    "filtered_complete_base_google_gemma-2-9b_improved_stop-rouge-l-f_impr-Qwen_Qwen2.5_7B_Instruct_eval-mistralai_Mistral_7B_Instruct_v0.3": {
+        "llm_metrics": {
+            "redundancy": {
+                "starting_score": 4.446601941747573,
+                "final_score": 4.556253569388921
+            },
+            "extraneous_information": {
+                "starting_score": 4.556,
+                "final_score": 4.493142857142857
+            },
+            "contradiction": {
+                "starting_score": 4.743003997715591,
+                "final_score": 4.725299828669332
+            },
+            "perspective_misalignment": {
+                "starting_score": 4.410051399200457,
+                "final_score": 4.522558537978298
+            }
+        }
+    }
+}

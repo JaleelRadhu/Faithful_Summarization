@@ -8,7 +8,7 @@ model:
 
 data:
   base_summary_dir: /home/abdullahm/jaleel/Faithfullness_Improver/data
-  results_dir: /home/abdullahm/jaleel/Faithfullness_Improver/results/
+  results_dir: /home/abdullahm/jaleel/Faithfullness_Improver/results_llm/
   output_dir: /home/abdullahm/jaleel/Faithfullness_Improver/outputs/
 
 perspective_definitions_path: /home/abdullahm/jaleel/Faithfullness_Improver/prompts/perspective_defn.json
