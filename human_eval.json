@@ -1,0 +1,55 @@
+{
+    "1": {
+        "question": "have you had any surgery?",
+        "answers": [
+            "Yes.  I have had seven surgeries starting when I was just 24 years old.  I am now 54.  People say I look pretty healthy.....boy do I have them fooled!!!",
+            "i got oral surgery two times. Worse 5000 ever spend!",
+            "Just had Lasik 3 weeks ago....best $4000 I ever spent!"
+        ],
+        "Input Spans": [
+            "have had seven surgeries starting when I was just 24 years old.  I am now 54.  People say I look pretty healthy.....boy do I have them fooled!!",
+            ": i got oral surgery two times. Worse 5000 ever spend",
+            "2: Just had Lasik 3 weeks ago....best $4000 I ever spent"
+        ],
+        "Perspective": "EXPERIENCE",
+        "Qwen_Qwen2.5-7B-Instruct_improved_base_summary": ": Experienced multiple surgeries starting at age 24, now 54, with various procedures including oral surgery and LASIK.",
+        "Qwen_Qwen2.5-7B-Instruct_improved_revised_summary": "Experienced multiple surgeries starting at age 24, including oral surgery and LASIK. Now 54, people say I look pretty healthy, but boy do I have them fooled!",
+        "mistral_base_summary": "The individual has undergone a total of seven surgeries, starting at the age of 24 and is now 54. They have also had oral surgery twice, which they found to be a very unpleasant experience. More recently, they had Lasik surgery, which they consider to be the best $4000 they have ever spent.",
+        "mistral_revised_summary": "The individual has undergone seven surgeries starting at the age of 24 and is now 54. They had oral surgery twice, finding it to be a very unpleasant experience, and more recently had Lasik surgery, considering it the best $4000 they have ever spent.",
+        "gemma-3-12b-it_base_summary": "I have had surgeries, including seven total starting at age 24. Others have had oral surgery twice and recently underwent Lasik.",
+        "gemma-3-12b-it_revised_summary": "I have had seven surgeries starting at age 24, and others have had oral surgery twice and recently underwent Lasik.",
+        "order list": [
+            4,
+            1,
+            3,
+            0,
+            2,
+            5
+        ]
+    },
+    "2": {
+        "question": "HOW YOU KNOW IF YOUR ADDICTED TO PAIN PILLS?",
+        "answers": [
+            "you sound like my ex-girlfriend.  are you shaky in the morning, lost your sex drive, giving away your possessions, and generally self centered and selfish?",
+            "Do you keep feeling like you need to cough when you skip one? I take pain pills for muscle spasms in my neck, and if I skip them, I cough and cough, and of course feel terrible.  Do you still have pain when you are on them?  My pain is dulled, but usually still there.  If so, I would expect it to be terrible when you miss one.  If it is a lot worse when you miss one than it was before you started them, then go to your doctor."
+        ],
+        "Input Spans": [
+            "If it is a lot worse when you miss one than it was before you started them, then go to your doctor."
+        ],
+        "Perspective": "SUGGESTION",
+        "Qwen_Qwen2.5-7B-Instruct_improved_base_summary": "Answer the question based on the provided span: If your pain significantly worsens when you miss taking pain pills, consult your doctor.",
+        "Qwen_Qwen2.5-7B-Instruct_improved_revised_summary": "If your pain significantly worsens when you miss taking pain pills, consult your doctor.",
+        "mistral_base_summary": "If you experience a significant increase in pain when you miss a dose of pain pills, it might be a sign to consult a healthcare professional.",
+        "mistral_revised_summary": "If you experience a significant increase in pain when you miss a dose of pain pills, it might be a sign to consult a healthcare professional.",
+        "gemma-3-12b-it_base_summary": "If withdrawal symptoms are significantly worse than the original pain, it's recommended to consult a doctor.",
+        "gemma-3-12b-it_revised_summary": "If withdrawal symptoms are significantly worse than the original pain, it's recommended to consult a doctor.",
+        "order list": [
+            5,
+            4,
+            2,
+            1,
+            3,
+            0
+        ]
+    }
+}

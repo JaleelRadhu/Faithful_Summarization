@@ -1,0 +1,20 @@
+{
+    "filtered_complete_base_google_gemma-2-9b_improved_stop-rouge-l-f_imp_eval_model-Qwen_Qwen2.5_7B_Instruct.json": {
+        "Extraneous Information": {
+            "original": 4.42481638964051,
+            "revised": 4.482025512176266
+        },
+        "Contradiction": {
+            "original": 4.675686122922304,
+            "revised": 4.668341708542713
+        },
+        "Perspective Misalignment": {
+            "original": 4.565906455353692,
+            "revised": 4.654425976034016
+        },
+        "Redundancy": {
+            "original": 4.633938925396212,
+            "revised": 4.723618090452261
+        }
+    }
+}

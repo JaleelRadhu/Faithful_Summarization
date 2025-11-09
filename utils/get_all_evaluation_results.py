@@ -234,7 +234,7 @@ def main():
     # Define the output file name for the aggregated results
     # Can be specified in config or use a default
     if args.output_sub_dir != "":
-        output_results_filename = "results_full_model_" + args.output_sub_dir+ ".json"
+        output_results_filename = "results_full_model_g" + args.output_sub_dir+ ".json"
     else:
         output_results_filename = "results_full_model" +  ".json"
     output_results_path = os.path.join(results_dir, output_results_filename)

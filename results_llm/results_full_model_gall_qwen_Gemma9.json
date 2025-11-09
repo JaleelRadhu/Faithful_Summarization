@@ -1,0 +1,20 @@
+{
+    "filtered_complete_base_google_gemma-2-9b_improved_stop-rouge-l-f_imp_eval_model-Qwen_Qwen2.5_7B_Instruct": {
+        "rouge_l": {
+            "starting_score": 0.27670963074243765,
+            "final_score": 0.3494952773265505
+        },
+        "rouge_1": {
+            "starting_score": 0.2989917876422217,
+            "final_score": 0.37711209697830206
+        },
+        "rouge_2": {
+            "starting_score": 0.11431902708755173,
+            "final_score": 0.1699084928764351
+        },
+        "meteor": {
+            "starting_score": 0.26904613626803203,
+            "final_score": 0.3134464914253571
+        }
+    }
+}
