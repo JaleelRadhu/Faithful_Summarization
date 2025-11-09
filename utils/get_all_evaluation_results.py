@@ -48,13 +48,13 @@ def get_file_metrics(file_path):
 
     # Define metrics with their names for easier aggregation and clarity
     metric_funs_with_names = [
-        # ("rouge_l", get_rouge_l_score),
-        # ("rouge_1", get_rouge_1_score),
-        # ("rouge_2", get_rouge_2_score),
-        # ("meteor", get_meteor_score),
+        ("rouge_l", get_rouge_l_score),
+        ("rouge_1", get_rouge_1_score),
+        ("rouge_2", get_rouge_2_score),
+        ("meteor", get_meteor_score),
         # ("bertscore", get_BERTScore),
         # ("bartscore", get_BARTScore),
-        ("llm_metrics", get_llm_metrics) # This one might return multiple sub-scores
+        # ("llm_metrics", get_llm_metrics) # This one might return multiple sub-scores
     ]
 
     # This list will store all individual scores for each item, before averaging them out.

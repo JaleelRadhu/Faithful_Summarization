@@ -1,0 +1,128 @@
+{
+    "filtered_complete_base_mistralai_Mistral-7B-Instruct-v0.3_improved_stop-rouge-l-f_imp_eval_model-Qwen_Qwen2.5_7B_Instruct.json": {
+        "Extraneous Information": {
+            "original": 3.7688442211055277,
+            "revised": 4.256667955160418
+        },
+        "Contradiction": {
+            "original": 4.2029377657518365,
+            "revised": 4.514882102821801
+        },
+        "Perspective Misalignment": {
+            "original": 4.2029377657518365,
+            "revised": 4.524545805952841
+        },
+        "Redundancy": {
+            "original": 4.245844607653653,
+            "revised": 4.578662543486664
+        }
+    },
+    "filtered_complete_base_meta-llama_Llama-3.1-8B-Instruct_improved_stop-rouge-l-f_imp_eval_model-Qwen_Qwen2.5_7B_Instruct.json": {
+        "Extraneous Information": {
+            "original": 4.274062620796289,
+            "revised": 4.428681870892926
+        },
+        "Contradiction": {
+            "original": 4.527251642829532,
+            "revised": 4.633165829145729
+        },
+        "Perspective Misalignment": {
+            "original": 4.487050637804407,
+            "revised": 4.640123695400077
+        },
+        "Redundancy": {
+            "original": 4.598763045999227,
+            "revised": 4.695013529184384
+        }
+    },
+    "filtered_complete_base_google_gemma-3-12b-it_improved_stop-rouge-l-f_imp_eval_model-Qwen_Qwen2.5_7B_Instruct.json": {
+        "Extraneous Information": {
+            "original": 4.094317742558949,
+            "revised": 4.369540007730962
+        },
+        "Contradiction": {
+            "original": 4.412446849632779,
+            "revised": 4.587166602241979
+        },
+        "Perspective Misalignment": {
+            "original": 4.400077309625049,
+            "revised": 4.584460765365288
+        },
+        "Redundancy": {
+            "original": 4.511016621569385,
+            "revised": 4.659451101662157
+        }
+    },
+    "filtered_complete_base_Qwen_Qwen2.5-7B-Instruct_improved_stop-rouge-l-f_imp_eval_model-Qwen_Qwen2.5_7B_Instruct.json": {
+        "Extraneous Information": {
+            "original": 4.242142025611176,
+            "revised": 4.403958090803259
+        },
+        "Contradiction": {
+            "original": 4.5064027939464495,
+            "revised": 4.611175785797439
+        },
+        "Perspective Misalignment": {
+            "original": 4.464105549088087,
+            "revised": 4.597594101668607
+        },
+        "Redundancy": {
+            "original": 4.589445091191307,
+            "revised": 4.688009313154831
+        }
+    },
+    "filtered_complete_base_meta-llama_Llama-3.1-8B_improved_stop-rouge-l-f_imp_eval_model-Qwen_Qwen2.5_7B_Instruct.json": {
+        "Extraneous Information": {
+            "original": 3.725164282953228,
+            "revised": 4.22806339389254
+        },
+        "Contradiction": {
+            "original": 4.4623115577889445,
+            "revised": 4.514882102821801
+        },
+        "Perspective Misalignment": {
+            "original": 4.115577889447236,
+            "revised": 4.5017394665635875
+        },
+        "Redundancy": {
+            "original": 4.042133745651333,
+            "revised": 4.586780054116738
+        }
+    },
+    "filtered_complete_plasma_test_improved_stop-rouge-l-f_imp_eval_model-Qwen_Qwen2.5_7B_Instruct.json": {
+        "Extraneous Information": {
+            "original": 2.0610746037881715,
+            "revised": 4.101662156938539
+        },
+        "Contradiction": {
+            "original": 3.8666408967916506,
+            "revised": 4.439505218399691
+        },
+        "Perspective Misalignment": {
+            "original": 2.281020487050638,
+            "revised": 4.4263625821414765
+        },
+        "Redundancy": {
+            "original": 2.7576343254735214,
+            "revised": 4.492462311557789
+        }
+    },
+    "filtered_complete_base_microsoft_Phi-3-mini-4k-instruct_improved_stop-rouge-l-f_imp_eval_model-Qwen_Qwen2.5_7B_Instruct.json": {
+        "Extraneous Information": {
+            "original": 4.100889060688056,
+            "revised": 4.379976807112485
+        },
+        "Contradiction": {
+            "original": 4.45380749903363,
+            "revised": 4.60919984538075
+        },
+        "Perspective Misalignment": {
+            "original": 4.396598376497874,
+            "revised": 4.572091225357557
+        },
+        "Redundancy": {
+            "original": 4.510630073444144,
+            "revised": 4.66756861229223
+        }
+    }
+}

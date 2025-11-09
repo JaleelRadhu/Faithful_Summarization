@@ -1,10 +1,11 @@
 import json
 import os
 import argparse
-import multiprocessing
-import re
-from utils.generation_new import ChatGenerator
+from concurrent.futures import ProcessPoolExecutor, as_completed
 from tqdm import tqdm
+import re
+from utils.generation_new import ChatGenerator 
+from tqdm.contrib.concurrent import process_map
 from functools import partial
 import pandas as pd
 from dotenv import load_dotenv
@@ -185,6 +186,9 @@ def main():
     # Store loaded original data to avoid reloading the same file multiple times
     loaded_original_data = {}
 
+    # --- Store all results for final JSON output ---
+    all_results = {}
+
     # --- Process each file ---  
     for filename in files_to_evaluate:
         print(f"\n{'='*80}\nProcessing file: {filename}\n{'='*80}")
@@ -211,9 +215,6 @@ def main():
             print(f"Could not read or parse {filename}: {e}")
             continue
         
-        # Extract the directory name
-        input_dir_name = os.path.basename(args.input_dir.rstrip('/'))
-        
         all_scores = []
 
         # --- Prepare the evaluation function with necessary context ---
@@ -229,17 +230,24 @@ def main():
         )
 
         # --- Use multiprocessing to evaluate items in parallel ---
-        # num_processes = multiprocessing.cpu_count() * 2  # Example: Use double the number of CPU cores
-        num_processes = 100
-        with multiprocessing.Pool(processes=num_processes) as pool:
-            item_scores_list = list(tqdm(
-                pool.imap(evaluation_func, results_data),
-                total=len(results_data),
-                desc=f"Evaluating items in {filename}"
-            ))
-
-        all_scores = [item_scores for item_scores in item_scores_list if item_scores is not None]
-
+        num_processes = 200 # Adjust as needed
+        item_scores_list = []
+        
+        with ProcessPoolExecutor(max_workers=num_processes) as executor:
+            # Submit all evaluation tasks to the executor
+            futures = {executor.submit(evaluation_func, item): item for item in results_data}
+            
+            print(f"Starting evaluation for {len(results_data)} items in {filename}...")
+            processed_count = 0
+            
+            # Process results as they are completed
+            for future in as_completed(futures):
+                item_scores_list.append(future.result())
+                processed_count += 1
+                if processed_count % 100 == 0:
+                    print(f"    ... Processed {processed_count} / {len(results_data)} items for {filename}")
+        
+        all_scores = [score for score in item_scores_list if score is not None]
         # --- Calculate and Display Average Scores for the file ---
         if not all_scores:
             print("No valid items found to evaluate in this file.")
@@ -257,25 +265,17 @@ def main():
             avg_revised = df_scores[f'revised_{metric_key}'].mean()
             print(f"{metric:<25} | Start: {avg_original:.2f} -> Final: {avg_revised:.2f}")
         
+        # --- Store the calculated averages for this file ---
+        all_results[filename] = calculate_average_scores(df_scores)
+
         print("-" * 50)
 
-
-
     # --- After processing all files, save aggregated results to a single JSON file ---
-    all_results = {}
-    for filename in files_to_evaluate:
-        filepath = os.path.join(args.input_dir, filename)
-        try:
-            df_scores = pd.DataFrame(all_scores)
-            average_scores = calculate_average_scores(df_scores)
-            all_results[filename] = average_scores
-        except (json.JSONDecodeError, FileNotFoundError) as e:
-            print(f"Could not read or parse {filename}: {e}")
-            continue
-
     # Create the directory if it doesn't exist
     os.makedirs(args.result_dir, exist_ok=True)
 
+    # Extract the directory name for the output file
+    input_dir_name = os.path.basename(args.input_dir.rstrip('/'))
     output_filename = f"results_full_model_{input_dir_name.lower()}.json" # Naming json file
     output_filepath = os.path.join(args.result_dir, output_filename)
     try:

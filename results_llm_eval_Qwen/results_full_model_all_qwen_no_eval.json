@@ -1,0 +1,128 @@
+{
+    "filtered_complete_plasma_test_improved_no-eval_stop-rouge-l-f_imp_eval_model-Qwen_Qwen2.5_7B_Instruct.json": {
+        "Extraneous Information": {
+            "original": 2.07035175879397,
+            "revised": 4.028218013142636
+        },
+        "Contradiction": {
+            "original": 3.863161963664476,
+            "revised": 4.421337456513336
+        },
+        "Perspective Misalignment": {
+            "original": 2.2624661770390415,
+            "revised": 4.312717433320448
+        },
+        "Redundancy": {
+            "original": 2.770390413606494,
+            "revised": 4.471202164669501
+        }
+    },
+    "filtered_complete_base_meta-llama_Llama-3.1-8B-Instruct_improved_no-eval_stop-rouge-l-f_imp_eval_model-Qwen_Qwen2.5_7B_Instruct.json": {
+        "Extraneous Information": {
+            "original": 4.274062620796289,
+            "revised": 4.285272516428296
+        },
+        "Contradiction": {
+            "original": 4.553150367220719,
+            "revised": 4.54619250096637
+        },
+        "Perspective Misalignment": {
+            "original": 4.498647081561654,
+            "revised": 4.519907228449942
+        },
+        "Redundancy": {
+            "original": 4.608426749130267,
+            "revised": 4.608040201005025
+        }
+    },
+    "filtered_complete_base_Qwen_Qwen2.5-7B-Instruct_improved_no-eval_stop-rouge-l-f_imp_eval_model-Qwen_Qwen2.5_7B_Instruct.json": {
+        "Extraneous Information": {
+            "original": 4.226232052774544,
+            "revised": 4.282110981761739
+        },
+        "Contradiction": {
+            "original": 4.519984478075282,
+            "revised": 4.547923942568879
+        },
+        "Perspective Misalignment": {
+            "original": 4.459060923554521,
+            "revised": 4.503298409002716
+        },
+        "Redundancy": {
+            "original": 4.583624369421808,
+            "revised": 4.621653084982538
+        }
+    },
+    "filtered_complete_base_google_gemma-2-9b_improved_no-eval_stop-rouge-l-f_imp_eval_model-Qwen_Qwen2.5_7B_Instruct.json": {
+        "Extraneous Information": {
+            "original": 4.460765365287978,
+            "revised": 4.308465403942791
+        },
+        "Contradiction": {
+            "original": 4.699265558562041,
+            "revised": 4.579822187862389
+        },
+        "Perspective Misalignment": {
+            "original": 4.583301120989563,
+            "revised": 4.521066872825667
+        },
+        "Redundancy": {
+            "original": 4.658291457286432,
+            "revised": 4.628140703517588
+        }
+    },
+    "filtered_complete_base_mistralai_Mistral-7B-Instruct-v0.3_improved_no-eval_stop-rouge-l-f_imp_eval_model-Qwen_Qwen2.5_7B_Instruct.json": {
+        "Extraneous Information": {
+            "original": 3.7742558948589098,
+            "revised": 4.083494395052184
+        },
+        "Contradiction": {
+            "original": 4.220332431387708,
+            "revised": 4.409741012756088
+        },
+        "Perspective Misalignment": {
+            "original": 4.218786238886741,
+            "revised": 4.400850405875532
+        },
+        "Redundancy": {
+            "original": 4.253962118283726,
+            "revised": 4.478933127174333
+        }
+    },
+    "filtered_complete_base_google_gemma-3-12b-it_improved_no-eval_stop-rouge-l-f_imp_eval_model-Qwen_Qwen2.5_7B_Instruct.json": {
+        "Extraneous Information": {
+            "original": 4.074217240046385,
+            "revised": 4.218786238886741
+        },
+        "Contradiction": {
+            "original": 4.417858523386162,
+            "revised": 4.5017394665635875
+        },
+        "Perspective Misalignment": {
+            "original": 4.395052183996907,
+            "revised": 4.491302667182064
+        },
+        "Redundancy": {
+            "original": 4.484344800927715,
+            "revised": 4.574023965983765
+        }
+    },
+    "filtered_complete_base_meta-llama_Llama-3.1-8B_improved_no-eval_stop-rouge-l-f_imp_eval_model-Qwen_Qwen2.5_7B_Instruct.json": {
+        "Extraneous Information": {
+            "original": 3.6795516041747196,
+            "revised": 4.169694626981059
+        },
+        "Contradiction": {
+            "original": 4.472748357170468,
+            "revised": 4.470042520293776
+        },
+        "Perspective Misalignment": {
+            "original": 4.126014688828759,
+            "revised": 4.444530344027831
+        },
+        "Redundancy": {
+            "original": 4.02667182064167,
+            "revised": 4.546579049091612
+        }
+    }
+}

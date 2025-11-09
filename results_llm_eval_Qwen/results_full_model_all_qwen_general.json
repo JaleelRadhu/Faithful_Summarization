@@ -1,0 +1,128 @@
+{
+    "filtered_complete_base_meta-llama_Llama-3.1-8B_improved_stop-rouge-l-f_imp_eval_model-Qwen_Qwen2.5_7B_Instruct_general_prompts.json": {
+        "Extraneous Information": {
+            "original": 3.674913026671821,
+            "revised": 3.712408194820255
+        },
+        "Contradiction": {
+            "original": 4.457672980286046,
+            "revised": 4.179358330112099
+        },
+        "Perspective Misalignment": {
+            "original": 4.110166215693854,
+            "revised": 4.25241592578276
+        },
+        "Redundancy": {
+            "original": 4.027444916892153,
+            "revised": 4.211828372632393
+        }
+    },
+    "filtered_complete_base_mistralai_Mistral-7B-Instruct-v0.3_improved_stop-rouge-l-f_imp_eval_model-Qwen_Qwen2.5_7B_Instruct_general_prompts.json": {
+        "Extraneous Information": {
+            "original": 3.753382296095864,
+            "revised": 3.7881716273676074
+        },
+        "Contradiction": {
+            "original": 4.226130653266332,
+            "revised": 4.226903749516815
+        },
+        "Perspective Misalignment": {
+            "original": 4.246617703904136,
+            "revised": 4.2790877464244295
+        },
+        "Redundancy": {
+            "original": 4.267104754541941,
+            "revised": 4.263239273289525
+        }
+    },
+    "filtered_complete_base_Qwen_Qwen2.5-7B-Instruct_improved_stop-rouge-l-f_imp_eval_model-Qwen_Qwen2.5_7B_Instruct_general_prompts.json": {
+        "Extraneous Information": {
+            "original": 4.2192471866511445,
+            "revised": 3.8474970896391154
+        },
+        "Contradiction": {
+            "original": 4.519984478075282,
+            "revised": 4.238649592549476
+        },
+        "Perspective Misalignment": {
+            "original": 4.454792394256888,
+            "revised": 4.291424136592937
+        },
+        "Redundancy": {
+            "original": 4.5653861078773765,
+            "revised": 4.294140473418704
+        }
+    },
+    "filtered_complete_base_meta-llama_Llama-3.1-8B-Instruct_improved_stop-rouge-l-f_imp_eval_model-Qwen_Qwen2.5_7B_Instruct_general_prompts.json": {
+        "Extraneous Information": {
+            "original": 4.260146888287592,
+            "revised": 3.8647081561654426
+        },
+        "Contradiction": {
+            "original": 4.541553923463471,
+            "revised": 4.268650947042907
+        },
+        "Perspective Misalignment": {
+            "original": 4.483185156551991,
+            "revised": 4.328179358330112
+        },
+        "Redundancy": {
+            "original": 4.589485890993429,
+            "revised": 4.327406262079629
+        }
+    },
+    "filtered_complete_plasma_test_improved_stop-rouge-l-f_imp_eval_model-Qwen_Qwen2.5_7B_Instruct_general_prompts.json": {
+        "Extraneous Information": {
+            "original": 2.0869733281793583,
+            "revised": 3.7093158098183223
+        },
+        "Contradiction": {
+            "original": 3.8805566293003477,
+            "revised": 4.194433706996521
+        },
+        "Perspective Misalignment": {
+            "original": 2.300734441437959,
+            "revised": 4.206416698879011
+        },
+        "Redundancy": {
+            "original": 2.7962891379976806,
+            "revised": 4.239659837649787
+        }
+    },
+    "filtered_complete_base_google_gemma-2-9b_improved_stop-rouge-l-f_imp_eval_model-Qwen_Qwen2.5_7B_Instruct_general_prompts.json": {
+        "Extraneous Information": {
+            "original": 4.438345574023966,
+            "revised": 3.761113258600696
+        },
+        "Contradiction": {
+            "original": 4.690374951681484,
+            "revised": 4.22806339389254
+        },
+        "Perspective Misalignment": {
+            "original": 4.568998840355624,
+            "revised": 4.264785465790491
+        },
+        "Redundancy": {
+            "original": 4.655585620409741,
+            "revised": 4.243138770776961
+        }
+    },
+    "filtered_complete_base_google_gemma-3-12b-it_improved_stop-rouge-l-f_imp_eval_model-Qwen_Qwen2.5_7B_Instruct_general_prompts.json": {
+        "Extraneous Information": {
+            "original": 4.098183223811365,
+            "revised": 3.847313490529571
+        },
+        "Contradiction": {
+            "original": 4.444916892153073,
+            "revised": 4.2459396751740135
+        },
+        "Perspective Misalignment": {
+            "original": 4.392346347120217,
+            "revised": 4.294549671434093
+        },
+        "Redundancy": {
+            "original": 4.499033629686896,
+            "revised": 4.280633938925396
+        }
+    }
+}

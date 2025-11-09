@@ -1,38 +1,38 @@
 {
     "filtered_complete_base_Qwen_Qwen2.5-7B-Instruct_improved_stop-rouge-l-f_impr-Qwen_Qwen2.5_7B_Instruct_eval-mistralai_Mistral_7B_Instruct_v0.3.json": {
         "Extraneous Information": {
-            "original": 3.776961731735601,
-            "revised": 4.137224584460766
+            "original": 4.231664726426077,
+            "revised": 4.2790065968180055
         },
         "Contradiction": {
-            "original": 4.220332431387708,
-            "revised": 4.43448009277155
+            "original": 4.53046177726038,
+            "revised": 4.545207605743112
         },
         "Perspective Misalignment": {
-            "original": 4.219945883262466,
-            "revised": 4.428681870892926
+            "original": 4.4687621265036865,
+            "revised": 4.515327900659682
         },
         "Redundancy": {
-            "original": 4.28140703517588,
-            "revised": 4.510630073444144
+            "original": 4.5944897167248735,
+            "revised": 4.632518432285603
         }
     },
     "filtered_complete_base_mistralai_Mistral-7B-Instruct-v0.3_improved_stop-rouge-l-f_impr-Qwen_Qwen2.5_7B_Instruct_eval-mistralai_Mistral_7B_Instruct_v0.3.json": {
         "Extraneous Information": {
-            "original": 3.776961731735601,
-            "revised": 4.137224584460766
+            "original": 3.763819095477387,
+            "revised": 4.126014688828759
         },
         "Contradiction": {
-            "original": 4.220332431387708,
-            "revised": 4.43448009277155
+            "original": 4.2183996907615,
+            "revised": 4.443757247777349
         },
         "Perspective Misalignment": {
-            "original": 4.219945883262466,
-            "revised": 4.428681870892926
+            "original": 4.216466950135292,
+            "revised": 4.44916892153073
         },
         "Redundancy": {
-            "original": 4.28140703517588,
-            "revised": 4.510630073444144
+            "original": 4.26942404329339,
+            "revised": 4.515268650947043
         }
     }
 }

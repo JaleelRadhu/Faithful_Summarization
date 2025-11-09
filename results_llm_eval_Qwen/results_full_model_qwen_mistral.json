@@ -1,0 +1,146 @@
+{
+    "filtered_complete_base_microsoft_Phi-3-mini-4k-instruct_improved_stop-rouge-l-f_impr-mistralai_Mistral_7B_Instruct_v0.3_eval-Qwen_Qwen2.5_7B_Instruct.json": {
+        "Extraneous Information": {
+            "original": 4.085427135678392,
+            "revised": 4.132199458832624
+        },
+        "Contradiction": {
+            "original": 4.424429841515269,
+            "revised": 4.438732122149208
+        },
+        "Perspective Misalignment": {
+            "original": 4.364514882102822,
+            "revised": 4.467723231542327
+        },
+        "Redundancy": {
+            "original": 4.497100889060688,
+            "revised": 4.51449555469656
+        }
+    },
+    "filtered_complete_base_Qwen_Qwen2.5-7B-Instruct_improved_stop-rouge-l-f_impr-mistralai_Mistral_7B_Instruct_v0.3_eval-Qwen_Qwen2.5_7B_Instruct.json": {
+        "Extraneous Information": {
+            "original": 4.244082266201009,
+            "revised": 4.178114086146683
+        },
+        "Contradiction": {
+            "original": 4.53162592161428,
+            "revised": 4.485448195576251
+        },
+        "Perspective Misalignment": {
+            "original": 4.475746992627085,
+            "revised": 4.472642607683353
+        },
+        "Redundancy": {
+            "original": 4.596041909196741,
+            "revised": 4.550252231276678
+        }
+    },
+    "filtered_complete_base_meta-llama_Llama-3.1-8B-Instruct_improved_stop-rouge-l-f_impr-mistralai_Mistral_7B_Instruct_v0.3_eval-Qwen_Qwen2.5_7B_Instruct.json": {
+        "Extraneous Information": {
+            "original": 4.274835717046773,
+            "revised": 4.170467723231543
+        },
+        "Contradiction": {
+            "original": 4.54116737533823,
+            "revised": 4.4731349052957095
+        },
+        "Perspective Misalignment": {
+            "original": 4.4839582528024735,
+            "revised": 4.484344800927715
+        },
+        "Redundancy": {
+            "original": 4.591032083494395,
+            "revised": 4.527251642829532
+        }
+    },
+    "filtered_complete_base_google_gemma-3-12b-it_improved_stop-rouge-l-f_impr-mistralai_Mistral_7B_Instruct_v0.3_eval-Qwen_Qwen2.5_7B_Instruct.json": {
+        "Extraneous Information": {
+            "original": 4.109393119443371,
+            "revised": 4.117897178198686
+        },
+        "Contradiction": {
+            "original": 4.448782373405489,
+            "revised": 4.451101662156939
+        },
+        "Perspective Misalignment": {
+            "original": 4.423270197139544,
+            "revised": 4.443757247777349
+        },
+        "Redundancy": {
+            "original": 4.514882102821801,
+            "revised": 4.500966370313104
+        }
+    },
+    "filtered_complete_base_meta-llama_Llama-3.1-8B_improved_stop-rouge-l-f_impr-mistralai_Mistral_7B_Instruct_v0.3_eval-Qwen_Qwen2.5_7B_Instruct.json": {
+        "Extraneous Information": {
+            "original": 3.682257441051411,
+            "revised": 4.122535755701585
+        },
+        "Contradiction": {
+            "original": 4.460378817162737,
+            "revised": 4.445303440278314
+        },
+        "Perspective Misalignment": {
+            "original": 4.094704290684191,
+            "revised": 4.438345574023966
+        },
+        "Redundancy": {
+            "original": 4.018561484918793,
+            "revised": 4.505991495941244
+        }
+    },
+    "filtered_complete_base_mistralai_Mistral-7B-Instruct-v0.3_improved_stop-rouge-l-f_impr-mistralai_Mistral_7B_Instruct_v0.3_eval-Qwen_Qwen2.5_7B_Instruct.json": {
+        "Extraneous Information": {
+            "original": 3.779281020487051,
+            "revised": 4.05102435253189
+        },
+        "Contradiction": {
+            "original": 4.198685736374179,
+            "revised": 4.3834557402396594
+        },
+        "Perspective Misalignment": {
+            "original": 4.210668728256668,
+            "revised": 4.418245071511403
+        },
+        "Redundancy": {
+            "original": 4.263239273289525,
+            "revised": 4.444530344027831
+        }
+    },
+    "filtered_complete_base_google_gemma-2-9b_improved_stop-rouge-l-f_impr-mistralai_Mistral_7B_Instruct_v0.3_eval-Qwen_Qwen2.5_7B_Instruct.json": {
+        "Extraneous Information": {
+            "original": 4.4657904909161195,
+            "revised": 4.156551990722845
+        },
+        "Contradiction": {
+            "original": 4.703517587939698,
+            "revised": 4.47081561654426
+        },
+        "Perspective Misalignment": {
+            "original": 4.587553150367221,
+            "revised": 4.455740239659837
+        },
+        "Redundancy": {
+            "original": 4.659064553536916,
+            "revised": 4.5342095090838805
+        }
+    },
+    "filtered_complete_plasma_test_improved_stop-rouge-l-f_impr-mistralai_Mistral_7B_Instruct_v0.3_eval-Qwen_Qwen2.5_7B_Instruct.json": {
+        "Extraneous Information": {
+            "original": 2.054116737533823,
+            "revised": 3.9748743718592965
+        },
+        "Contradiction": {
+            "original": 3.8527251642829534,
+            "revised": 4.36412833397758
+        },
+        "Perspective Misalignment": {
+            "original": 2.3003478933127175,
+            "revised": 4.345187475840742
+        },
+        "Redundancy": {
+            "original": 2.781213761113259,
+            "revised": 4.401623502126014
+        }
+    }
+}

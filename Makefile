@@ -8,14 +8,14 @@ DATA_DIR       := $(PROJECT_ROOT)/data
 
 # INPUT_FILES    := filtered_complete_base_google_gemma-2-9b.json filtered_complete_base_google_gemma-3-12b-it.json filtered_complete_base_meta-llama_Llama-3.1-8B-Instruct.json filtered_complete_base_meta-llama_Llama-3.1-8B.json filtered_complete_base_microsoft_Phi-3-mini-4k-instruct.json filtered_complete_base_mistralai_Mistral-7B-Instruct-v0.3.json filtered_complete_base_Qwen_Qwen2.5-7B-Instruct.json filtered_complete_plasma_test.json
 # INPUT_FILES    := dumm2.json
-# INPUT_FILES    := filtered_complete_base_mistralai_Mistral-7B-Instruct-v0.3.json
-INPUT_FILES    := filtered_complete_base_google_gemma-2-9b.json filtered_complete_base_google_gemma-3-12b-it.json filtered_complete_base_meta-llama_Llama-3.1-8B-Instruct.json filtered_complete_base_meta-llama_Llama-3.1-8B.json  filtered_complete_base_mistralai_Mistral-7B-Instruct-v0.3.json filtered_complete_base_Qwen_Qwen2.5-7B-Instruct.json filtered_complete_plasma_test.json
+INPUT_FILES    := filtered_complete_base_google_gemma-2-9b.json
+# INPUT_FILES    := filtered_complete_base_google_gemma-2-9b.json filtered_complete_base_google_gemma-3-12b-it.json filtered_complete_base_meta-llama_Llama-3.1-8B-Instruct.json filtered_complete_base_meta-llama_Llama-3.1-8B.json  filtered_complete_base_mistralai_Mistral-7B-Instruct-v0.3.json filtered_complete_base_Qwen_Qwen2.5-7B-Instruct.json filtered_complete_plasma_test.json
 
 NUM_WORKERS   := 100
 NO_COT = False
-NO_EVAL = True
+NO_EVAL = False
 GENERAL_EVAL_COT = False
-IS_EVAL_IMPROVER_SAME = False
+IS_EVAL_IMPROVER_SAME = True
 
 
 

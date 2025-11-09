@@ -1,0 +1,128 @@
+{
+    "filtered_complete_base_meta-llama_Llama-3.1-8B_improved_stop-rouge-l-f_imp_eval_model-Qwen_Qwen2.5_7B_Instruct_general_prompts": {
+        "rouge_l": {
+            "starting_score": 0.19740942656594196,
+            "final_score": 0.33251016960632734
+        },
+        "rouge_1": {
+            "starting_score": 0.21339587893921172,
+            "final_score": 0.36076588625929507
+        },
+        "rouge_2": {
+            "starting_score": 0.07485427290910224,
+            "final_score": 0.15031787937126165
+        },
+        "meteor": {
+            "starting_score": 0.19988286591311036,
+            "final_score": 0.3419027923115988
+        }
+    },
+    "filtered_complete_base_mistralai_Mistral-7B-Instruct-v0.3_improved_stop-rouge-l-f_imp_eval_model-Qwen_Qwen2.5_7B_Instruct_general_prompts": {
+        "rouge_l": {
+            "starting_score": 0.3004569569433273,
+            "final_score": 0.32461600553403486
+        },
+        "rouge_1": {
+            "starting_score": 0.3335456463015812,
+            "final_score": 0.3546798254702811
+        },
+        "rouge_2": {
+            "starting_score": 0.1259907135612363,
+            "final_score": 0.14190561541575156
+        },
+        "meteor": {
+            "starting_score": 0.3090061661494851,
+            "final_score": 0.33908363493928484
+        }
+    },
+    "filtered_complete_base_Qwen_Qwen2.5-7B-Instruct_improved_stop-rouge-l-f_imp_eval_model-Qwen_Qwen2.5_7B_Instruct_general_prompts": {
+        "rouge_l": {
+            "starting_score": 0.28136616557841737,
+            "final_score": 0.32130218134704475
+        },
+        "rouge_1": {
+            "starting_score": 0.31460123946784024,
+            "final_score": 0.35181473423847126
+        },
+        "rouge_2": {
+            "starting_score": 0.11952404686594488,
+            "final_score": 0.13960046661535125
+        },
+        "meteor": {
+            "starting_score": 0.25112949322105543,
+            "final_score": 0.3201286291147793
+        }
+    },
+    "filtered_complete_base_meta-llama_Llama-3.1-8B-Instruct_improved_stop-rouge-l-f_imp_eval_model-Qwen_Qwen2.5_7B_Instruct_general_prompts": {
+        "rouge_l": {
+            "starting_score": 0.303383111936887,
+            "final_score": 0.32895940399504375
+        },
+        "rouge_1": {
+            "starting_score": 0.34074925985909865,
+            "final_score": 0.3598366499025397
+        },
+        "rouge_2": {
+            "starting_score": 0.13209558611550393,
+            "final_score": 0.14650929449958364
+        },
+        "meteor": {
+            "starting_score": 0.30354655397957153,
+            "final_score": 0.34222609678305727
+        }
+    },
+    "filtered_complete_plasma_test_improved_stop-rouge-l-f_imp_eval_model-Qwen_Qwen2.5_7B_Instruct_general_prompts": {
+        "rouge_l": {
+            "starting_score": 0.12137787828910108,
+            "final_score": 0.3253588691507043
+        },
+        "rouge_1": {
+            "starting_score": 0.13299963260813674,
+            "final_score": 0.35279830463953255
+        },
+        "rouge_2": {
+            "starting_score": 0.02496911440320003,
+            "final_score": 0.1432472175881059
+        },
+        "meteor": {
+            "starting_score": 0.10154935241894583,
+            "final_score": 0.3339462029721495
+        }
+    },
+    "filtered_complete_base_google_gemma-2-9b_improved_stop-rouge-l-f_imp_eval_model-Qwen_Qwen2.5_7B_Instruct_general_prompts": {
+        "rouge_l": {
+            "starting_score": 0.27670963074243765,
+            "final_score": 0.33615241632395615
+        },
+        "rouge_1": {
+            "starting_score": 0.2989917876422217,
+            "final_score": 0.36479597182022755
+        },
+        "rouge_2": {
+            "starting_score": 0.11431902708755173,
+            "final_score": 0.1544286921545596
+        },
+        "meteor": {
+            "starting_score": 0.26904613626803203,
+            "final_score": 0.3465133247167383
+        }
+    },
+    "filtered_complete_base_google_gemma-3-12b-it_improved_stop-rouge-l-f_imp_eval_model-Qwen_Qwen2.5_7B_Instruct_general_prompts": {
+        "rouge_l": {
+            "starting_score": 0.2966746688295432,
+            "final_score": 0.32030249968763624
+        },
+        "rouge_1": {
+            "starting_score": 0.33274713072257334,
+            "final_score": 0.35076307181923544
+        },
+        "rouge_2": {
+            "starting_score": 0.12269484795501427,
+            "final_score": 0.13638412864806082
+        },
+        "meteor": {
+            "starting_score": 0.2785698803892727,
+            "final_score": 0.32554662800480305
+        }
+    }
+}

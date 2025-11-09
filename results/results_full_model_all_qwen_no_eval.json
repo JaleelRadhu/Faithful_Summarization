@@ -1,0 +1,128 @@
+{
+    "filtered_complete_plasma_test_improved_no-eval_stop-rouge-l-f_imp_eval_model-Qwen_Qwen2.5_7B_Instruct": {
+        "rouge_l": {
+            "starting_score": 0.12137787828910108,
+            "final_score": 0.3124108452633169
+        },
+        "rouge_1": {
+            "starting_score": 0.13299963260813674,
+            "final_score": 0.3392715219781262
+        },
+        "rouge_2": {
+            "starting_score": 0.02496911440320003,
+            "final_score": 0.13784315293022845
+        },
+        "meteor": {
+            "starting_score": 0.10154935241894583,
+            "final_score": 0.2880875915675875
+        }
+    },
+    "filtered_complete_base_meta-llama_Llama-3.1-8B-Instruct_improved_no-eval_stop-rouge-l-f_imp_eval_model-Qwen_Qwen2.5_7B_Instruct": {
+        "rouge_l": {
+            "starting_score": 0.303383111936887,
+            "final_score": 0.3226805341584416
+        },
+        "rouge_1": {
+            "starting_score": 0.34074925985909865,
+            "final_score": 0.35481126744327135
+        },
+        "rouge_2": {
+            "starting_score": 0.13209558611550393,
+            "final_score": 0.14371978897580734
+        },
+        "meteor": {
+            "starting_score": 0.30354655397957153,
+            "final_score": 0.3008727343886889
+        }
+    },
+    "filtered_complete_base_Qwen_Qwen2.5-7B-Instruct_improved_no-eval_stop-rouge-l-f_imp_eval_model-Qwen_Qwen2.5_7B_Instruct": {
+        "rouge_l": {
+            "starting_score": 0.28136616557841737,
+            "final_score": 0.3117385445675451
+        },
+        "rouge_1": {
+            "starting_score": 0.31460123946784024,
+            "final_score": 0.34190743281330577
+        },
+        "rouge_2": {
+            "starting_score": 0.11952404686594488,
+            "final_score": 0.13631577944516926
+        },
+        "meteor": {
+            "starting_score": 0.25112949322105543,
+            "final_score": 0.2765577307459963
+        }
+    },
+    "filtered_complete_base_google_gemma-2-9b_improved_no-eval_stop-rouge-l-f_imp_eval_model-Qwen_Qwen2.5_7B_Instruct": {
+        "rouge_l": {
+            "starting_score": 0.27670963074243765,
+            "final_score": 0.33216674779595834
+        },
+        "rouge_1": {
+            "starting_score": 0.2989917876422217,
+            "final_score": 0.3602542558595545
+        },
+        "rouge_2": {
+            "starting_score": 0.11431902708755173,
+            "final_score": 0.1553519070123271
+        },
+        "meteor": {
+            "starting_score": 0.26904613626803203,
+            "final_score": 0.2991024128455875
+        }
+    },
+    "filtered_complete_base_mistralai_Mistral-7B-Instruct-v0.3_improved_no-eval_stop-rouge-l-f_imp_eval_model-Qwen_Qwen2.5_7B_Instruct": {
+        "rouge_l": {
+            "starting_score": 0.3004569569433273,
+            "final_score": 0.3183528157747001
+        },
+        "rouge_1": {
+            "starting_score": 0.3335456463015812,
+            "final_score": 0.348706376103791
+        },
+        "rouge_2": {
+            "starting_score": 0.1259907135612363,
+            "final_score": 0.13797653570952348
+        },
+        "meteor": {
+            "starting_score": 0.3090061661494851,
+            "final_score": 0.305081954174584
+        }
+    },
+    "filtered_complete_base_google_gemma-3-12b-it_improved_no-eval_stop-rouge-l-f_imp_eval_model-Qwen_Qwen2.5_7B_Instruct": {
+        "rouge_l": {
+            "starting_score": 0.2966746688295432,
+            "final_score": 0.31589800923287353
+        },
+        "rouge_1": {
+            "starting_score": 0.33274713072257334,
+            "final_score": 0.34712500380314465
+        },
+        "rouge_2": {
+            "starting_score": 0.12269484795501427,
+            "final_score": 0.13553932802408455
+        },
+        "meteor": {
+            "starting_score": 0.2785698803892727,
+            "final_score": 0.28893183252444626
+        }
+    },
+    "filtered_complete_base_meta-llama_Llama-3.1-8B_improved_no-eval_stop-rouge-l-f_imp_eval_model-Qwen_Qwen2.5_7B_Instruct": {
+        "rouge_l": {
+            "starting_score": 0.19740942656594196,
+            "final_score": 0.32458047121720085
+        },
+        "rouge_1": {
+            "starting_score": 0.21339587893921172,
+            "final_score": 0.3517865614712149
+        },
+        "rouge_2": {
+            "starting_score": 0.07485427290910224,
+            "final_score": 0.14865187034941096
+        },
+        "meteor": {
+            "starting_score": 0.19988286591311036,
+            "final_score": 0.2957838590299258
+        }
+    }
+}
