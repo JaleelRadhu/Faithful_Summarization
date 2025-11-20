@@ -1,17 +1,201 @@
 {
     "1": {
-        "summary_1": "gemma-3-12b-it_base_summary",
-        "summary_2": "Qwen_Qwen2.5-7B-Instruct_improved_revised_summary",
+        "summary_1": "mistral_revised_summary",
+        "summary_2": "Qwen_Qwen2.5-7B-Instruct_improved_base_summary",
+        "summary_3": "gemma-3-12b-it_revised_summary",
+        "summary_4": "Qwen_Qwen2.5-7B-Instruct_improved_revised_summary",
+        "summary_5": "mistral_base_summary",
+        "summary_6": "gemma-3-12b-it_base_summary"
+    },
+    "2": {
+        "summary_1": "mistral_base_summary",
+        "summary_2": "mistral_revised_summary",
+        "summary_3": "Qwen_Qwen2.5-7B-Instruct_improved_base_summary",
+        "summary_4": "gemma-3-12b-it_base_summary",
+        "summary_5": "Qwen_Qwen2.5-7B-Instruct_improved_revised_summary",
+        "summary_6": "gemma-3-12b-it_revised_summary"
+    },
+    "3": {
+        "summary_1": "gemma-3-12b-it_revised_summary",
+        "summary_2": "mistral_base_summary",
         "summary_3": "mistral_revised_summary",
         "summary_4": "Qwen_Qwen2.5-7B-Instruct_improved_base_summary",
+        "summary_5": "Qwen_Qwen2.5-7B-Instruct_improved_revised_summary",
+        "summary_6": "gemma-3-12b-it_base_summary"
+    },
+    "4": {
+        "summary_1": "mistral_revised_summary",
+        "summary_2": "Qwen_Qwen2.5-7B-Instruct_improved_base_summary",
+        "summary_3": "gemma-3-12b-it_base_summary",
+        "summary_4": "gemma-3-12b-it_revised_summary",
+        "summary_5": "Qwen_Qwen2.5-7B-Instruct_improved_revised_summary",
+        "summary_6": "mistral_base_summary"
+    },
+    "5": {
+        "summary_1": "mistral_revised_summary",
+        "summary_2": "Qwen_Qwen2.5-7B-Instruct_improved_base_summary",
+        "summary_3": "gemma-3-12b-it_revised_summary",
+        "summary_4": "Qwen_Qwen2.5-7B-Instruct_improved_revised_summary",
+        "summary_5": "mistral_base_summary",
+        "summary_6": "gemma-3-12b-it_base_summary"
+    },
+    "6": {
+        "summary_1": "mistral_base_summary",
+        "summary_2": "Qwen_Qwen2.5-7B-Instruct_improved_revised_summary",
+        "summary_3": "gemma-3-12b-it_base_summary",
+        "summary_4": "mistral_revised_summary",
+        "summary_5": "gemma-3-12b-it_revised_summary",
+        "summary_6": "Qwen_Qwen2.5-7B-Instruct_improved_base_summary"
+    },
+    "7": {
+        "summary_1": "mistral_revised_summary",
+        "summary_2": "gemma-3-12b-it_revised_summary",
+        "summary_3": "Qwen_Qwen2.5-7B-Instruct_improved_base_summary",
+        "summary_4": "mistral_base_summary",
+        "summary_5": "Qwen_Qwen2.5-7B-Instruct_improved_revised_summary",
+        "summary_6": "gemma-3-12b-it_base_summary"
+    },
+    "8": {
+        "summary_1": "mistral_revised_summary",
+        "summary_2": "Qwen_Qwen2.5-7B-Instruct_improved_base_summary",
+        "summary_3": "mistral_base_summary",
+        "summary_4": "gemma-3-12b-it_revised_summary",
+        "summary_5": "gemma-3-12b-it_base_summary",
+        "summary_6": "Qwen_Qwen2.5-7B-Instruct_improved_revised_summary"
+    },
+    "9": {
+        "summary_1": "gemma-3-12b-it_revised_summary",
+        "summary_2": "mistral_revised_summary",
+        "summary_3": "gemma-3-12b-it_base_summary",
+        "summary_4": "Qwen_Qwen2.5-7B-Instruct_improved_base_summary",
+        "summary_5": "mistral_base_summary",
+        "summary_6": "Qwen_Qwen2.5-7B-Instruct_improved_revised_summary"
+    },
+    "10": {
+        "summary_1": "Qwen_Qwen2.5-7B-Instruct_improved_base_summary",
+        "summary_2": "mistral_base_summary",
+        "summary_3": "Qwen_Qwen2.5-7B-Instruct_improved_revised_summary",
+        "summary_4": "gemma-3-12b-it_base_summary",
+        "summary_5": "mistral_revised_summary",
+        "summary_6": "gemma-3-12b-it_revised_summary"
+    },
+    "11": {
+        "summary_1": "mistral_revised_summary",
+        "summary_2": "mistral_base_summary",
+        "summary_3": "Qwen_Qwen2.5-7B-Instruct_improved_base_summary",
+        "summary_4": "Qwen_Qwen2.5-7B-Instruct_improved_revised_summary",
+        "summary_5": "gemma-3-12b-it_revised_summary",
+        "summary_6": "gemma-3-12b-it_base_summary"
+    },
+    "12": {
+        "summary_1": "Qwen_Qwen2.5-7B-Instruct_improved_base_summary",
+        "summary_2": "mistral_base_summary",
+        "summary_3": "gemma-3-12b-it_base_summary",
+        "summary_4": "mistral_revised_summary",
+        "summary_5": "Qwen_Qwen2.5-7B-Instruct_improved_revised_summary",
+        "summary_6": "gemma-3-12b-it_revised_summary"
+    },
+    "13": {
+        "summary_1": "gemma-3-12b-it_revised_summary",
+        "summary_2": "gemma-3-12b-it_base_summary",
+        "summary_3": "mistral_revised_summary",
+        "summary_4": "mistral_base_summary",
+        "summary_5": "Qwen_Qwen2.5-7B-Instruct_improved_base_summary",
+        "summary_6": "Qwen_Qwen2.5-7B-Instruct_improved_revised_summary"
+    },
+    "14": {
+        "summary_1": "mistral_base_summary",
+        "summary_2": "Qwen_Qwen2.5-7B-Instruct_improved_base_summary",
+        "summary_3": "Qwen_Qwen2.5-7B-Instruct_improved_revised_summary",
+        "summary_4": "gemma-3-12b-it_revised_summary",
+        "summary_5": "gemma-3-12b-it_base_summary",
+        "summary_6": "mistral_revised_summary"
+    },
+    "15": {
+        "summary_1": "gemma-3-12b-it_revised_summary",
+        "summary_2": "Qwen_Qwen2.5-7B-Instruct_improved_base_summary",
+        "summary_3": "Qwen_Qwen2.5-7B-Instruct_improved_revised_summary",
+        "summary_4": "mistral_base_summary",
+        "summary_5": "mistral_revised_summary",
+        "summary_6": "gemma-3-12b-it_base_summary"
+    },
+    "16": {
+        "summary_1": "Qwen_Qwen2.5-7B-Instruct_improved_revised_summary",
+        "summary_2": "Qwen_Qwen2.5-7B-Instruct_improved_base_summary",
+        "summary_3": "mistral_revised_summary",
+        "summary_4": "gemma-3-12b-it_base_summary",
         "summary_5": "mistral_base_summary",
         "summary_6": "gemma-3-12b-it_revised_summary"
     },
-    "2": {
+    "17": {
+        "summary_1": "Qwen_Qwen2.5-7B-Instruct_improved_base_summary",
+        "summary_2": "gemma-3-12b-it_revised_summary",
+        "summary_3": "Qwen_Qwen2.5-7B-Instruct_improved_revised_summary",
+        "summary_4": "gemma-3-12b-it_base_summary",
+        "summary_5": "mistral_base_summary",
+        "summary_6": "mistral_revised_summary"
+    },
+    "18": {
+        "summary_1": "mistral_base_summary",
+        "summary_2": "Qwen_Qwen2.5-7B-Instruct_improved_revised_summary",
+        "summary_3": "Qwen_Qwen2.5-7B-Instruct_improved_base_summary",
+        "summary_4": "gemma-3-12b-it_revised_summary",
+        "summary_5": "mistral_revised_summary",
+        "summary_6": "gemma-3-12b-it_base_summary"
+    },
+    "19": {
+        "summary_1": "mistral_revised_summary",
+        "summary_2": "Qwen_Qwen2.5-7B-Instruct_improved_base_summary",
+        "summary_3": "Qwen_Qwen2.5-7B-Instruct_improved_revised_summary",
+        "summary_4": "mistral_base_summary",
+        "summary_5": "gemma-3-12b-it_base_summary",
+        "summary_6": "gemma-3-12b-it_revised_summary"
+    },
+    "20": {
+        "summary_1": "mistral_revised_summary",
+        "summary_2": "gemma-3-12b-it_revised_summary",
+        "summary_3": "gemma-3-12b-it_base_summary",
+        "summary_4": "mistral_base_summary",
+        "summary_5": "Qwen_Qwen2.5-7B-Instruct_improved_revised_summary",
+        "summary_6": "Qwen_Qwen2.5-7B-Instruct_improved_base_summary"
+    },
+    "21": {
         "summary_1": "gemma-3-12b-it_revised_summary",
-        "summary_2": "gemma-3-12b-it_base_summary",
-        "summary_3": "mistral_base_summary",
-        "summary_4": "Qwen_Qwen2.5-7B-Instruct_improved_revised_summary",
+        "summary_2": "Qwen_Qwen2.5-7B-Instruct_improved_base_summary",
+        "summary_3": "Qwen_Qwen2.5-7B-Instruct_improved_revised_summary",
+        "summary_4": "mistral_revised_summary",
+        "summary_5": "mistral_base_summary",
+        "summary_6": "gemma-3-12b-it_base_summary"
+    },
+    "22": {
+        "summary_1": "Qwen_Qwen2.5-7B-Instruct_improved_revised_summary",
+        "summary_2": "gemma-3-12b-it_revised_summary",
+        "summary_3": "mistral_revised_summary",
+        "summary_4": "gemma-3-12b-it_base_summary",
+        "summary_5": "Qwen_Qwen2.5-7B-Instruct_improved_base_summary",
+        "summary_6": "mistral_base_summary"
+    },
+    "23": {
+        "summary_1": "Qwen_Qwen2.5-7B-Instruct_improved_base_summary",
+        "summary_2": "Qwen_Qwen2.5-7B-Instruct_improved_revised_summary",
+        "summary_3": "gemma-3-12b-it_revised_summary",
+        "summary_4": "mistral_base_summary",
+        "summary_5": "mistral_revised_summary",
+        "summary_6": "gemma-3-12b-it_base_summary"
+    },
+    "24": {
+        "summary_1": "mistral_revised_summary",
+        "summary_2": "Qwen_Qwen2.5-7B-Instruct_improved_base_summary",
+        "summary_3": "gemma-3-12b-it_revised_summary",
+        "summary_4": "mistral_base_summary",
+        "summary_5": "Qwen_Qwen2.5-7B-Instruct_improved_revised_summary",
+        "summary_6": "gemma-3-12b-it_base_summary"
+    },
+    "25": {
+        "summary_1": "gemma-3-12b-it_base_summary",
+        "summary_2": "Qwen_Qwen2.5-7B-Instruct_improved_revised_summary",
+        "summary_3": "gemma-3-12b-it_revised_summary",
+        "summary_4": "mistral_base_summary",
         "summary_5": "mistral_revised_summary",
         "summary_6": "Qwen_Qwen2.5-7B-Instruct_improved_base_summary"
     }

@@ -1,4 +1,4 @@
-NUM_SAMPLES = 2
+NUM_SAMPLES = 25
 SOURCE_FILE_NAME=filtered_complete_base_google_gemma-2-9b.json
 EVAL_MODELS = Qwen_Qwen2.5-7B-Instruct_improved mistral gemma-3-12b-it
 
