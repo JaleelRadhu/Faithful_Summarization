@@ -41,7 +41,10 @@ def load_perspective_definitions():
 @st.cache_resource
 def get_gsheet():
     """Connect to Google Sheets and return the specific sheet."""
-    scopes = ["https://www.googleapis.com/auth/spreadsheets"]
+    scopes = [
+        "https://www.googleapis.com/auth/spreadsheets",
+        "https://www.googleapis.com/auth/drive",
+    ]
     creds = Credentials.from_service_account_info(st.secrets["google_credentials"], scopes=scopes)
     client = gspread.authorize(creds)
     return client.open(GSHEET_NAME).sheet1
