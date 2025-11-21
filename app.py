@@ -61,11 +61,11 @@ def save_results(evaluator_name, sample_id, scores):
     df_results = get_all_results_df()
 
     # Prepare the new data row as a dictionary
-    new_row_data = {'evaluator_name': evaluator_name, 'sample_id': sample_id}
+    new_row_data = {'evaluator_name': evaluator_name, 'sample_id': int(sample_id)}
     for summary_key, metrics in scores.items():
         for metric_name, score_value in metrics.items():
             column_name = f"{summary_key}_{metric_name}"
-            new_row_data[column_name] = score_value
+            new_row_data[column_name] = int(score_value)
 
     # Check if an entry for this evaluator and sample already exists
     if not df_results.empty:
