@@ -189,7 +189,7 @@ def render_login_page():
     name = st.text_input("Please enter your name to begin:")
     if st.button("Start Evaluation"):
         if name:
-            st.session_state.evaluator_name = name
+            st.session_state.evaluator_name = name.strip().lower()
             st.session_state.page = 'instructions'
             st.rerun()
         else:
@@ -246,7 +246,7 @@ def render_evaluation_page(df):
         df_results = st.session_state.results_df
 
         if not df_results.empty:
-            evaluated_samples = df_results[df_results['evaluator_name'] == st.session_state.evaluator_name]['sample_id'].unique()
+            evaluated_samples = df_results[df_results['evaluator_name'].str.lower() == st.session_state.evaluator_name]['sample_id'].unique()
             unevaluated_df = df[~df['id'].isin(evaluated_samples)]
             if unevaluated_df.empty:
                 st.session_state.page = 'thank_you'
@@ -267,7 +267,7 @@ def render_evaluation_page(df):
     existing_scores = {}
     df_results = st.session_state.results_df # Use the cached DataFrame
     if not df_results.empty:
-        score_row = df_results[(df_results['evaluator_name'] == st.session_state.evaluator_name) & (df_results['sample_id'] == sample_id)]
+        score_row = df_results[(df_results['evaluator_name'].str.lower() == st.session_state.evaluator_name) & (df_results['sample_id'] == sample_id)]
         if not score_row.empty:
             # Convert the first found row to a dictionary
             existing_scores = score_row.iloc[0].to_dict()
