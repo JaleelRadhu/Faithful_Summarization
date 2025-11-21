@@ -234,6 +234,10 @@ def render_evaluation_page(df):
         unsafe_allow_html=True
     )
 
+    # Ensure results are loaded into the session state if they aren't already
+    if st.session_state.results_df is None:
+        get_all_results_df()
+
     # Find the next un-evaluated sample for the current evaluator
     # This logic runs only when the page is first loaded for the user
     if 'initialized' not in st.session_state:
