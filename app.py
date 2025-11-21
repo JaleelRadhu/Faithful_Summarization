@@ -22,6 +22,8 @@ def initialize_session_state():
         st.session_state.current_index = 0
     if 'scores' not in st.session_state:
         st.session_state.scores = {}
+    if 'results_df' not in st.session_state:
+        st.session_state.results_df = None
 
 def load_data():
     """Load the evaluation data from the CSV file."""
@@ -51,14 +53,13 @@ def get_gsheet():
 
 def get_all_results_df():
     """Fetch all data from the Google Sheet and return as a DataFrame."""
-    sheet = get_gsheet()
-    data = sheet.get_all_records()
-    return pd.DataFrame(data)
+    data = get_gsheet().get_all_records()
+    st.session_state.results_df = pd.DataFrame(data)
 
 def save_results(evaluator_name, sample_id, scores):
     """Save or update the evaluation scores in the Google Sheet."""
     sheet = get_gsheet()
-    df_results = get_all_results_df()
+    df_results = st.session_state.results_df
 
     # Prepare the new data row as a dictionary
     new_row_data = {'evaluator_name': evaluator_name, 'sample_id': int(sample_id)}
@@ -66,6 +67,9 @@ def save_results(evaluator_name, sample_id, scores):
         for metric_name, score_value in metrics.items():
             column_name = f"{summary_key}_{metric_name}"
             new_row_data[column_name] = int(score_value)
+
+    # Convert the new row to a DataFrame for local update
+    new_row_df = pd.DataFrame([new_row_data])
 
     # Check if an entry for this evaluator and sample already exists
     if not df_results.empty:
@@ -90,12 +94,18 @@ def save_results(evaluator_name, sample_id, scores):
                 pass
         if update_cells:
             sheet.update_cells(update_cells)
+        # Update the local DataFrame in session state
+        for col, val in new_row_data.items():
+            if col in df_results.columns:
+                st.session_state.results_df.loc[existing_indices[0], col] = val
     else:
         # Append a new row to the Google Sheet
         header = sheet.row_values(1)
         # Order the new_row_data dict to match the header order
         ordered_row = [new_row_data.get(col, "") for col in header]
         sheet.append_row(ordered_row)
+        # Update the local DataFrame in session state
+        st.session_state.results_df = pd.concat([df_results, new_row_df], ignore_index=True)
 
 
 def show_definitions_modal(modal_type):
@@ -227,7 +237,10 @@ def render_evaluation_page(df):
     # Find the next un-evaluated sample for the current evaluator
     # This logic runs only when the page is first loaded for the user
     if 'initialized' not in st.session_state:
-        df_results = get_all_results_df()
+        # Fetch results ONCE and store in session state
+        get_all_results_df()
+        df_results = st.session_state.results_df
+
         if not df_results.empty:
             evaluated_samples = df_results[df_results['evaluator_name'] == st.session_state.evaluator_name]['sample_id'].unique()
             unevaluated_df = df[~df['id'].isin(evaluated_samples)]
@@ -248,7 +261,7 @@ def render_evaluation_page(df):
 
     # --- Load existing scores for this sample to pre-fill the form ---
     existing_scores = {}
-    df_results = get_all_results_df()
+    df_results = st.session_state.results_df # Use the cached DataFrame
     if not df_results.empty:
         score_row = df_results[(df_results['evaluator_name'] == st.session_state.evaluator_name) & (df_results['sample_id'] == sample_id)]
         if not score_row.empty:
@@ -362,7 +375,7 @@ def render_thank_you_page():
     st.markdown("You have successfully evaluated all the available samples. You can now close this window.")
     
     st.markdown("### Download All Results")
-    df_results = get_all_results_df()
+    df_results = st.session_state.results_df
     if not df_results.empty:
         csv = df_results.to_csv(index=False).encode('utf-8')
         st.download_button(
