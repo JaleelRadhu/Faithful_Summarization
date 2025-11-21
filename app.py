@@ -3,10 +3,12 @@ import pandas as pd
 import os
 import json
 import time
+import gspread
+from google.oauth2.service_account import Credentials
 
-RESULTS_FILE = 'human_eval_results.csv'
 DATA_FILE = 'human_eval.csv'
 PERSPECTIVE_DEFN_FILE = 'prompts/perspective_defn.json'
+GSHEET_NAME = "Human Evaluation Results" # The name of the Google Sheet you created
 
 # --- Helper Functions ---
 
@@ -36,35 +38,61 @@ def load_perspective_definitions():
     with open(PERSPECTIVE_DEFN_FILE, 'r') as f:
         return json.load(f)
 
+@st.cache_resource
+def get_gsheet():
+    """Connect to Google Sheets and return the specific sheet."""
+    scopes = ["https://www.googleapis.com/auth/spreadsheets"]
+    creds = Credentials.from_service_account_info(st.secrets["google_credentials"], scopes=scopes)
+    client = gspread.authorize(creds)
+    return client.open(GSHEET_NAME).sheet1
+
+def get_all_results_df():
+    """Fetch all data from the Google Sheet and return as a DataFrame."""
+    sheet = get_gsheet()
+    data = sheet.get_all_records()
+    return pd.DataFrame(data)
 
 def save_results(evaluator_name, sample_id, scores):
-    """Save the evaluation scores to a CSV file."""
-    # 1. Prepare the new data row
+    """Save or update the evaluation scores in the Google Sheet."""
+    sheet = get_gsheet()
+    df_results = get_all_results_df()
+
+    # Prepare the new data row as a dictionary
     new_row_data = {'evaluator_name': evaluator_name, 'sample_id': sample_id}
     for summary_key, metrics in scores.items():
         for metric_name, score_value in metrics.items():
             column_name = f"{summary_key}_{metric_name}"
             new_row_data[column_name] = score_value
-    
-    new_row_df = pd.DataFrame([new_row_data])
-    
-    # 2. Read existing data and update or append
-    if not os.path.exists(RESULTS_FILE):
-       new_row_df.to_csv(RESULTS_FILE, index=False)
+
+    # Check if an entry for this evaluator and sample already exists
+    if not df_results.empty:
+        existing_indices = df_results[(df_results['evaluator_name'] == evaluator_name) & (df_results['sample_id'] == sample_id)].index
     else:
-        df_results = pd.read_csv(RESULTS_FILE)
-        # Check if an entry for this evaluator and sample already exists
-        existing_index = df_results[(df_results['evaluator_name'] == evaluator_name) & (df_results['sample_id'] == sample_id)].index
-        
-        if not existing_index.empty:
-           # Update the existing row using .loc
-           for column, value in new_row_data.items():
-               df_results.loc[existing_index[0], column] = value
-        else:
-            # Append the new row
-            df_results = pd.concat([df_results, new_row_df], ignore_index=True)
-        
-        df_results.to_csv(RESULTS_FILE, index=False)
+        existing_indices = []
+
+    if len(existing_indices) > 0:
+        # Update the existing row in the Google Sheet
+        # gspread row indices are 1-based, and we add 1 for the header
+        sheet_row_index = existing_indices[0] + 2
+        # Get header to find column indices
+        header = sheet.row_values(1)
+        update_cells = []
+        for col_name, value in new_row_data.items():
+            try:
+                # gspread col indices are 1-based
+                col_index = header.index(col_name) + 1
+                update_cells.append(gspread.Cell(sheet_row_index, col_index, value))
+            except ValueError:
+                # Column not in sheet, skip
+                pass
+        if update_cells:
+            sheet.update_cells(update_cells)
+    else:
+        # Append a new row to the Google Sheet
+        header = sheet.row_values(1)
+        # Order the new_row_data dict to match the header order
+        ordered_row = [new_row_data.get(col, "") for col in header]
+        sheet.append_row(ordered_row)
 
 
 def show_definitions_modal(modal_type):
@@ -196,24 +224,20 @@ def render_evaluation_page(df):
     # Find the next un-evaluated sample for the current evaluator
     # This logic runs only when the page is first loaded for the user
     if 'initialized' not in st.session_state:
-        if os.path.exists(RESULTS_FILE):
-            try:
-                df_results = pd.read_csv(RESULTS_FILE)
-                if not df_results.empty:
-                    evaluated_samples = df_results[df_results['evaluator_name'] == st.session_state.evaluator_name]['sample_id'].unique()
-                    unevaluated_df = df[~df['id'].isin(evaluated_samples)]
-                    if unevaluated_df.empty:
-                        st.session_state.page = 'thank_you'
-                        st.rerun()
-                    else:
-                        st.session_state.current_index = unevaluated_df.index[0]
-            except pd.errors.EmptyDataError:
-                st.session_state.current_index = 0 # File is empty, start from beginning
+        df_results = get_all_results_df()
+        if not df_results.empty:
+            evaluated_samples = df_results[df_results['evaluator_name'] == st.session_state.evaluator_name]['sample_id'].unique()
+            unevaluated_df = df[~df['id'].isin(evaluated_samples)]
+            if unevaluated_df.empty:
+                st.session_state.page = 'thank_you'
+                st.rerun()
+            else:
+                st.session_state.current_index = unevaluated_df.index[0]
         else:
             st.session_state.current_index = 0
-        
+
         # Mark that the initial index has been set for this session
-        st.session_state.initialized = True 
+        st.session_state.initialized = True
 
     # This line ensures we don't reset the index on every rerun
     sample = df.iloc[st.session_state.get('current_index', 0)]
@@ -221,17 +245,12 @@ def render_evaluation_page(df):
 
     # --- Load existing scores for this sample to pre-fill the form ---
     existing_scores = {}
-    if os.path.exists(RESULTS_FILE):
-        try:
-            df_results = pd.read_csv(RESULTS_FILE)
-            if not df_results.empty:
-                score_row = df_results[(df_results['evaluator_name'] == st.session_state.evaluator_name) & (df_results['sample_id'] == sample_id)]
-                if not score_row.empty:
-                    # Convert the first found row to a dictionary
-                    existing_scores = score_row.iloc[0].to_dict()
-        except (pd.errors.EmptyDataError, FileNotFoundError):
-            # If file is empty or not found, existing_scores remains empty
-            pass
+    df_results = get_all_results_df()
+    if not df_results.empty:
+        score_row = df_results[(df_results['evaluator_name'] == st.session_state.evaluator_name) & (df_results['sample_id'] == sample_id)]
+        if not score_row.empty:
+            # Convert the first found row to a dictionary
+            existing_scores = score_row.iloc[0].to_dict()
 
     st.title(f"Evaluation for Sample ID: {sample_id}")
     
@@ -339,15 +358,16 @@ def render_thank_you_page():
     st.header(f"Thank you, {st.session_state.evaluator_name}, for your contribution!")
     st.markdown("You have successfully evaluated all the available samples. You can now close this window.")
     
-    if os.path.exists(RESULTS_FILE):
-        st.markdown("### Download Your Results")
-        with open(RESULTS_FILE, "rb") as fp:
-            st.download_button(
-                label="Download results.csv",
-                data=fp,
-                file_name=RESULTS_FILE,
-                mime="text/csv",
-            )
+    st.markdown("### Download All Results")
+    df_results = get_all_results_df()
+    if not df_results.empty:
+        csv = df_results.to_csv(index=False).encode('utf-8')
+        st.download_button(
+            label="Download all results as CSV",
+            data=csv,
+            file_name="human_eval_results.csv",
+            mime="text/csv",
+        )
 
 # --- Main App Logic ---
 
