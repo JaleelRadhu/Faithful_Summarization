@@ -202,21 +202,47 @@ def render_instructions_page():
     st.markdown("""
     Thank you for helping with this evaluation task. 
     Your feedback is crucial for evaluating our models.
-    You will be given summaries of input spans from answers on reddit to healthcare related questions. The summaries are supposed to from a particular perspective as defined ahead.
+    You will be given summaries of **spans** from answers on Reddit to healthcare-related questions. The summaries are supposed to be from a particular perspective as defined ahead.
     
-    **Your Task:** You are required to evaluate and score summaries based on the provided Questions, List of Answers, Perspective, and Relevant Spans from the answers.
+    **Your Task:** You are required to evaluate and score summaries based on the provided Questions, List of Answers, Perspective, and Relevant **Spans** from the answers.
 
     **Metrics:** Each summary must be evaluated on six metrics: Fluency, Coherence, Extraneous, Contradiction, Perspective Misalignment, and Redundancy. All metrics are scored on a 1–5 scale (1 = poor, 5 = excellent).
     [You will have the definitions of each ahead !]
-    
-    
+    """)
+
+    with st.expander("See a quick demo of the evaluation screen"):
+        st.write("The evaluation screen is split into two columns:")
+        left, right = st.columns(2, gap="large")
+        with left:
+            st.subheader("Context (Left Side)")
+            st.markdown("This side provides all the reference material.")
+            st.markdown("**Question:** What is the best way to quit smoking?")
+            st.markdown("**Perspective:** `SUGGESTION`")
+            st.markdown("**Spans (Primary Evaluation Source):**")
+            st.info("span1: use some form of nicotine replacement product... span2: get a prescription for Zyban...")
+            st.warning("You will base your evaluation primarily on these spans.")
+
+        with right:
+            st.subheader("Summaries (Right Side)")
+            st.markdown("This side is where you will read the summaries and score them.")
+            st.markdown("---")
+            st.markdown("**Summary 1**")
+            st.info("To quit smoking, you can use nicotine replacement products or get a prescription for Zyban.")
+            
+            st.markdown("**Your scoring task:**")
+            st.write("You will use radio buttons to score each summary on 6 metrics.")
+            st.image("https://i.imgur.com/sJ4y41s.png", caption="Example of scoring buttons for one summary.")
+
+    st.markdown("---")
+    st.error("""
     ### **CRITICAL NOTE**
-    When evaluating, compare each summary **only against the provided input spans** from the answers.
+    When evaluating, compare each summary **only against the provided spans** from the answers.
     
     Use the full answers **only for context** if any span seems unclear or incomplete.
     
-    The final evaluation should be based solely on how well the summary aligns with the **input spans**, not the entire answers.
+    The final evaluation should be based solely on how well the summary aligns with the **spans**, not the entire answers.
     """)
+
     if st.button("I Understand, Let's Begin!"):
         st.session_state.page = 'evaluation'
         st.rerun()
@@ -291,12 +317,12 @@ def render_evaluation_page(df):
             st.text(sample['answers'])
         
         # Highlight the Input Spans section
-        st.markdown("**Input Spans (Primary Evaluation Source):**")
+        st.markdown("**Spans (Primary Evaluation Source):**")
         st.warning(
-            "**IMPORTANT:** Base your evaluation primarily on these **Input Spans**. "
+            "**IMPORTANT:** Base your evaluation primarily on these **Spans**. "
             "Use the 'Show Full Reference Answers' button above only for additional context if a span is unclear."
         )
-        st.info(sample['Input Spans'])
+        st.info(sample['spans'])
 
         st.markdown("---")
         st.markdown("_The buttons below are for your reference if you forget the instructions or definitions._")
