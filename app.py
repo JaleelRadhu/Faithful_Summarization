@@ -322,7 +322,7 @@ def render_evaluation_page(df):
             "**IMPORTANT:** Base your evaluation primarily on these **Spans**. "
             "Use the 'Show Full Reference Answers' button above only for additional context if a span is unclear."
         )
-        st.info(sample['spans'])
+        st.info(sample['Input Spans'])
 
         st.markdown("---")
         st.markdown("_The buttons below are for your reference if you forget the instructions or definitions._")
