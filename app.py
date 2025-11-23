@@ -177,6 +177,18 @@ def show_instructions_modal():
         Each summary must be evaluated on six metrics (Fluency, Coherence, Extraneous, Contradiction, Perspective Misalignment, Redundancy). All metrics are scored on a 1–5 scale (1 = poor, 5 = excellent).
         """)
 
+def show_spans_answers_explanation():
+    """Display an expander explaining the difference between spans and full answers."""
+    with st.expander("❓ Spans vs. Full Answers", expanded=False):
+        st.markdown("""
+        - **Spans (Primary Source):** These are the specific, most relevant snippets of text extracted from the full answers. **Your evaluation should be based almost entirely on these spans.**
+        
+        - **Full Answers (Context Only):** These are the complete, original answers from which the spans were taken. You should only read these if a span seems confusing or lacks context.
+        
+        Think of the **Spans** as the assigned reading and the **Full Answers** as the optional, extended library.
+        """)
+
+
 # --- Page Rendering Functions ---
 
 def render_login_page():
@@ -261,14 +273,16 @@ def render_evaluation_page(df):
     )
 
     # --- Top-level expanders for definitions and instructions ---
-    top_cols = st.columns(3)
+    top_cols = st.columns(4)
     with top_cols[0]:
         show_instructions_modal()
     with top_cols[1]:
         show_definitions_modal("perspective")
     with top_cols[2]:
         show_definitions_modal("metrics")
-
+    with top_cols[3]:
+        show_spans_answers_explanation()
+        
     # Ensure results are loaded into the session state if they aren't already
     if st.session_state.results_df is None:
         get_all_results_df()
@@ -320,23 +334,13 @@ def render_evaluation_page(df):
         st.subheader("Context")
         st.markdown(f"**Question:** {sample['question']}")
         st.markdown(f"**Perspective:** `{sample['Perspective']}`")
-        
-        with st.expander("❓ What's the difference between 'Spans' and 'Full Answers'?", expanded=False):
-            st.markdown("""
-            - **Spans (Primary Source):** These are the specific, most relevant snippets of text extracted from the full answers. **Your evaluation should be based almost entirely on these spans.**
-            
-            - **Full Answers (Context Only):** These are the complete, original answers from which the spans were taken. You should only read these if a span seems confusing or lacks context.
-            
-            Think of the **Spans** as the assigned reading and the **Full Answers** as the optional, extended library.
-            """)
-
-        st.markdown("##### Spans (Primary Evaluation Source)")
-        st.info(sample['Input Spans'])
 
         # Place full answers inside an expander button
         with st.expander("Show Full Reference Answers (for context only)"):
             st.text(sample['answers'])
         
+        st.markdown("##### Spans (Primary Evaluation Source)")
+        st.info(sample['Input Spans'])
 
     with right_col:
         # --- Scoring Section in the right column (scrollable) ---
