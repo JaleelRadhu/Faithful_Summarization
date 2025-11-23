@@ -169,10 +169,10 @@ def show_instructions_modal():
     with st.expander("View Instructions", expanded=False):
         st.markdown("""
         ### Evaluation Instructions Summary
-        The summary is of input spans from answers on reddit to healthcare related question.
+        The summary is of spans from answers on reddit to healthcare related question.
         You are required to evaluate and score summaries based on the provided Questions, List of Answers, Perspective, and Relevant Spans from the answers.
         
-        **Note:** When evaluating, compare each summary **only against the provided input spans** from the answers. Use the full answers only for context if any span seems unclear or incomplete. The final evaluation should be based solely on how well the summary aligns with the input spans, not the entire answers.
+        **Note:** When evaluating, compare each summary **only against the provided spans** from the answers. Use the full answers only for context if any span seems unclear or incomplete. The final evaluation should be based solely on how well the summary aligns with the spans, not the entire answers.
         
         Each summary must be evaluated on six metrics (Fluency, Coherence, Extraneous, Contradiction, Perspective Misalignment, Redundancy). All metrics are scored on a 1–5 scale (1 = poor, 5 = excellent).
         """)
