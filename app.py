@@ -222,29 +222,6 @@ def render_instructions_page():
     [You will have the definitions of each ahead !]
     """)
 
-    with st.expander("See a quick demo of the evaluation screen"):
-        st.write("The evaluation screen is split into two columns:")
-        left, right = st.columns(2, gap="large")
-        with left:
-            st.subheader("Context (Left Side)")
-            st.markdown("This side provides all the reference material.")
-            st.markdown("**Question:** What is the best way to quit smoking?")
-            st.markdown("**Perspective:** `SUGGESTION`")
-            st.markdown("**Spans (Primary Evaluation Source):**")
-            st.info("span1: use some form of nicotine replacement product... span2: get a prescription for Zyban...")
-            st.warning("You will base your evaluation primarily on these spans.")
-
-        with right:
-            st.subheader("Summaries (Right Side)")
-            st.markdown("This side is where you will read the summaries and score them.")
-            st.markdown("---")
-            st.markdown("**Summary 1**")
-            st.info("To quit smoking, you can use nicotine replacement products or get a prescription for Zyban.")
-            
-            st.markdown("**Your scoring task:**")
-            st.write("You will use radio buttons to score each summary on 6 metrics.")
-            st.image("https://i.imgur.com/sJ4y41s.png", caption="Example of scoring buttons for one summary.")
-
     st.markdown("---")
     st.error("""
     ### **CRITICAL NOTE**
