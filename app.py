@@ -25,6 +25,14 @@ def initialize_session_state():
         st.session_state.scores = {}
     if 'results_df' not in st.session_state:
         st.session_state.results_df = None
+    if 'current_sample_id_tracker' not in st.session_state:
+        st.session_state.current_sample_id_tracker = None
+    if 'guesses' not in st.session_state:
+        st.session_state.guesses = {}
+    if 'revealed' not in st.session_state:
+        st.session_state.revealed = {}
+    if 'just_revealed' not in st.session_state:
+        st.session_state.just_revealed = False
 
 def load_data():
     """Load the evaluation data from the CSV file."""
@@ -57,13 +65,16 @@ def get_all_results_df():
     data = get_gsheet().get_all_records()
     st.session_state.results_df = pd.DataFrame(data)
 
-def save_results(evaluator_name, sample_id, scores):
+def save_results(evaluator_name, sample_id, scores, summary_guesses=None):
     """Save or update the evaluation scores in the Google Sheet."""
     sheet = get_gsheet()
     df_results = st.session_state.results_df
 
     # Prepare the new data row as a dictionary
     new_row_data = {'evaluator_name': evaluator_name, 'sample_id': int(sample_id)}
+    if summary_guesses:
+        for s_key, guess in summary_guesses.items():
+            new_row_data[f"{s_key}_guessed_perspective"] = guess
     for summary_key, metrics in scores.items():
         for metric_name, score_value in metrics.items():
             column_name = f"{summary_key}_{metric_name}"
@@ -71,6 +82,17 @@ def save_results(evaluator_name, sample_id, scores):
 
     # Convert the new row to a DataFrame for local update
     new_row_df = pd.DataFrame([new_row_data])
+
+    # Ensure guessed_perspective columns exist in the sheet if needed
+    if summary_guesses:
+        header_check = sheet.row_values(1)
+        for s_key in summary_guesses.keys():
+            col_name = f"{s_key}_guessed_perspective"
+            if col_name not in header_check:
+                # Add a new column before trying to update the header
+                sheet.add_cols(1)
+                sheet.update_cell(1, len(header_check) + 1, col_name)
+                header_check.append(col_name) # Update local header list
 
     # Check if an entry for this evaluator and sample already exists
     if not df_results.empty:
@@ -109,10 +131,10 @@ def save_results(evaluator_name, sample_id, scores):
         st.session_state.results_df = pd.concat([df_results, new_row_df], ignore_index=True)
 
 
-def show_definitions_modal(modal_type):
+def show_definitions_modal(modal_type, expanded=False):
     """Display a modal with definitions for perspectives or metrics."""
     definitions = load_perspective_definitions()
-    with st.expander(f"View {modal_type.capitalize()} Definitions", expanded=False):
+    with st.expander(f"View {modal_type.capitalize()} Definitions", expanded=expanded):
         if modal_type == "perspective":
             if definitions:
                 for perspective, definition in definitions.items():
@@ -161,13 +183,19 @@ def show_definitions_modal(modal_type):
             - **1**: Extremely redundant, overwhelming repetition
             """)
 
+@st.dialog("True Perspective Revealed")
+def show_reveal_modal(perspective):
+    """Display a modal with the true perspective."""
+    st.markdown(f"### The True Perspective is:\n\n# **{perspective}**")
+    st.info("Please rate **Perspective Misalignment** in accordance with this perspective.")
+
 def show_instructions_modal():
     """Display a modal with the evaluation instructions."""
     with st.expander("View Instructions", expanded=False):
         st.markdown("""
         ### Evaluation Instructions Summary
-        The summary is of spans from answers on reddit to healthcare related question.
-        You are required to evaluate and score summaries based on the provided Questions, List of Answers, Perspective, and Relevant Spans from the answers.
+        The summary is of spans from answers on Reddit to healthcare related questions.
+        For **each summary**, first **guess the perspective** it seems to convey. Then, the true perspective will be revealed. Finally, evaluate and score the summary based on the provided Questions, List of Answers, True Perspective, and Relevant Spans.
         
         **Note:** When evaluating, compare each summary **only against the provided spans** from the answers. Use the full answers only for context if any span seems unclear or incomplete. The final evaluation should be based solely on how well the summary aligns with the spans, not the entire answers.
         
@@ -213,7 +241,7 @@ def render_instructions_page():
     Your feedback is crucial for evaluating our models.
     You will be given summaries of **spans** from answers on Reddit to healthcare-related questions. The summaries are supposed to be from a particular perspective as defined ahead.
     
-    **Your Task:** You are required to evaluate and score summaries based on the provided Questions, List of Answers, Perspective, and Relevant **Spans** from the answers.
+    **Your Task:** For each summary, read it and **guess the perspective**. Then, the true perspective will be revealed, and you are required to evaluate and score the summary based on the provided Questions, List of Answers, Perspective, and Relevant **Spans** from the answers.
 
     **Metrics:** Each summary must be evaluated on six metrics: Fluency, Coherence, Extraneous, Contradiction, Perspective Misalignment, and Redundancy. All metrics are scored on a 1–5 scale (1 = poor, 5 = excellent).
     [You will have the definitions of each ahead !]
@@ -247,14 +275,12 @@ def render_evaluation_page(df):
     )
 
     # --- Top-level expanders for definitions and instructions ---
-    top_cols = st.columns(4)
+    top_cols = st.columns(3)
     with top_cols[0]:
         show_instructions_modal()
     with top_cols[1]:
-        show_definitions_modal("perspective")
-    with top_cols[2]:
         show_definitions_modal("metrics")
-    with top_cols[3]:
+    with top_cols[2]:
         show_spans_answers_explanation()
         
     # Ensure results are loaded into the session state if they aren't already
@@ -290,6 +316,14 @@ def render_evaluation_page(df):
     # This line ensures we don't reset the index on every rerun
     sample = df.iloc[st.session_state.get('current_index', 0)]
     sample_id = sample['id']
+    
+    # Reset guess state if sample changed
+    if st.session_state.get('current_sample_id_tracker') != sample_id:
+        st.session_state.current_sample_id_tracker = sample_id
+        if sample_id not in st.session_state.guesses:
+            st.session_state.guesses[sample_id] = {}
+        if sample_id not in st.session_state.revealed:
+            st.session_state.revealed[sample_id] = False
 
     # --- Load existing scores for this sample to pre-fill the form ---
     existing_scores = {}
@@ -299,6 +333,16 @@ def render_evaluation_page(df):
         if not score_row.empty:
             # Convert the first found row to a dictionary
             existing_scores = score_row.iloc[0].to_dict()
+            # Load existing guesses
+            # If we have existing scores, we consider the sample revealed
+            st.session_state.revealed[sample_id] = True
+            if sample_id not in st.session_state.guesses:
+                st.session_state.guesses[sample_id] = {}
+            for i in range(1, 7):
+                s_key = f'summary_{i}'
+                col = f'{s_key}_guessed_perspective'
+                if col in existing_scores and pd.notna(existing_scores[col]) and existing_scores[col]:
+                    st.session_state.guesses[sample_id][s_key] = existing_scores[col]
 
     st.title("Evaluation Task")
     
@@ -309,23 +353,34 @@ def render_evaluation_page(df):
     st.progress(current_progress / total_samples)
     st.write(f"Sample {current_progress} of {total_samples}")
 
-    # Create a two-column layout
-    left_col, right_col = st.columns(2, gap="large")
+    if st.session_state.get('just_revealed', False):
+        show_reveal_modal(sample['Perspective'])
+        st.session_state.just_revealed = False
+
+    # Create a three-column layout
+    left_col, score_col, def_col = st.columns([3, 3, 1.5], gap="medium")
 
     with left_col:
         # --- Display Context in the left column ---
         st.subheader("Context")
         st.markdown(f"**Question:** {sample['question']}")
-        st.markdown(f"**Perspective:** `{sample['Perspective']}`")
-
-        # Place full answers inside an expander button
-        with st.expander("Show Full Reference Answers (for context only)"):
-            st.text(sample['answers'])
         
+        if st.session_state.revealed.get(sample_id, False):
+            st.markdown(f"**Perspective:** `{sample['Perspective']}`")
+        else:
+            st.markdown("**Perspective:** ❓ *Hidden (Intended Perspective)*")
+
         st.markdown("##### Spans (Primary Evaluation Source)")
         st.info(sample['Input Spans'])
 
-    with right_col:
+        # Place full answers inside an expander button
+        with st.expander("Show Full Reference Answers (for context only)", expanded=True):
+            st.text(sample['answers'])
+
+    with def_col:
+        show_definitions_modal("perspective", expanded=True)
+
+    with score_col:
         # --- Scoring Section in the right column (scrollable) ---
         st.subheader("Summaries for Evaluation")
         
@@ -335,6 +390,9 @@ def render_evaluation_page(df):
             # Initialize scores for the current sample
             st.session_state.scores[sample_id] = {}
 
+            definitions = load_perspective_definitions()
+            options = list(definitions.keys()) if definitions else ["SUGGESTION", "INFORMATION", "EXPERIENCE", "CAUSE", "QUESTION"]
+
             for i in range(1, 7):
                 summary_col = f'summary_{i}'
                 st.session_state.scores[sample_id][summary_col] = {}
@@ -343,24 +401,56 @@ def render_evaluation_page(df):
                 st.markdown(f"**Summary {i}**")
                 st.info(sample[summary_col])
 
-                # Create columns for click-based scoring
-                score_cols = st.columns(len(score_categories))
-                for idx, category in enumerate(score_categories):
-                    with score_cols[idx]:
-                        # Check for a pre-existing score to set the default
-                        score_column_name = f"{summary_col}_{category}"
-                        previous_score = existing_scores.get(score_column_name)
-                        default_index = int(previous_score - 1) if pd.notna(previous_score) else 0
+                if not st.session_state.revealed.get(sample_id, False):
+                    st.write("👇 **First, guess the perspective of this summary:**")
+                    # We use a unique key for each radio button to capture the state
+                    st.radio("Select Perspective:", options, key=f"guess_{sample_id}_{i}")
+                else:
+                    # Reveal True Perspective and Scoring
+                    current_guess = st.session_state.guesses[sample_id].get(summary_col)
+                    st.info(f"**Your Guess:** {current_guess}")
+                    # st.warning("Please rate **Perspective Misalignment** in accordance with the **True Perspective**.") # Moved to top
 
-                        # Use radio buttons for scoring
-                        score = st.radio(
-                            label=category,
-                            options=[1, 2, 3, 4, 5],
-                            index=default_index,
-                            key=f"score_{sample_id}_{i}_{category}",
-                            horizontal=True
-                        )
-                        st.session_state.scores[sample_id][summary_col][category] = score
+                    # Create columns for click-based scoring
+                    score_cols = st.columns(len(score_categories))
+                    for idx, category in enumerate(score_categories):
+                        with score_cols[idx]:
+                            # Check for a pre-existing score to set the default
+                            score_column_name = f"{summary_col}_{category}"
+                            previous_score = existing_scores.get(score_column_name)
+                            default_index = int(previous_score - 1) if pd.notna(previous_score) else 0
+
+                            # Use radio buttons for scoring
+                            score = st.radio(
+                                label=category,
+                                options=[1, 2, 3, 4, 5],
+                                index=default_index,
+                                key=f"score_{sample_id}_{i}_{category}",
+                                horizontal=True
+                            )
+                            st.session_state.scores[sample_id][summary_col][category] = score
+            
+            # Button to submit all guesses and reveal
+            if not st.session_state.revealed.get(sample_id, False):
+                st.markdown("---")
+                if st.button("Submit All Guesses & Reveal True Perspective", type="primary"):
+                    # Collect and validate guesses
+                    temp_guesses = {}
+                    all_answered = True
+                    for i in range(1, 7):
+                        key = f"guess_{sample_id}_{i}"
+                        if key not in st.session_state or not st.session_state[key]:
+                            all_answered = False
+                            break
+                        temp_guesses[f'summary_{i}'] = st.session_state[key]
+                    
+                    if all_answered:
+                        st.session_state.guesses[sample_id] = temp_guesses
+                        st.session_state.revealed[sample_id] = True
+                        st.session_state.just_revealed = True
+                        st.rerun()
+                    else:
+                        st.error("Please select a perspective guess for ALL summaries before proceeding.")
 
         st.divider()
 
@@ -373,9 +463,9 @@ def render_evaluation_page(df):
                 st.rerun()
 
         with nav_cols[2]:
-            if st.button("Submit and Go to Next ➡️", type="primary"):
+            if st.session_state.revealed.get(sample_id, False) and st.button("Submit and Go to Next ➡️", type="primary"):
                 # Save the collected scores
-                save_results(st.session_state.evaluator_name, sample_id, st.session_state.scores[sample_id])
+                save_results(st.session_state.evaluator_name, sample_id, st.session_state.scores[sample_id], summary_guesses=st.session_state.guesses[sample_id])
                 
                 # Clear scores for the next round and show success message
                 if sample_id in st.session_state.scores:
