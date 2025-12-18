@@ -5,6 +5,7 @@ import json
 import time
 import gspread
 from google.oauth2.service_account import Credentials
+import random
 
 DATA_FILE = 'human_eval.csv'
 PERSPECTIVE_DEFN_FILE = 'prompts/perspective_defn.json'
@@ -273,14 +274,19 @@ def render_evaluation_page(df):
 
         if not df_results.empty:
             evaluated_samples = df_results[df_results['evaluator_name'].str.lower() == st.session_state.evaluator_name]['sample_id'].unique()
-            unevaluated_df = df[~df['id'].isin(evaluated_samples)]
-            if unevaluated_df.empty:
-                st.session_state.page = 'thank_you'
-                st.rerun()
-            else:
-                st.session_state.current_index = unevaluated_df.index[0]
+            unevaluated_indices = df[~df['id'].isin(evaluated_samples)].index.tolist()
         else:
-            st.session_state.current_index = 0
+            unevaluated_indices = df.index.tolist()
+
+        if not unevaluated_indices:
+            st.session_state.page = 'thank_you'
+            st.rerun()
+
+        # Randomize the order of unevaluated samples
+        random.shuffle(unevaluated_indices)
+        st.session_state.randomized_indices = unevaluated_indices
+        st.session_state.queue_pos = 0
+        st.session_state.current_index = st.session_state.randomized_indices[0]
 
         # Mark that the initial index has been set for this session
         st.session_state.initialized = True
@@ -300,8 +306,12 @@ def render_evaluation_page(df):
 
     st.title(f"Evaluation for Sample ID: {sample_id}")
     
-    st.progress((st.session_state.current_index + 1) / len(df))
-    st.write(f"Sample {st.session_state.current_index + 1} of {len(df)}")
+    # Calculate progress based on queue position and total samples
+    total_samples = len(df)
+    completed_before_session = total_samples - len(st.session_state.randomized_indices)
+    current_progress = completed_before_session + st.session_state.queue_pos + 1
+    st.progress(current_progress / total_samples)
+    st.write(f"Sample {current_progress} of {total_samples}")
 
     # Create a two-column layout
     left_col, right_col = st.columns(2, gap="large")
@@ -361,8 +371,9 @@ def render_evaluation_page(df):
         # --- Navigation Buttons ---
         nav_cols = st.columns([1, 1, 1]) # Give equal space
         with nav_cols[0]:
-            if st.button("⬅️ Previous Sample", disabled=(st.session_state.current_index == 0)):
-                st.session_state.current_index -= 1
+            if st.button("⬅️ Previous Sample", disabled=(st.session_state.queue_pos == 0)):
+                st.session_state.queue_pos -= 1
+                st.session_state.current_index = st.session_state.randomized_indices[st.session_state.queue_pos]
                 st.rerun()
 
         with nav_cols[2]:
@@ -378,11 +389,12 @@ def render_evaluation_page(df):
                 time.sleep(1) # Give user time to see the message
                 
                 # Move to the next sample or finish
-                if st.session_state.current_index + 1 >= len(df):
+                if st.session_state.queue_pos + 1 >= len(st.session_state.randomized_indices):
                     st.session_state.page = 'thank_you'
                 else:
-                    # Simply move to the next index
-                    st.session_state.current_index += 1
+                    # Move to the next index in the randomized queue
+                    st.session_state.queue_pos += 1
+                    st.session_state.current_index = st.session_state.randomized_indices[st.session_state.queue_pos]
                 
                 st.rerun()
 
