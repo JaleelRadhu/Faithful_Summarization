@@ -130,7 +130,6 @@ def show_definitions_modal(modal_type):
             
             ---
             #### 3. Extraneous Information
-            Measures how much information in the summary is unsupported or irrelevant to the provided answers.
             - **5**: No extraneous information, fully supported
             - **4**: Minimal extraneous info, mostly aligned
             - **3**: Moderate extraneous info, somewhat aligned
@@ -139,7 +138,6 @@ def show_definitions_modal(modal_type):
             
             ---
             #### 4. Contradiction
-            Evaluates whether the summary contains statements contradicting the given answers.
             - **5**: No contradictions at all
             - **4**: Minor contradictions
             - **3**: Some noticeable contradictions
@@ -148,7 +146,6 @@ def show_definitions_modal(modal_type):
             
             ---
             #### 5. Perspective Misalignment
-            Assesses how well the summary aligns with the given perspective (e.g., Suggestion, Information, Experience, Cause, or Question).
             - **5**: Fully aligned with the given perspective
             - **4**: Mostly aligned, with small deviations
             - **3**: Balanced between correct and different perspectives
@@ -157,7 +154,6 @@ def show_definitions_modal(modal_type):
             
             ---
             #### 6. Redundancy
-            Measures the level of repetition or unnecessary restating of information.
             - **5**: No redundancy, concise and clear
             - **4**: Slight redundancy, does not harm clarity
             - **3**: Moderate redundancy, some repetition
@@ -304,7 +300,7 @@ def render_evaluation_page(df):
             # Convert the first found row to a dictionary
             existing_scores = score_row.iloc[0].to_dict()
 
-    st.title(f"Evaluation for Sample ID: {sample_id}")
+    st.title("Evaluation Task")
     
     # Calculate progress based on queue position and total samples
     total_samples = len(df)
@@ -385,7 +381,7 @@ def render_evaluation_page(df):
                 if sample_id in st.session_state.scores:
                     del st.session_state.scores[sample_id]
                 
-                st.success(f"Scores for sample {sample_id} submitted successfully!")
+                st.success("Scores submitted successfully!")
                 time.sleep(1) # Give user time to see the message
                 
                 # Move to the next sample or finish
